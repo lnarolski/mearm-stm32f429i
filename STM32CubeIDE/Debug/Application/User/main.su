@@ -1,0 +1,17 @@
+main.c:800:13:SPI5_Write	16	static
+main.c:912:13:TouchGFX_Task	8	static
+main.c:224:6:SystemClock_Config	152	static
+main.c:143:5:main	112	static
+main.c:644:6:IOE_Init	0	static
+main.c:653:6:IOE_ITConfig	0	static
+main.c:665:6:IOE_Write	32	static
+main.c:676:9:IOE_Read	32	static
+main.c:689:10:IOE_ReadMultiple	24	static
+main.c:698:6:IOE_Delay	0	static
+main.c:826:6:LCD_IO_Init	8	static
+main.c:836:6:LCD_IO_WriteData	16	static
+main.c:852:6:LCD_IO_WriteReg	16	static
+main.c:871:10:LCD_IO_ReadData	32	static
+main.c:898:6:LCD_Delay	0	static
+main.c:931:6:HAL_TIM_PeriodElapsedCallback	0	static
+main.c:948:6:Error_Handler	0	static

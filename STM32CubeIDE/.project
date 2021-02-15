@@ -409,11 +409,6 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Slider_Horizontal_Small_slider_horizontal_small_round_back.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_Blue_Slider_Horizontal_Small_slider_horizontal_small_round_fill.cpp</name>
-			<type>1</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Slider_Horizontal_Small_slider_horizontal_small_round_fill.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/image_Blue_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_nob.cpp</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_nob.cpp</locationURI>
@@ -422,11 +417,6 @@
 			<name>Application/User/generated/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_back.cpp</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_back.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_fill.cpp</name>
-			<type>1</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_fill.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_Blue_Togglebars_Toggle_round_large_button_OFF.cpp</name>
