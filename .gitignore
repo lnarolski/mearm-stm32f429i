@@ -26,6 +26,9 @@
 *.exe
 *.out
 *.app
+*.hex
+*.bin
+*.elf
 
 # application specific
 generated

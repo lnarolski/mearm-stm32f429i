@@ -140,7 +140,44 @@
             "Moveable": false
           }
         ],
-        "Interactions": [],
+        "Interactions": [
+          {
+            "InteractionName": "XAxisSliderValue_Changed",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "xAxisSlider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "XAxisSliderValue_Changed"
+            }
+          },
+          {
+            "InteractionName": "YAxisSliderValue_Changed",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "yAxisSlider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "YAxisSliderValue_Changed"
+            }
+          },
+          {
+            "InteractionName": "ManipulatorControlToggleButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "manipulatorControlToggleButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ManipulatorControlToggleButton_Clicked"
+            }
+          }
+        ],
         "Name": "mainScreen",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0

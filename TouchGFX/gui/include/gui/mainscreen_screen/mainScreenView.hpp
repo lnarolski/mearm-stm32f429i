@@ -12,6 +12,10 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 protected:
+private:
+    void XAxisSliderValue_Changed(int value);
+    void YAxisSliderValue_Changed(int value);
+    void ManipulatorControlToggleButton_Clicked();
 };
 
 #endif // MAINSCREENVIEW_HPP
