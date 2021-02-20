@@ -32,7 +32,14 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#define manipulatorPWM_Pin GPIO_PIN_0
+#define manipulatorPWM_GPIO_Port GPIOA
+#define xAxisPWM_Pin GPIO_PIN_1
+#define xAxisPWM_GPIO_Port GPIOA
+#define yAxisPWM_L_Pin GPIO_PIN_7
+#define yAxisPWM_L_GPIO_Port GPIOA
+#define yAxisPWM_R_Pin GPIO_PIN_12
+#define yAxisPWM_R_GPIO_Port GPIOD
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -54,7 +61,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
