@@ -1,0 +1,13 @@
+DMA.hpp:140:18:virtual void touchgfx::DMA_Interface::flush()	0	static
+DMA.hpp:214:21:virtual touchgfx::DMAType touchgfx::DMA_Interface::getDMAType()	0	static
+STM32DMA.hpp:90:18:virtual void STM32F4DMA::signalDMAInterrupt()	0	static
+STM32DMA.cpp:80:16:virtual touchgfx::BlitOperations STM32F4DMA::getBlitCaps()	0	static
+STM32DMA.cpp:69:6:virtual void STM32F4DMA::initialize()	8	static
+STM32DMA.cpp:52:17:void DMA2D_XferErrorCallback(DMA2D_HandleTypeDef*)	8	static
+STM32DMA.cpp:47:17:void DMA2D_XferCpltCallback(DMA2D_HandleTypeDef*)	0	static
+STM32DMA.cpp:63:1:STM32F4DMA::~STM32F4DMA()	8	static,ignoring_inline_asm
+STM32DMA.cpp:63:1:virtual STM32F4DMA::~STM32F4DMA()	8	static
+HAL.hpp:225:17:static touchgfx::LCD& touchgfx::HAL::lcd()	0	static
+STM32DMA.cpp:92:6:virtual void STM32F4DMA::setupDataCopy(const touchgfx::BlitOp&)	40	static
+STM32DMA.cpp:193:6:virtual void STM32F4DMA::setupDataFill(const touchgfx::BlitOp&)	32	static
+STM32DMA.cpp:59:1:STM32F4DMA::STM32F4DMA()	16	static

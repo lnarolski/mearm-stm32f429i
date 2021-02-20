@@ -1,0 +1,15 @@
+Font.hpp:177:30:virtual const GlyphNode* touchgfx::Font::getGlyph(touchgfx::Unicode::UnicodeChar) const	16	static
+Font.hpp:196:34:virtual touchgfx::Unicode::UnicodeChar touchgfx::Font::getFallbackChar() const	0	static
+Font.hpp:209:34:virtual touchgfx::Unicode::UnicodeChar touchgfx::Font::getEllipsisChar() const	0	static
+Font.hpp:298:44:virtual uint16_t touchgfx::Font::getFontHeight() const	0	static
+Font.hpp:310:44:virtual uint16_t touchgfx::Font::getMinimumTextHeight() const	0	static
+Font.hpp:320:43:virtual uint8_t touchgfx::Font::getBitsPerPixel() const	0	static
+Font.hpp:330:43:virtual uint8_t touchgfx::Font::getByteAlignRow() const	0	static
+UnmappedDataFont.hpp:89:29:virtual const uint16_t* touchgfx::UnmappedDataFont::getGSUBTable() const	0	static
+UnmappedDataFont.cpp:40:16:virtual const uint8_t* touchgfx::UnmappedDataFont::getPixelData(const GlyphNode*) const	0	static
+UnmappedDataFont.cpp:46:8:virtual int8_t touchgfx::UnmappedDataFont::getKerning(touchgfx::Unicode::UnicodeChar, const GlyphNode*) const	8	static
+UnmappedDataFont.hpp:19:7:touchgfx::UnmappedDataFont::~UnmappedDataFont()	0	static
+UnmappedDataFont.hpp:19:7:virtual touchgfx::UnmappedDataFont::~UnmappedDataFont()	8	static
+UnmappedDataFont.cpp:12:1:touchgfx::UnmappedDataFont::UnmappedDataFont(const GlyphNode*, const uint16_t*, uint16_t, uint16_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, const uint8_t* const*, const touchgfx::KerningNode*, touchgfx::Unicode::UnicodeChar, touchgfx::Unicode::UnicodeChar, const uint16_t*)	16	static
+UnmappedDataFont.cpp:68:5:int touchgfx::UnmappedDataFont::lookupUnicode(uint16_t) const	16	static
+UnmappedDataFont.cpp:23:18:virtual const GlyphNode* touchgfx::UnmappedDataFont::getGlyph(touchgfx::Unicode::UnicodeChar, const uint8_t*&, uint8_t&) const	8	static

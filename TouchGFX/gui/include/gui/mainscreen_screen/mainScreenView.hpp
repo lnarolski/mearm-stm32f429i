@@ -3,6 +3,10 @@
 
 #include <gui_generated/mainscreen_screen/mainScreenViewBase.hpp>
 #include <gui/mainscreen_screen/mainScreenPresenter.hpp>
+#include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal_tim.h"
+
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 class mainScreenView : public mainScreenViewBase
 {
