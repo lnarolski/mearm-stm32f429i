@@ -194,10 +194,10 @@ int main(void)
 	MX_TIM4_Init();
 	MX_TIM5_Init();
 
-	HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_2, &xAxisPWMDuty, 2);
-	HAL_TIM_PWM_Start_DMA(&htim3, TIM_CHANNEL_2, &yAxisPWMDuty_L, 1);
-	HAL_TIM_PWM_Start_DMA(&htim4, TIM_CHANNEL_1, &yAxisPWMDuty_R, 1);
-	HAL_TIM_PWM_Start_DMA(&htim4, TIM_CHANNEL_1, &manipulatorPWMDuty, 2);
+//	HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_2, &xAxisPWMDuty, 2);
+//	HAL_TIM_PWM_Start_DMA(&htim3, TIM_CHANNEL_2, &yAxisPWMDuty_L, 1);
+//	HAL_TIM_PWM_Start_DMA(&htim4, TIM_CHANNEL_1, &yAxisPWMDuty_R, 1);
+//	HAL_TIM_PWM_Start_DMA(&htim4, TIM_CHANNEL_1, &manipulatorPWMDuty, 2);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -1228,19 +1228,19 @@ static void MX_DMA_Init(void)
   /* DMA controller clock enable */
   __HAL_RCC_DMA1_CLK_ENABLE();
 
-  /* DMA interrupt init */
-  /* DMA1_Stream0_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
-  /* DMA1_Stream2_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream2_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Stream2_IRQn);
-  /* DMA1_Stream5_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream5_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Stream5_IRQn);
-  /* DMA1_Stream6_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream6_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Stream6_IRQn);
+//  /* DMA interrupt init */
+//  /* DMA1_Stream0_IRQn interrupt configuration */
+//  HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 0, 0);
+//  HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
+//  /* DMA1_Stream2_IRQn interrupt configuration */
+//  HAL_NVIC_SetPriority(DMA1_Stream2_IRQn, 0, 0);
+//  HAL_NVIC_EnableIRQ(DMA1_Stream2_IRQn);
+//  /* DMA1_Stream5_IRQn interrupt configuration */
+//  HAL_NVIC_SetPriority(DMA1_Stream5_IRQn, 0, 0);
+//  HAL_NVIC_EnableIRQ(DMA1_Stream5_IRQn);
+//  /* DMA1_Stream6_IRQn interrupt configuration */
+//  HAL_NVIC_SetPriority(DMA1_Stream6_IRQn, 0, 0);
+//  HAL_NVIC_EnableIRQ(DMA1_Stream6_IRQn);
 
 }
 

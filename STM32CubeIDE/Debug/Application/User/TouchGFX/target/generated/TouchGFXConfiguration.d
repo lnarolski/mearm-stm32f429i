@@ -60,12 +60,6 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
- ../../TouchGFX/generated/images/include/BitmapDatabase.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
- ../../TouchGFX/target/generated/STM32DMA.hpp \
- ../../TouchGFX/target/TouchGFXHAL.hpp \
- ../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp \
- ../../TouchGFX/target/STM32TouchController.hpp \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -101,7 +95,13 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
- ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
+ ../../TouchGFX/generated/images/include/BitmapDatabase.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
+ ../../TouchGFX/target/generated/STM32DMA.hpp \
+ ../../TouchGFX/target/TouchGFXHAL.hpp \
+ ../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp \
+ ../../TouchGFX/target/STM32TouchController.hpp
 
 ../../TouchGFX/generated/texts/include/texts/TypedTextDatabase.hpp:
 
@@ -223,18 +223,6 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
 
-../../TouchGFX/generated/images/include/BitmapDatabase.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
-
-../../TouchGFX/target/generated/STM32DMA.hpp:
-
-../../TouchGFX/target/TouchGFXHAL.hpp:
-
-../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:
-
-../../TouchGFX/target/STM32TouchController.hpp:
-
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 
 ../../Core/Inc/stm32f4xx_hal_conf.h:
@@ -306,3 +294,15 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
+
+../../TouchGFX/generated/images/include/BitmapDatabase.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
+
+../../TouchGFX/target/generated/STM32DMA.hpp:
+
+../../TouchGFX/target/TouchGFXHAL.hpp:
+
+../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:
+
+../../TouchGFX/target/STM32TouchController.hpp:

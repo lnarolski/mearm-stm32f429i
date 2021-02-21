@@ -3,6 +3,8 @@
 
 #include <gui_generated/mainscreen_screen/mainScreenViewBase.hpp>
 #include <gui/mainscreen_screen/mainScreenPresenter.hpp>
+#include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal_tim.h"
 
 class mainScreenView : public mainScreenViewBase
 {
