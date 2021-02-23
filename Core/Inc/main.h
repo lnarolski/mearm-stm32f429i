@@ -34,7 +34,7 @@ extern "C" {
 /* USER CODE BEGIN Includes */
 #define manipulatorPWM_Pin GPIO_PIN_0
 #define manipulatorPWM_GPIO_Port GPIOA
-#define xAxisPWM_Pin GPIO_PIN_1
+#define xAxisPWM_Pin GPIO_PIN_3
 #define xAxisPWM_GPIO_Port GPIOA
 #define yAxisPWM_L_Pin GPIO_PIN_7
 #define yAxisPWM_L_GPIO_Port GPIOA

@@ -13,7 +13,7 @@ extern TIM_HandleTypeDef htim5;
 mainScreenView::mainScreenView()
 {
 	/* Initialize all configured peripherals */
-	HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_2, &xAxisPWMDuty, 1);
+	HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_4, &xAxisPWMDuty, 1);
 	HAL_TIM_PWM_Start_DMA(&htim3, TIM_CHANNEL_2, &yAxisPWMDuty_L, 1);
 	HAL_TIM_PWM_Start_DMA(&htim4, TIM_CHANNEL_1, &yAxisPWMDuty_R, 1);
 	HAL_TIM_PWM_Start_DMA(&htim5, TIM_CHANNEL_1, &manipulatorPWMDuty, 1);
@@ -31,13 +31,13 @@ void mainScreenView::tearDownScreen()
 
 void mainScreenView::XAxisSliderValue_Changed(int value)
 {
-	xAxisPWMDuty = value * 100;
+	xAxisPWMDuty = 275 + 9 * value;
 }
 
 void mainScreenView::YAxisSliderValue_Changed(int value)
 {
-	yAxisPWMDuty_L = value * 100;
-	yAxisPWMDuty_R = value * 100;
+	yAxisPWMDuty_L = 275 + 9 * value;
+	yAxisPWMDuty_R = 275 + 9 * value;
 }
 
 void mainScreenView::ManipulatorControlToggleButton_Clicked()
@@ -46,12 +46,12 @@ void mainScreenView::ManipulatorControlToggleButton_Clicked()
 
 	if (state)
 	{
-		manipulatorPWMDuty = 0;
+		manipulatorPWMDuty = 275;
 		state = false;
 	}
 	else
 	{
-		manipulatorPWMDuty = 10000;
+		manipulatorPWMDuty = 700;
 		state = true;
 	}
 }
