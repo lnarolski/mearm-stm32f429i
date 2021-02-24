@@ -1,9 +1,9 @@
 #include <gui/mainscreen_screen/mainScreenView.hpp>
 
-uint32_t xAxisPWMDuty;
-uint32_t yAxisPWMDuty_L;
-uint32_t yAxisPWMDuty_R;
-uint32_t manipulatorPWMDuty;
+uint32_t xAxisPWMDuty = 725;
+uint32_t yAxisPWMDuty_L = 842;
+uint32_t yAxisPWMDuty_R = 842;
+uint32_t manipulatorPWMDuty = 275;
 
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
@@ -36,8 +36,8 @@ void mainScreenView::XAxisSliderValue_Changed(int value)
 
 void mainScreenView::YAxisSliderValue_Changed(int value)
 {
-	yAxisPWMDuty_L = 275 + 9 * value;
-	yAxisPWMDuty_R = 275 + 9 * value;
+	yAxisPWMDuty_L = (int) (842.0 + 3.42 * (float)value);
+	yAxisPWMDuty_R = (int) (842.0 + 3.42 * (float)value);
 }
 
 void mainScreenView::ManipulatorControlToggleButton_Clicked()
