@@ -21,9 +21,10 @@ TypedText.hpp:68:13:touchgfx::TypedText::~TypedText()	0	static
 View.hpp:40:7:touchgfx::View<mainScreenPresenter>::~View()	0	static
 mainScreenViewBase.hpp:20:13:mainScreenViewBase::~mainScreenViewBase()	0	static
 mainScreenViewBase.hpp:26:18:virtual void mainScreenViewBase::XAxisSliderValue_Changed(int)	0	static
-mainScreenViewBase.hpp:31:18:virtual void mainScreenViewBase::YAxisSliderValue_Changed(int)	0	static
+mainScreenViewBase.hpp:31:18:virtual void mainScreenViewBase::YAxisSlider_L_Value_Changed(int)	0	static
 mainScreenViewBase.hpp:36:18:virtual void mainScreenViewBase::ManipulatorControlToggleButton_Clicked()	0	static
-mainScreenViewBase.cpp:57:6:virtual void mainScreenViewBase::setupScreen()	0	static
+mainScreenViewBase.hpp:41:18:virtual void mainScreenViewBase::YAxisSlider_R_Value_Changed(int)	0	static
+mainScreenViewBase.cpp:83:6:virtual void mainScreenViewBase::setupScreen()	0	static
 Callback.hpp:294:8:touchgfx::Callback<mainScreenViewBase, const touchgfx::Slider&, int>::~Callback()	0	static
 Callback.hpp:362:8:touchgfx::Callback<mainScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 Callback.hpp:323:18:void touchgfx::Callback<dest_type, T1, T2, void>::execute(T1, T2) [with dest_type = mainScreenViewBase; T1 = const touchgfx::Slider&; T2 = int]	12	static
@@ -35,9 +36,9 @@ View.hpp:40:7:virtual touchgfx::View<mainScreenPresenter>::~View()	8	static
 Callback.hpp:362:8:virtual touchgfx::Callback<mainScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
 Callback.hpp:294:8:virtual touchgfx::Callback<mainScreenViewBase, const touchgfx::Slider&, int>::~Callback()	8	static
 mainScreenViewBase.hpp:20:13:virtual mainScreenViewBase::~mainScreenViewBase()	8	static
-mainScreenViewBase.cpp:62:6:void mainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	0	static
-mainScreenViewBase.cpp:73:6:void mainScreenViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slider&, int)	4	static
+mainScreenViewBase.cpp:88:6:void mainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	0	static
+mainScreenViewBase.cpp:99:6:void mainScreenViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slider&, int)	4	static
 Drawable.hpp:53:5:touchgfx::Drawable::Drawable()	0	static
 TextArea.hpp:47:5:touchgfx::TextArea::TextArea()	8	static
 Color.hpp:51:22:static touchgfx::colortype touchgfx::Color::getColorFrom24BitRGB(uint8_t, uint8_t, uint8_t)	16	static
-mainScreenViewBase.cpp:9:1:mainScreenViewBase::mainScreenViewBase()	80	static
+mainScreenViewBase.cpp:9:1:mainScreenViewBase::mainScreenViewBase()	104	static

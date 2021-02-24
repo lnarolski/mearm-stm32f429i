@@ -17,8 +17,8 @@ mainScreenViewBase::mainScreenViewBase() :
     backgroundImage.setXY(0, 0);
     backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_BACKGROUNDS_MAIN_BG_PORTRAIT_240X320PX_ID));
 
-    manipulatorControlToggleButton.setXY(95, 157);
-    manipulatorControlToggleButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    manipulatorControlToggleButton.setXY(72, 141);
+    manipulatorControlToggleButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_SMALL_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_SMALL_BUTTON_ON_ID));
     manipulatorControlToggleButton.setAction(buttonCallback);
 
     titleText.setXY(23, 15);
@@ -26,32 +26,58 @@ mainScreenViewBase::mainScreenViewBase() :
     titleText.setLinespacing(0);
     titleText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
 
-    manipulatorText.setXY(100, 101);
+    manipulatorText.setXY(61, 76);
     manipulatorText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     manipulatorText.setLinespacing(0);
     manipulatorText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID2));
 
-    yAxisSlider.setXY(23, 71);
-    yAxisSlider.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_ROUND_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_ROUND_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_INDICATORS_SLIDER3_VERTICAL_ROUND_NOB_ID));
-    yAxisSlider.setupVerticalSlider(7, 3, 0, 0, 125);
-    yAxisSlider.setValueRange(0, 100);
-    yAxisSlider.setValue(50);
-    yAxisSlider.setNewValueCallback(sliderValueChangedCallback);
+    yAxisSlider_L.setXY(23, 52);
+    yAxisSlider_L.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_ROUND_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_ROUND_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_INDICATORS_SLIDER3_VERTICAL_ROUND_NOB_ID));
+    yAxisSlider_L.setupVerticalSlider(7, 3, 0, 0, 125);
+    yAxisSlider_L.setValueRange(0, 100);
+    yAxisSlider_L.setValue(0);
+    yAxisSlider_L.setNewValueCallback(sliderValueChangedCallback);
 
-    xAxisSlider.setXY(31, 266);
+    xAxisSlider.setXY(31, 261);
     xAxisSlider.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_SLIDER_HORIZONTAL_SMALL_ROUND_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_HORIZONTAL_SMALL_INDICATORS_SLIDER_HORIZONTAL_SMALL_ROUND_KNOB_ID));
     xAxisSlider.setupHorizontalSlider(3, 7, 0, 0, 125);
     xAxisSlider.setValueRange(0, 100);
     xAxisSlider.setValue(50);
     xAxisSlider.setNewValueCallback(sliderValueChangedCallback);
 
+    yAxisSlider_R.setXY(183, 52);
+    yAxisSlider_R.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_ROUND_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_ROUND_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_INDICATORS_SLIDER3_VERTICAL_ROUND_NOB_ID));
+    yAxisSlider_R.setupVerticalSlider(7, 3, 0, 0, 125);
+    yAxisSlider_R.setValueRange(0, 100);
+    yAxisSlider_R.setValue(0);
+    yAxisSlider_R.setNewValueCallback(sliderValueChangedCallback);
+
+    leftText.setXY(21, 239);
+    leftText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    leftText.setLinespacing(0);
+    leftText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID3));
+
+    rightText.setXY(174, 239);
+    rightText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    rightText.setLinespacing(0);
+    rightText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID4));
+
+    baseText.setXY(96, 295);
+    baseText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    baseText.setLinespacing(0);
+    baseText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID5));
+
     add(__background);
     add(backgroundImage);
     add(manipulatorControlToggleButton);
     add(titleText);
     add(manipulatorText);
-    add(yAxisSlider);
+    add(yAxisSlider_L);
     add(xAxisSlider);
+    add(yAxisSlider_R);
+    add(leftText);
+    add(rightText);
+    add(baseText);
 }
 
 void mainScreenViewBase::setupScreen()
@@ -72,12 +98,12 @@ void mainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
 
 void mainScreenViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slider& src, int value)
 {
-    if (&src == &yAxisSlider)
+    if (&src == &yAxisSlider_L)
     {
-        //YAxisSliderValue_Changed
-        //When yAxisSlider value changed call virtual function
-        //Call YAxisSliderValue_Changed
-        YAxisSliderValue_Changed(value);
+        //YAxisSlider_L_Value_Changed
+        //When yAxisSlider_L value changed call virtual function
+        //Call YAxisSlider_L_Value_Changed
+        YAxisSlider_L_Value_Changed(value);
     }
     else if (&src == &xAxisSlider)
     {
@@ -85,5 +111,12 @@ void mainScreenViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slide
         //When xAxisSlider value changed call virtual function
         //Call XAxisSliderValue_Changed
         XAxisSliderValue_Changed(value);
+    }
+    else if (&src == &yAxisSlider_R)
+    {
+        //YAxisSlider_R_Value_Changed
+        //When yAxisSlider_R value changed call virtual function
+        //Call YAxisSlider_R_Value_Changed
+        YAxisSlider_R_Value_Changed(value);
     }
 }

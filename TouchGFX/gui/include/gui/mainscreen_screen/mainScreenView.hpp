@@ -16,7 +16,8 @@ public:
 protected:
 private:
     void XAxisSliderValue_Changed(int value);
-    void YAxisSliderValue_Changed(int value);
+    void YAxisSlider_L_Value_Changed(int value);
+    void YAxisSlider_R_Value_Changed(int value);
     void ManipulatorControlToggleButton_Clicked();
 };
 

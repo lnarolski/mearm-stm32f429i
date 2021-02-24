@@ -28,12 +28,17 @@ public:
         // Override and implement this function in mainScreen
     }
 
-    virtual void YAxisSliderValue_Changed(int value)
+    virtual void YAxisSlider_L_Value_Changed(int value)
     {
         // Override and implement this function in mainScreen
     }
 
     virtual void ManipulatorControlToggleButton_Clicked()
+    {
+        // Override and implement this function in mainScreen
+    }
+
+    virtual void YAxisSlider_R_Value_Changed(int value)
     {
         // Override and implement this function in mainScreen
     }
@@ -51,8 +56,12 @@ protected:
     touchgfx::ToggleButton manipulatorControlToggleButton;
     touchgfx::TextArea titleText;
     touchgfx::TextArea manipulatorText;
-    touchgfx::Slider yAxisSlider;
+    touchgfx::Slider yAxisSlider_L;
     touchgfx::Slider xAxisSlider;
+    touchgfx::Slider yAxisSlider_R;
+    touchgfx::TextArea leftText;
+    touchgfx::TextArea rightText;
+    touchgfx::TextArea baseText;
 
 private:
 

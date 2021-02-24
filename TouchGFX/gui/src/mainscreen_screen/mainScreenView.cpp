@@ -34,9 +34,13 @@ void mainScreenView::XAxisSliderValue_Changed(int value)
 	xAxisPWMDuty = 275 + 9 * value;
 }
 
-void mainScreenView::YAxisSliderValue_Changed(int value)
+void mainScreenView::YAxisSlider_L_Value_Changed(int value)
 {
-	yAxisPWMDuty_L = (int) (842.0 + 3.42 * (float)value);
+	yAxisPWMDuty_L = (int) (842.0 + 5.06 * (float)value);
+}
+
+void mainScreenView::YAxisSlider_R_Value_Changed(int value)
+{
 	yAxisPWMDuty_R = (int) (842.0 + 3.42 * (float)value);
 }
 

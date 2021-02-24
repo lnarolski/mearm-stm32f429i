@@ -23,14 +23,14 @@
           {
             "Type": "ToggleButton",
             "InitialStatePressed": false,
-            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
-            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_small_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_small_button_OFF.png",
             "Alpha": 255,
-            "Style": "Style4",
+            "Style": "Style5",
             "Name": "manipulatorControlToggleButton",
-            "X": 95,
-            "Y": 157,
-            "Width": 128,
+            "X": 72,
+            "Y": 141,
+            "Width": 96,
             "Height": 38,
             "Visible": true,
             "LockPosition": false,
@@ -76,8 +76,8 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "manipulatorText",
-            "X": 100,
-            "Y": 101,
+            "X": 61,
+            "Y": 76,
             "Width": 118,
             "Height": 50,
             "Visible": true,
@@ -100,10 +100,10 @@
             "IndicatorMin": 0,
             "ValueMax": 100,
             "ValueMin": 0,
-            "InitValue": 50,
-            "Name": "yAxisSlider",
+            "InitValue": 0,
+            "Name": "yAxisSlider_L",
             "X": 23,
-            "Y": 71,
+            "Y": 52,
             "Width": 34,
             "Height": 179,
             "Visible": true,
@@ -129,9 +129,107 @@
             "InitValue": 50,
             "Name": "xAxisSlider",
             "X": 31,
-            "Y": 266,
+            "Y": 261,
             "Width": 179,
             "Height": 34,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "Slider",
+            "IsHorizontalSlider": false,
+            "BackgroundUnselected": "__designer\\Blue_Slider_Vertical_Small_Slider3_Vertical_Round_back.png",
+            "BackgroundSelected": "__designer\\Blue_Slider_Vertical_Small_Slider3_Vertical_Round_back.png",
+            "Indicator": "__designer\\Blue_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_nob.png",
+            "BackgroundX": 7,
+            "BackgroundY": 3,
+            "IndicatorPos": 0,
+            "IndicatorMax": 125,
+            "IndicatorMin": 0,
+            "ValueMax": 100,
+            "ValueMin": 0,
+            "InitValue": 0,
+            "Name": "yAxisSlider_R",
+            "X": 183,
+            "Y": 52,
+            "Width": 34,
+            "Height": 179,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId3",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "leftText",
+            "X": 21,
+            "Y": 239,
+            "Width": 38,
+            "Height": 25,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "rightText",
+            "X": 174,
+            "Y": 239,
+            "Width": 52,
+            "Height": 25,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId5",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "baseText",
+            "X": 96,
+            "Y": 295,
+            "Width": 48,
+            "Height": 25,
             "Visible": true,
             "LockPosition": false,
             "Draggable": false,
@@ -154,15 +252,15 @@
             }
           },
           {
-            "InteractionName": "YAxisSliderValue_Changed",
+            "InteractionName": "YAxisSlider_L_Value_Changed",
             "HasCompletedTrigger": false,
             "Trigger": {
               "Type": "TriggerSliderValueChanged",
-              "TriggerComponent": "yAxisSlider"
+              "TriggerComponent": "yAxisSlider_L"
             },
             "Action": {
               "Type": "ActionCustom",
-              "FunctionName": "YAxisSliderValue_Changed"
+              "FunctionName": "YAxisSlider_L_Value_Changed"
             }
           },
           {
@@ -175,6 +273,18 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "ManipulatorControlToggleButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "YAxisSlider_R_Value_Changed",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "yAxisSlider_R"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "YAxisSlider_R_Value_Changed"
             }
           }
         ],
@@ -191,6 +301,18 @@
       },
       {
         "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId3",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId4",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId5",
         "IsResource": false
       }
     ],
@@ -233,8 +355,6 @@
     "PostGenerateTargetCommand": "touchgfx update_project --project-file=../STM32F429I-DISCO.ioc --platform=m4",
     "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
     "RunSimulatorCommand": "build\\bin\\simulator.exe",
-    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
-    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
     "LandscapeSkinX": 0,
     "LandscapeSkinY": 0,
     "PortraitSkinX": 0,

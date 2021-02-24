@@ -4,8 +4,9 @@ Screen.hpp:158:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	stati
 mainScreenView.hpp:13:13:mainScreenView::~mainScreenView()	0	static
 mainScreenView.cpp:27:6:virtual void mainScreenView::tearDownScreen()	0	static
 mainScreenView.cpp:32:6:virtual void mainScreenView::XAxisSliderValue_Changed(int)	0	static
-mainScreenView.cpp:37:6:virtual void mainScreenView::YAxisSliderValue_Changed(int)	8	static
-mainScreenView.cpp:43:6:virtual void mainScreenView::ManipulatorControlToggleButton_Clicked()	0	static
+mainScreenView.cpp:37:6:virtual void mainScreenView::YAxisSlider_L_Value_Changed(int)	8	static
+mainScreenView.cpp:42:6:virtual void mainScreenView::YAxisSlider_R_Value_Changed(int)	8	static
+mainScreenView.cpp:47:6:virtual void mainScreenView::ManipulatorControlToggleButton_Clicked()	0	static
 mainScreenView.cpp:22:6:virtual void mainScreenView::setupScreen()	0	static
 mainScreenView.hpp:13:13:virtual mainScreenView::~mainScreenView()	8	static
 mainScreenView.cpp:13:1:mainScreenView::mainScreenView()	8	static
