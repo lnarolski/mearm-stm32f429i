@@ -1,0 +1,307 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Circuit diagram"
+Date "2021-02-25"
+Rev "1"
+Comp "Łukasz Narolski"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Circuit_diagram-eagle-import:STM32F429I-DISC1 U1
+U 1 1 94FABF20
+P 2240 3645
+F 0 "U1" H 1740 5745 59  0000 L BNN
+F 1 "STM32F429I-DISC1" H 1740 1545 59  0000 L BNN
+F 2 "Circuit diagram:MODULE_STM32F429I-DISC1" H 2240 3645 50  0001 C CNN
+F 3 "" H 2240 3645 50  0001 C CNN
+	1    2240 3645
+	1    0    0    -1  
+$EndComp
+Text GLabel 2940 1845 0    10   BiDi ~ 0
+VDD
+$Comp
+L Circuit_diagram-eagle-import:STM32F429I-DISC1 U1
+U 2 1 94FABF2C
+P 4975 3635
+F 0 "U1" H 4475 5635 59  0000 L BNN
+F 1 "STM32F429I-DISC1" H 4475 1535 59  0000 L BNN
+F 2 "Circuit diagram:MODULE_STM32F429I-DISC1" H 4975 3635 50  0001 C CNN
+F 3 "" H 4975 3635 50  0001 C CNN
+	2    4975 3635
+	1    0    0    -1  
+$EndComp
+Text Label 5675 5535 0    10   ~ 0
+GND
+$Comp
+L ServoPCB-rescue:CONN_01X03 P2
+U 1 1 57D18276
+P 10210 2690
+F 0 "P2" H 10210 2890 50  0000 C CNN
+F 1 "BASE_SERVO" V 10310 2690 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 10210 2690 50  0001 C CNN
+F 3 "" H 10210 2690 50  0000 C CNN
+F 4 "y" H 10210 2690 60  0001 C CNN "Required"
+	1    10210 2690
+	1    0    0    -1  
+$EndComp
+$Comp
+L ServoPCB-rescue:CONN_01X03 P3
+U 1 1 57D18342
+P 10210 3315
+F 0 "P3" H 10210 3515 50  0000 C CNN
+F 1 "LEFT_SERVO" V 10310 3315 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 10210 3315 50  0001 C CNN
+F 3 "" H 10210 3315 50  0000 C CNN
+F 4 "y" H 10210 3315 60  0001 C CNN "Required"
+	1    10210 3315
+	1    0    0    -1  
+$EndComp
+$Comp
+L ServoPCB-rescue:CONN_01X03 P5
+U 1 1 57D18395
+P 10210 4540
+F 0 "P5" H 10210 4740 50  0000 C CNN
+F 1 "GRIP_SERVO" V 10310 4540 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 10210 4540 50  0001 C CNN
+F 3 "" H 10210 4540 50  0000 C CNN
+F 4 "y" H 10210 4540 60  0001 C CNN "Required"
+	1    10210 4540
+	1    0    0    -1  
+$EndComp
+$Comp
+L ServoPCB-rescue:CONN_01X03 P4
+U 1 1 57D183E0
+P 10210 3915
+F 0 "P4" H 10210 4115 50  0000 C CNN
+F 1 "RIGHT_SERVO" V 10310 3915 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 10210 3915 50  0001 C CNN
+F 3 "" H 10210 3915 50  0000 C CNN
+F 4 "y" H 10210 3915 60  0001 C CNN "Required"
+	1    10210 3915
+	1    0    0    -1  
+$EndComp
+$Comp
+L ServoPCB-rescue:CONN_02X03 P1
+U 1 1 57D1847B
+P 8685 3590
+F 0 "P1" H 8685 3790 50  0000 C CNN
+F 1 "CONNECTOR" H 8685 3390 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03" H 8685 2390 50  0001 C CNN
+F 3 "" H 8685 2390 50  0000 C CNN
+F 4 "y" H 8685 3590 60  0001 C CNN "Required"
+	1    8685 3590
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 57D18668
+P 9710 4940
+F 0 "#PWR01" H 9710 4690 50  0001 C CNN
+F 1 "GND" H 9710 4790 50  0000 C CNN
+F 2 "" H 9710 4940 50  0000 C CNN
+F 3 "" H 9710 4940 50  0000 C CNN
+	1    9710 4940
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR02
+U 1 1 57D18695
+P 9610 2365
+F 0 "#PWR02" H 9610 2215 50  0001 C CNN
+F 1 "VCC" H 9610 2515 50  0000 C CNN
+F 2 "" H 9610 2365 50  0000 C CNN
+F 3 "" H 9610 2365 50  0000 C CNN
+	1    9610 2365
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9610 2365 9610 2690
+Wire Wire Line
+	9610 4540 10010 4540
+Wire Wire Line
+	10010 3915 9610 3915
+Connection ~ 9610 3915
+Wire Wire Line
+	8935 3315 9010 3315
+Connection ~ 9610 3315
+Wire Wire Line
+	10010 2690 9610 2690
+Connection ~ 9610 2690
+Wire Wire Line
+	10010 2590 9710 2590
+Wire Wire Line
+	9710 2590 9710 3215
+Wire Wire Line
+	8360 3215 9010 3215
+Connection ~ 9710 3215
+Wire Wire Line
+	10010 3815 9710 3815
+Connection ~ 9710 3815
+Wire Wire Line
+	10010 4440 9710 4440
+Connection ~ 9710 4440
+Wire Wire Line
+	8435 3490 8400 3490
+Wire Wire Line
+	8360 3490 8360 3215
+Wire Wire Line
+	8935 3490 8935 3315
+Wire Wire Line
+	8435 3590 8260 3590
+Wire Wire Line
+	8260 3590 8260 2790
+Wire Wire Line
+	8260 2790 10010 2790
+Wire Wire Line
+	9260 3590 9260 3415
+Wire Wire Line
+	9260 3415 10010 3415
+Wire Wire Line
+	8435 3690 8360 3690
+Wire Wire Line
+	8360 3690 8360 3900
+Wire Wire Line
+	8360 4015 10010 4015
+Wire Wire Line
+	8935 3690 9125 3690
+Wire Wire Line
+	9260 3690 9260 4640
+Wire Wire Line
+	9260 4640 10010 4640
+$Comp
+L Device:CP C1
+U 1 1 57D1865B
+P 9285 2990
+F 0 "C1" H 9310 3090 50  0000 L CNN
+F 1 "CP" H 9310 2890 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D7.5_L11.2_P2.5" H 9323 2840 50  0001 C CNN
+F 3 "" H 9285 2990 50  0000 C CNN
+	1    9285 2990
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9435 2990 9610 2990
+Connection ~ 9610 2990
+Wire Wire Line
+	9135 2990 9010 2990
+Wire Wire Line
+	9010 2990 9010 3215
+Connection ~ 9010 3215
+Wire Wire Line
+	9610 3915 9610 4540
+Wire Wire Line
+	9610 3315 9610 3915
+Wire Wire Line
+	9610 3315 10010 3315
+Wire Wire Line
+	9610 2690 9610 2990
+Wire Wire Line
+	9710 3215 9710 3815
+Wire Wire Line
+	9710 3215 10010 3215
+Wire Wire Line
+	9710 3815 9710 4440
+Wire Wire Line
+	9710 4440 9710 4940
+Wire Wire Line
+	9610 2990 9610 3315
+Wire Wire Line
+	9010 3215 9710 3215
+Text GLabel 5975 5535 2    50   Input ~ 0
+GND
+Wire Wire Line
+	4275 2235 3975 2235
+Wire Wire Line
+	4275 2535 3975 2535
+Wire Wire Line
+	4275 2935 3975 2935
+Wire Wire Line
+	4275 5335 3975 5335
+Wire Wire Line
+	5975 5535 5675 5535
+Text GLabel 3975 2235 0    50   Input ~ 0
+manipulatorPWM
+Text GLabel 3975 2535 0    50   Input ~ 0
+xAxisPWM
+Text GLabel 3975 2935 0    50   Input ~ 0
+yAxisPWM_L
+Text GLabel 3975 5335 0    50   Input ~ 0
+yAxisPWM_R
+Text GLabel 7475 2815 0    50   Input ~ 0
+manipulatorPWM
+Text GLabel 7475 3115 0    50   Input ~ 0
+xAxisPWM
+Text GLabel 7475 3515 0    50   Input ~ 0
+yAxisPWM_L
+Text GLabel 7485 3900 0    50   Input ~ 0
+yAxisPWM_R
+Text GLabel 7490 4555 0    50   Input ~ 0
+GND
+Wire Wire Line
+	7490 4555 8400 4555
+Wire Wire Line
+	8400 4555 8400 3490
+Connection ~ 8400 3490
+Wire Wire Line
+	8400 3490 8360 3490
+$Comp
+L Device:Battery BT
+U 1 1 60465FB6
+P 8710 4555
+F 0 "BT" H 8818 4601 50  0000 L CNN
+F 1 "Battery 5V/2A" H 8818 4510 50  0000 L CNN
+F 2 "" V 8710 4615 50  0001 C CNN
+F 3 "~" V 8710 4615 50  0001 C CNN
+	1    8710 4555
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8400 4555 8510 4555
+Connection ~ 8400 4555
+Wire Wire Line
+	8910 4555 9010 4555
+Wire Wire Line
+	9010 4555 9010 3315
+Connection ~ 9010 3315
+Wire Wire Line
+	9010 3315 9610 3315
+Wire Wire Line
+	8935 3590 8970 3590
+Wire Wire Line
+	7475 3515 7925 3515
+Wire Wire Line
+	7925 3515 7925 3935
+Wire Wire Line
+	7925 3935 8970 3935
+Wire Wire Line
+	8970 3935 8970 3590
+Connection ~ 8970 3590
+Wire Wire Line
+	8970 3590 9260 3590
+Wire Wire Line
+	7475 3115 8080 3115
+Wire Wire Line
+	8080 3115 8080 3590
+Wire Wire Line
+	8080 3590 8260 3590
+Connection ~ 8260 3590
+Wire Wire Line
+	7475 2815 9125 2815
+Wire Wire Line
+	9125 2815 9125 3690
+Connection ~ 9125 3690
+Wire Wire Line
+	9125 3690 9260 3690
+Wire Wire Line
+	7485 3900 8360 3900
+Connection ~ 8360 3900
+Wire Wire Line
+	8360 3900 8360 4015
+$EndSCHEMATC

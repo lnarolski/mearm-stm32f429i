@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name mearm-base-pcb)(type Legacy)(uri C:/temp/mearm-base-pcb/ServoPCB-cache.lib)(options "")(descr ""))
+  (lib (name ServoPCB-rescue)(type Legacy)(uri C:/temp/mearm-base-pcb/ServoPCB-rescue.lib)(options "")(descr ""))
+  (lib (name STM32F429I)(type Legacy)(uri C:/Users/Lukasz/Downloads/STM32F429I-DISC1.lib)(options "")(descr ""))
+  (lib (name Circuit_diagram-eagle-import)(type Legacy)(uri ${KIPRJMOD}/Circuit_diagram-eagle-import.lib)(options "")(descr ""))
+)
