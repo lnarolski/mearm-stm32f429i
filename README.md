@@ -44,3 +44,5 @@ On this screen you can control position of robotic arm with 3 sliders. State of 
 " target="_blank"><img src="http://img.youtube.com/vi/v-BcKC6yjKo/0.jpg" 
 alt="YouTube video" border="10" /></a>
 </p>
+
+# [More info (in polish)](https://narolski.eu/2021/02/28/mearm-stm32f429i/)
