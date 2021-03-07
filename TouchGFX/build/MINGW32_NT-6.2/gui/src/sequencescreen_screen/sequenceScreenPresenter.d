@@ -1,6 +1,7 @@
-build/MINGW32_NT-6.2/generated/gui_generated/src/mainscreen_screen/mainScreenViewBase.o: \
- generated/gui_generated/src/mainscreen_screen/mainScreenViewBase.cpp \
- generated/gui_generated/include/gui_generated/mainscreen_screen/mainScreenViewBase.hpp \
+build/MINGW32_NT-6.2/gui/src/sequencescreen_screen/sequenceScreenPresenter.o: \
+ gui/src/sequencescreen_screen/sequenceScreenPresenter.cpp \
+ gui/include/gui/sequencescreen_screen/sequenceScreenView.hpp \
+ generated/gui_generated/include/gui_generated/sequencescreen_screen/sequenceScreenViewBase.hpp \
  gui/include/gui/common/FrontendApplication.hpp \
  generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -41,25 +42,23 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/mainscreen_screen/mainScreenVie
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  gui/include/gui/model/Model.hpp \
- gui/include/gui/mainscreen_screen/mainScreenPresenter.hpp \
+ gui/include/gui/sequencescreen_screen/sequenceScreenPresenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- generated/images/include/BitmapDatabase.hpp \
- generated/texts/include/texts/TextKeysAndLanguages.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp
 
-generated/gui_generated/include/gui_generated/mainscreen_screen/mainScreenViewBase.hpp:
+gui/include/gui/sequencescreen_screen/sequenceScreenView.hpp:
+
+generated/gui_generated/include/gui_generated/sequencescreen_screen/sequenceScreenViewBase.hpp:
 
 gui/include/gui/common/FrontendApplication.hpp:
 
@@ -141,7 +140,7 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 gui/include/gui/model/Model.hpp:
 
-gui/include/gui/mainscreen_screen/mainScreenPresenter.hpp:
+gui/include/gui/sequencescreen_screen/sequenceScreenPresenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
 
@@ -155,7 +154,9 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 
@@ -164,13 +165,3 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
-
-generated/images/include/BitmapDatabase.hpp:
-
-generated/texts/include/texts/TextKeysAndLanguages.hpp:

@@ -172,6 +172,18 @@
     <Filter Include="Header Files\generated\gui_generated\common">
       <UniqueIdentifier>ED3B8C34-0110-66CB-FCC2-3DAC3687A40F</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\sequencescreen_screen">
+      <UniqueIdentifier>9FC954EB-8C8D-BBA5-7032-42191E531A30</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\sequencescreen_screen">
+      <UniqueIdentifier>FF714A49-DEE9-1D7C-CBB2-DF499C1A0290</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\sequencescreen_screen">
+      <UniqueIdentifier>A829AF44-2C58-BD3A-6922-057F3D8B4C22</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\sequencescreen_screen">
+      <UniqueIdentifier>C85F6A80-9FAE-13F1-D5BC-F279572EF538</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -209,6 +221,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\mainscreen_screen\mainScreenViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\mainscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\sequencescreen_screen\sequenceScreenPresenter.cpp">
+      <Filter>Source Files\gui\sequencescreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\sequencescreen_screen\sequenceScreenView.cpp">
+      <Filter>Source Files\gui\sequencescreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\sequencescreen_screen\sequenceScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\sequencescreen_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -651,6 +672,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\mainscreen_screen\mainScreenViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\mainscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\sequencescreen_screen\sequenceScreenPresenter.hpp">
+      <Filter>Header Files\gui\sequencescreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\sequencescreen_screen\sequenceScreenView.hpp">
+      <Filter>Header Files\gui\sequencescreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\sequencescreen_screen\sequenceScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\sequencescreen_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

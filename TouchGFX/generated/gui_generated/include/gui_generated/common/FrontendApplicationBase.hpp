@@ -18,6 +18,8 @@ public:
     // mainScreen
     void gotomainScreenScreenNoTransition();
 
+    void gotomainScreenScreenSlideTransitionWest();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -25,6 +27,8 @@ protected:
 
     // mainScreen
     void gotomainScreenScreenNoTransitionImpl();
+
+    void gotomainScreenScreenSlideTransitionWestImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/Slider.hpp>
+#include <touchgfx/widgets/ButtonWithIcon.hpp>
 
 class mainScreenViewBase : public touchgfx::View<mainScreenPresenter>
 {
@@ -43,6 +44,11 @@ public:
         // Override and implement this function in mainScreen
     }
 
+    virtual void sequenceScreenButton_Clicked()
+    {
+        // Override and implement this function in mainScreen
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -62,6 +68,7 @@ protected:
     touchgfx::TextArea leftText;
     touchgfx::TextArea rightText;
     touchgfx::TextArea baseText;
+    touchgfx::ButtonWithIcon sequenceScreenButton;
 
 private:
 

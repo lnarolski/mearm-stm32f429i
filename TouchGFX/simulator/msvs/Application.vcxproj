@@ -23,6 +23,9 @@
     <ClCompile Include="..\..\gui\src\mainscreen_screen\mainScreenPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\mainscreen_screen\mainScreenView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\mainscreen_screen\mainScreenViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\sequencescreen_screen\sequenceScreenPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\sequencescreen_screen\sequenceScreenView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\sequencescreen_screen\sequenceScreenViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xlsx"/>
@@ -173,6 +176,9 @@
     <ClInclude Include="..\..\gui\include\gui\mainscreen_screen\mainScreenPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\mainscreen_screen\mainScreenView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\mainscreen_screen\mainScreenViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\sequencescreen_screen\sequenceScreenPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\sequencescreen_screen\sequenceScreenView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\sequencescreen_screen\sequenceScreenViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>
