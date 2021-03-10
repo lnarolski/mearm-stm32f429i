@@ -44,11 +44,6 @@ public:
         // Override and implement this function in mainScreen
     }
 
-    virtual void sequenceScreenButton_Clicked()
-    {
-        // Override and implement this function in mainScreen
-    }
-
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());

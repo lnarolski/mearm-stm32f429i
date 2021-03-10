@@ -1,0 +1,5 @@
+sequenceScreenPresenter.hpp:28:13:sequenceScreenPresenter::~sequenceScreenPresenter()	0	static
+sequenceScreenPresenter.cpp:10:6:virtual void sequenceScreenPresenter::activate()	0	static
+sequenceScreenPresenter.hpp:28:13:virtual sequenceScreenPresenter::~sequenceScreenPresenter()	8	static
+sequenceScreenPresenter.hpp:28:13:virtual void* sequenceScreenPresenter::_ZThn4_N23sequenceScreenPresenterD1Ev()	0	static
+sequenceScreenPresenter.cpp:4:1:sequenceScreenPresenter::sequenceScreenPresenter(sequenceScreenView&)	8	static

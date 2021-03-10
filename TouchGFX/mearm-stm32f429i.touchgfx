@@ -319,8 +319,10 @@
               "TriggerComponent": "sequenceScreenButton"
             },
             "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "sequenceScreenButton_Clicked"
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "sequenceScreen"
             }
           }
         ],

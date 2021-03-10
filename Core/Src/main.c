@@ -91,6 +91,11 @@ DMA_HandleTypeDef hdma_tim2_ch2_ch4;
 DMA_HandleTypeDef hdma_tim3_ch2;
 DMA_HandleTypeDef hdma_tim4_ch1;
 DMA_HandleTypeDef hdma_tim5_ch1;
+
+uint32_t xAxisPWMDuty = 725;
+uint32_t yAxisPWMDuty_L = 842;
+uint32_t yAxisPWMDuty_R = 842;
+uint32_t manipulatorPWMDuty = 275;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

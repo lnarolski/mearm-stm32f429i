@@ -20,6 +20,9 @@ public:
 
     void gotomainScreenScreenSlideTransitionWest();
 
+    // sequenceScreen
+    void gotosequenceScreenScreenSlideTransitionEast();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -29,6 +32,9 @@ protected:
     void gotomainScreenScreenNoTransitionImpl();
 
     void gotomainScreenScreenSlideTransitionWestImpl();
+
+    // sequenceScreen
+    void gotosequenceScreenScreenSlideTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

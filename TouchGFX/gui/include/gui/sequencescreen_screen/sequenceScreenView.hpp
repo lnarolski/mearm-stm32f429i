@@ -11,6 +11,11 @@ public:
     virtual ~sequenceScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+    void SaveSequenceButton_Clicked();
+    void PlaySequenceButton_Clicked();
+    void AddNewPositionButton_Clicked();
+    void DeletePositionButton_Clicked();
 protected:
 };
 

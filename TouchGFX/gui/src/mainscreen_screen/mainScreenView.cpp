@@ -1,9 +1,9 @@
 #include <gui/mainscreen_screen/mainScreenView.hpp>
 
-uint32_t xAxisPWMDuty = 725;
-uint32_t yAxisPWMDuty_L = 842;
-uint32_t yAxisPWMDuty_R = 842;
-uint32_t manipulatorPWMDuty = 275;
+extern uint32_t xAxisPWMDuty;
+extern uint32_t yAxisPWMDuty_L;
+extern uint32_t yAxisPWMDuty_R;
+extern uint32_t manipulatorPWMDuty;
 
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;

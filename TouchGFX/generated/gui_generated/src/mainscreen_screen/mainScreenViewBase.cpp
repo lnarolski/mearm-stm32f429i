@@ -103,9 +103,9 @@ void mainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
     else if (&src == &sequenceScreenButton)
     {
         //sequenceScreenButton_Clicked
-        //When sequenceScreenButton clicked call virtual function
-        //Call sequenceScreenButton_Clicked
-        sequenceScreenButton_Clicked();
+        //When sequenceScreenButton clicked change screen to sequenceScreen
+        //Go to sequenceScreen with screen transition towards East
+        application().gotosequenceScreenScreenSlideTransitionEast();
     }
 }
 

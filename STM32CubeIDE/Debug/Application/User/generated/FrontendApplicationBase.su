@@ -6,17 +6,46 @@ Transition.hpp:103:18:virtual void touchgfx::Transition::setScreenContainer(touc
 MVPApplication.hpp:47:7:touchgfx::MVPApplication::~MVPApplication()	0	static
 FrontendApplicationBase.hpp:16:13:FrontendApplicationBase::~FrontendApplicationBase()	0	static
 NoTransition.hpp:38:18:virtual void touchgfx::NoTransition::handleTickEvent()	0	static
+Callback.hpp:362:8:touchgfx::Callback<touchgfx::SlideTransition<(touchgfx::Direction)3>, touchgfx::Drawable&, void, void>::~Callback()	0	static
+Callback.hpp:362:8:touchgfx::Callback<touchgfx::SlideTransition<(touchgfx::Direction)2>, touchgfx::Drawable&, void, void>::~Callback()	0	static
+SlideTransition.hpp:41:7:touchgfx::SlideTransition<(touchgfx::Direction)3>::~SlideTransition()	0	static
+SlideTransition.hpp:41:7:touchgfx::SlideTransition<(touchgfx::Direction)2>::~SlideTransition()	0	static
 NoTransition.hpp:34:7:touchgfx::NoTransition::~NoTransition()	0	static
 Callback.hpp:430:8:touchgfx::Callback<FrontendApplicationBase>::~Callback()	0	static
+Callback.hpp:392:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = touchgfx::SlideTransition<(touchgfx::Direction)3>; T1 = touchgfx::Drawable&]	8	static
+Callback.hpp:402:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = touchgfx::SlideTransition<(touchgfx::Direction)3>; T1 = touchgfx::Drawable&]	0	static
+Callback.hpp:392:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = touchgfx::SlideTransition<(touchgfx::Direction)2>; T1 = touchgfx::Drawable&]	8	static
+Callback.hpp:402:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = touchgfx::SlideTransition<(touchgfx::Direction)2>; T1 = touchgfx::Drawable&]	0	static
 Callback.hpp:456:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = FrontendApplicationBase]	4	static
 Callback.hpp:466:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = FrontendApplicationBase]	0	static
 MVPApplication.hpp:47:7:virtual touchgfx::MVPApplication::~MVPApplication()	8	static
 NoTransition.hpp:34:7:virtual touchgfx::NoTransition::~NoTransition()	8	static
 FrontendApplicationBase.hpp:16:13:virtual FrontendApplicationBase::~FrontendApplicationBase()	8	static
 Callback.hpp:430:8:virtual touchgfx::Callback<FrontendApplicationBase>::~Callback()	8	static
+SlideTransition.hpp:41:7:virtual touchgfx::SlideTransition<(touchgfx::Direction)3>::~SlideTransition()	8	static
+Callback.hpp:362:8:virtual touchgfx::Callback<touchgfx::SlideTransition<(touchgfx::Direction)3>, touchgfx::Drawable&, void, void>::~Callback()	8	static
+SlideTransition.hpp:41:7:virtual touchgfx::SlideTransition<(touchgfx::Direction)2>::~SlideTransition()	8	static
+Callback.hpp:362:8:virtual touchgfx::Callback<touchgfx::SlideTransition<(touchgfx::Direction)2>, touchgfx::Drawable&, void, void>::~Callback()	8	static
 Transition.hpp:92:18:virtual void touchgfx::Transition::invalidate()	8	static
+SlideTransition.hpp:203:18:void touchgfx::SlideTransition<templateDirection>::tickMoveDrawable(touchgfx::Drawable&) [with touchgfx::Direction templateDirection = (touchgfx::Direction)3]	4	static
+SlideTransition.hpp:203:18:void touchgfx::SlideTransition<templateDirection>::tickMoveDrawable(touchgfx::Drawable&) [with touchgfx::Direction templateDirection = (touchgfx::Direction)2]	4	static
+SlideTransition.hpp:149:18:void touchgfx::SlideTransition<templateDirection>::tearDown() [with touchgfx::Direction templateDirection = (touchgfx::Direction)3]	0	static
+SlideTransition.hpp:176:18:void touchgfx::SlideTransition<templateDirection>::initMoveDrawable(touchgfx::Drawable&) [with touchgfx::Direction templateDirection = (touchgfx::Direction)3]	0	static
+SlideTransition.hpp:176:18:void touchgfx::SlideTransition<templateDirection>::initMoveDrawable(touchgfx::Drawable&) [with touchgfx::Direction templateDirection = (touchgfx::Direction)3]	4	static
+SlideTransition.hpp:149:18:void touchgfx::SlideTransition<templateDirection>::tearDown() [with touchgfx::Direction templateDirection = (touchgfx::Direction)2]	0	static
+SlideTransition.hpp:176:18:void touchgfx::SlideTransition<templateDirection>::initMoveDrawable(touchgfx::Drawable&) [with touchgfx::Direction templateDirection = (touchgfx::Direction)2]	4	static
+SlideTransition.hpp:92:18:void touchgfx::SlideTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = (touchgfx::Direction)3]	8	static
+SlideTransition.hpp:92:18:void touchgfx::SlideTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = (touchgfx::Direction)2]	8	static
 MVPApplication.hpp:63:18:virtual void touchgfx::MVPApplication::handlePendingScreenTransition()	8	static
-FrontendApplicationBase.cpp:17:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	24	static
-FrontendApplicationBase.cpp:34:6:void FrontendApplicationBase::gotomainScreenScreenNoTransition()	0	static
+SlideTransition.hpp:157:18:void touchgfx::SlideTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = (touchgfx::Direction)3]	24	static
+SlideTransition.hpp:157:18:void touchgfx::SlideTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = (touchgfx::Direction)2]	24	static
+FrontendApplicationBase.cpp:19:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	24	static
+FrontendApplicationBase.cpp:36:6:void FrontendApplicationBase::gotomainScreenScreenNoTransition()	0	static
+FrontendApplicationBase.cpp:47:6:void FrontendApplicationBase::gotomainScreenScreenSlideTransitionWest()	0	static
+FrontendApplicationBase.cpp:60:6:void FrontendApplicationBase::gotosequenceScreenScreenSlideTransitionEast()	0	static
 MVPApplication.hpp:165:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = mainScreenView; PresenterType = mainScreenPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	32	static
-FrontendApplicationBase.cpp:40:6:void FrontendApplicationBase::gotomainScreenScreenNoTransitionImpl()	16	static
+FrontendApplicationBase.cpp:42:6:void FrontendApplicationBase::gotomainScreenScreenNoTransitionImpl()	16	static
+MVPApplication.hpp:165:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = mainScreenView; PresenterType = mainScreenPresenter; TransType = touchgfx::SlideTransition<(touchgfx::Direction)3>; ModelType = Model]	48	static
+FrontendApplicationBase.cpp:53:6:void FrontendApplicationBase::gotomainScreenScreenSlideTransitionWestImpl()	16	static
+MVPApplication.hpp:165:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = sequenceScreenView; PresenterType = sequenceScreenPresenter; TransType = touchgfx::SlideTransition<(touchgfx::Direction)2>; ModelType = Model]	48	static
+FrontendApplicationBase.cpp:66:6:void FrontendApplicationBase::gotosequenceScreenScreenSlideTransitionEastImpl()	16	static
