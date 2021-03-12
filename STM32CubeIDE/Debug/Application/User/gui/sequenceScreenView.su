@@ -1,8 +1,35 @@
+Drawable.hpp:207:18:virtual void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
+Drawable.hpp:261:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+Drawable.hpp:273:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+Drawable.hpp:289:18:virtual void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+Drawable.hpp:302:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+Drawable.hpp:314:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+Drawable.hpp:324:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+Drawable.hpp:334:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	0	static
+Drawable.hpp:344:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+Drawable.hpp:354:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+Drawable.hpp:364:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
+Drawable.hpp:451:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+Drawable.hpp:566:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	0	static
 Screen.hpp:108:18:virtual void touchgfx::Screen::afterTransition()	0	static
 Screen.hpp:148:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 Screen.hpp:158:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-sequenceScreenView.hpp:11:13:sequenceScreenView::~sequenceScreenView()	0	static
-sequenceScreenView.cpp:18:6:virtual void sequenceScreenView::tearDownScreen()	0	static
-sequenceScreenView.cpp:13:6:virtual void sequenceScreenView::setupScreen()	0	static
+Widget.hpp:50:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
+TypedText.hpp:68:13:touchgfx::TypedText::~TypedText()	0	static
+sequenceScreenViewBase.hpp:25:18:virtual void sequenceScreenViewBase::positionsListUpdateItem(positionContainer&, int16_t)	0	static
+sequenceScreenView.cpp:24:6:virtual void sequenceScreenView::tearDownScreen()	0	static
+DrawableList.hpp:79:7:touchgfx::DrawableListItems<positionContainer, 6>::~DrawableListItems()	16	static
+DrawableList.hpp:101:21:int16_t touchgfx::DrawableListItems<TYPE, SIZE>::getNumberOfDrawables() [with TYPE = positionContainer; int SIZE = 6]	0	static
+sequenceScreenView.cpp:19:6:virtual void sequenceScreenView::setupScreen()	0	static
+TypedText.hpp:68:13:virtual touchgfx::TypedText::~TypedText()	8	static
+DrawableList.hpp:79:7:virtual touchgfx::DrawableListItems<positionContainer, 6>::~DrawableListItems()	8	static
+DrawableList.hpp:82:23:touchgfx::Drawable* touchgfx::DrawableListItems<TYPE, SIZE>::getDrawable(int16_t) [with TYPE = positionContainer; int SIZE = 6]	8	static
+sequenceScreenView.hpp:11:13:sequenceScreenView::~sequenceScreenView()	8	static
 sequenceScreenView.hpp:11:13:virtual sequenceScreenView::~sequenceScreenView()	8	static
-sequenceScreenView.cpp:8:1:sequenceScreenView::sequenceScreenView()	8	static
+sequenceScreenView.cpp:14:1:sequenceScreenView::sequenceScreenView()	8	static
+positionContainerBase.hpp:11:7:constexpr positionContainerBase::positionContainerBase(const positionContainerBase&)	16	static
+stl_uninitialized.h:305:5:_ForwardIterator std::__uninitialized_move_if_noexcept_a(_InputIterator, _InputIterator, _ForwardIterator, _Allocator&) [with _InputIterator = positionContainer*; _ForwardIterator = positionContainer*; _Allocator = std::allocator<positionContainer>]	32	static
+stl_construct.h:105:9:static void std::_Destroy_aux<<anonymous> >::__destroy(_ForwardIterator, _ForwardIterator) [with _ForwardIterator = positionContainer*; bool <anonymous> = false]	16	static
+sequenceScreenView.cpp:39:6:virtual void sequenceScreenView::AddNewPositionButton_Clicked()	224	static
+sequenceScreenView.cpp:55:1:cpp)	0	static
+sequenceScreenView.cpp:55:1:cpp)	8	static

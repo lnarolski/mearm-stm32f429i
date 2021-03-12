@@ -7,7 +7,8 @@
 #include <texts/TextKeysAndLanguages.hpp>
 
 sequenceScreenViewBase::sequenceScreenViewBase() :
-    buttonCallback(this, &sequenceScreenViewBase::buttonCallbackHandler)
+    buttonCallback(this, &sequenceScreenViewBase::buttonCallbackHandler),
+    updateItemCallback(this, &sequenceScreenViewBase::updateItemCallbackHandler)
 {
 
     __background.setPosition(0, 0, 240, 320);
@@ -15,8 +16,6 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
 
     backgroundImage.setXY(0, 0);
     backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_BACKGROUNDS_MAIN_BG_PORTRAIT_240X320PX_ID));
-
-    positionsList.setPosition(0, 60, 240, 200);
 
     backButton.setXY(0, 260);
     backButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_BACK_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_BACK_ARROW_32_ID));
@@ -48,20 +47,36 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     infoTextArea.setLinespacing(0);
     infoTextArea.setTypedText(touchgfx::TypedText(T_SINGLEUSEID6));
 
+    positionsList.setPosition(0, 60, 240, 200);
+    positionsList.setHorizontal(false);
+    positionsList.setCircular(false);
+    positionsList.setEasingEquation(touchgfx::EasingEquations::backEaseOut);
+    positionsList.setSwipeAcceleration(10);
+    positionsList.setDragAcceleration(10);
+    positionsList.setNumberOfItems(2);
+    positionsList.setPadding(0, 0);
+    positionsList.setSnapping(true);
+    positionsList.setDrawableSize(41, 0);
+    positionsList.setDrawables(positionsListListItems, updateItemCallback);
+
     add(__background);
     add(backgroundImage);
-    add(positionsList);
     add(backButton);
     add(deletePositionButton);
     add(addNewPositionButton);
     add(playSequenceButton);
     add(saveSequenceButton);
     add(infoTextArea);
+    add(positionsList);
 }
 
 void sequenceScreenViewBase::setupScreen()
 {
-
+    positionsList.initialize();
+    for (int i = 0; i < positionsListListItems.getNumberOfDrawables(); i++)
+    {
+        positionsListListItems[i].initialize();
+    }
 }
 
 void sequenceScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
@@ -100,5 +115,15 @@ void sequenceScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
         //When saveSequenceButton clicked call virtual function
         //Call SaveSequenceButton_Clicked
         SaveSequenceButton_Clicked();
+    }
+}
+
+void sequenceScreenViewBase::updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex)
+{
+    if (items == &positionsListListItems)
+    {
+        touchgfx::Drawable* d = items->getDrawable(containerIndex);
+        positionContainer* cc = (positionContainer*)d;
+        positionsListUpdateItem(*cc, itemIndex);
     }
 }

@@ -39,6 +39,7 @@ C:/TouchGFXProjects/mearm-stm32f429i/TouchGFX/generated/images/src/__designer/im
 C:/TouchGFXProjects/mearm-stm32f429i/TouchGFX/generated/images/src/__designer/image_Blue_Togglebars_Toggle_round_small_button_ON.cpp \
 C:/TouchGFXProjects/mearm-stm32f429i/TouchGFX/generated/images/src/image_Sequence_Icon_32.cpp \
 C:/TouchGFXProjects/mearm-stm32f429i/TouchGFX/generated/gui_generated/src/mainscreen_screen/mainScreenViewBase.cpp \
+C:/TouchGFXProjects/mearm-stm32f429i/TouchGFX/generated/gui_generated/src/containers/positionContainerBase.cpp \
 C:/TouchGFXProjects/mearm-stm32f429i/TouchGFX/generated/gui_generated/src/sequencescreen_screen/sequenceScreenViewBase.cpp 
 
 OBJS += \
@@ -77,6 +78,7 @@ OBJS += \
 ./Application/User/generated/image_Blue_Togglebars_Toggle_round_small_button_ON.o \
 ./Application/User/generated/image_Sequence_Icon_32.o \
 ./Application/User/generated/mainScreenViewBase.o \
+./Application/User/generated/positionContainerBase.o \
 ./Application/User/generated/sequenceScreenViewBase.o 
 
 CPP_DEPS += \
@@ -115,6 +117,7 @@ CPP_DEPS += \
 ./Application/User/generated/image_Blue_Togglebars_Toggle_round_small_button_ON.d \
 ./Application/User/generated/image_Sequence_Icon_32.d \
 ./Application/User/generated/mainScreenViewBase.d \
+./Application/User/generated/positionContainerBase.d \
 ./Application/User/generated/sequenceScreenViewBase.d 
 
 
@@ -189,6 +192,8 @@ Application/User/generated/image_Sequence_Icon_32.o: C:/TouchGFXProjects/mearm-s
 	arm-none-eabi-g++ "$<" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../../Core/Inc -I../../Drivers/CMSIS/Include -I../../Drivers/BSP -I../../TouchGFX/target -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../TouchGFX/App -I../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../../TouchGFX/target/generated -I../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Middlewares/ST/touchgfx/framework/include -I../../TouchGFX/generated/fonts/include -I../../TouchGFX/generated/gui_generated/include -I../../TouchGFX/generated/images/include -I../../TouchGFX/generated/texts/include -I../../TouchGFX/gui/include -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -MMD -MP -MF"Application/User/generated/image_Sequence_Icon_32.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 Application/User/generated/mainScreenViewBase.o: C:/TouchGFXProjects/mearm-stm32f429i/TouchGFX/generated/gui_generated/src/mainscreen_screen/mainScreenViewBase.cpp
 	arm-none-eabi-g++ "$<" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../../Core/Inc -I../../Drivers/CMSIS/Include -I../../Drivers/BSP -I../../TouchGFX/target -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../TouchGFX/App -I../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../../TouchGFX/target/generated -I../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Middlewares/ST/touchgfx/framework/include -I../../TouchGFX/generated/fonts/include -I../../TouchGFX/generated/gui_generated/include -I../../TouchGFX/generated/images/include -I../../TouchGFX/generated/texts/include -I../../TouchGFX/gui/include -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -MMD -MP -MF"Application/User/generated/mainScreenViewBase.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+Application/User/generated/positionContainerBase.o: C:/TouchGFXProjects/mearm-stm32f429i/TouchGFX/generated/gui_generated/src/containers/positionContainerBase.cpp
+	arm-none-eabi-g++ "$<" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../../Core/Inc -I../../Drivers/CMSIS/Include -I../../Drivers/BSP -I../../TouchGFX/target -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../TouchGFX/App -I../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../../TouchGFX/target/generated -I../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Middlewares/ST/touchgfx/framework/include -I../../TouchGFX/generated/fonts/include -I../../TouchGFX/generated/gui_generated/include -I../../TouchGFX/generated/images/include -I../../TouchGFX/generated/texts/include -I../../TouchGFX/gui/include -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -MMD -MP -MF"Application/User/generated/positionContainerBase.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 Application/User/generated/sequenceScreenViewBase.o: C:/TouchGFXProjects/mearm-stm32f429i/TouchGFX/generated/gui_generated/src/sequencescreen_screen/sequenceScreenViewBase.cpp
 	arm-none-eabi-g++ "$<" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../../Core/Inc -I../../Drivers/CMSIS/Include -I../../Drivers/BSP -I../../TouchGFX/target -I../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../../TouchGFX/App -I../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../../TouchGFX/target/generated -I../../Middlewares/Third_Party/FreeRTOS/Source/include -I../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../../Drivers/STM32F4xx_HAL_Driver/Inc -I../../Middlewares/ST/touchgfx/framework/include -I../../TouchGFX/generated/fonts/include -I../../TouchGFX/generated/gui_generated/include -I../../TouchGFX/generated/images/include -I../../TouchGFX/generated/texts/include -I../../TouchGFX/gui/include -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -MMD -MP -MF"Application/User/generated/sequenceScreenViewBase.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 

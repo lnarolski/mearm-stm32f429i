@@ -350,22 +350,6 @@
             "Moveable": false
           },
           {
-            "Components": [],
-            "Type": "Container",
-            "IsCacheableContainer": false,
-            "Name": "positionsList",
-            "X": 0,
-            "Y": 60,
-            "Width": 240,
-            "Height": 200,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
             "Type": "ButtonWithIcon",
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
@@ -517,6 +501,33 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Type": "ScrollList",
+            "PaddingBefore": 0,
+            "PaddingAfter": 0,
+            "Snapping": true,
+            "IsHorizontal": false,
+            "IsCircular": false,
+            "ItemTemplateName": "positionContainer",
+            "NumberofItems": 2,
+            "InitialElement": 0,
+            "ItemMargin": 0,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "Name": "positionsList",
+            "X": 0,
+            "Y": 60,
+            "Width": 240,
+            "Height": 200,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": true,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [
@@ -588,7 +599,47 @@
         "CanvasBufferSize": 0
       }
     ],
-    "CustomContainerDefinitions": [],
+    "CustomContainerDefinitions": [
+      {
+        "Components": [
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId8",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId9",
+              "UseBuffer": true,
+              "BufferSize": 16
+            },
+            "Name": "positionText",
+            "X": 12,
+            "Y": 8,
+            "Width": 51,
+            "Height": 25,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "positionContainer",
+        "X": 0,
+        "Y": 0,
+        "Width": 240,
+        "Height": 41
+      }
+    ],
     "TextEntries": [
       {
         "TextEntryId": "SingleUseId1",
@@ -612,6 +663,14 @@
       },
       {
         "TextEntryId": "SingleUseId6",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId8",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId9",
         "IsResource": false
       }
     ],

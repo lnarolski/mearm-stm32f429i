@@ -1,0 +1,20 @@
+Drawable.hpp:207:18:virtual void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
+Drawable.hpp:261:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+Drawable.hpp:273:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+Drawable.hpp:289:18:virtual void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+Drawable.hpp:302:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+Drawable.hpp:314:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+Drawable.hpp:324:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+Drawable.hpp:334:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	0	static
+Drawable.hpp:344:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+Drawable.hpp:354:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+Drawable.hpp:364:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
+Drawable.hpp:451:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+Drawable.hpp:566:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	0	static
+TypedText.hpp:68:13:touchgfx::TypedText::~TypedText()	0	static
+Widget.hpp:50:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
+positionContainerBase.hpp:15:13:positionContainerBase::~positionContainerBase()	0	static
+positionContainerBase.cpp:23:6:virtual void positionContainerBase::initialize()	0	static
+TypedText.hpp:68:13:virtual touchgfx::TypedText::~TypedText()	8	static
+positionContainerBase.hpp:15:13:virtual positionContainerBase::~positionContainerBase()	8	static
+positionContainerBase.cpp:8:1:positionContainerBase::positionContainerBase()	32	static

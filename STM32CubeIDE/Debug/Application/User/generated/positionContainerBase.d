@@ -1,6 +1,6 @@
-Application/User/generated/sequenceScreenViewBase.o: \
- C:/TouchGFXProjects/mearm-stm32f429i/TouchGFX/generated/gui_generated/src/sequencescreen_screen/sequenceScreenViewBase.cpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/sequencescreen_screen/sequenceScreenViewBase.hpp \
+Application/User/generated/positionContainerBase.o: \
+ C:/TouchGFXProjects/mearm-stm32f429i/TouchGFX/generated/gui_generated/src/containers/positionContainerBase.cpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -41,31 +41,16 @@ Application/User/generated/sequenceScreenViewBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
- ../../TouchGFX/gui/include/gui/sequencescreen_screen/sequenceScreenPresenter.hpp \
- ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp \
- ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- ../../TouchGFX/generated/images/include/BitmapDatabase.hpp \
- ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
+ ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
 
-../../TouchGFX/generated/gui_generated/include/gui_generated/sequencescreen_screen/sequenceScreenViewBase.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp:
 
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 
@@ -147,22 +132,6 @@ Application/User/generated/sequenceScreenViewBase.o: \
 
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
 
-../../TouchGFX/gui/include/gui/sequencescreen_screen/sequenceScreenPresenter.hpp:
-
-../../TouchGFX/gui/include/gui/model/ModelListener.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp:
-
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
@@ -173,22 +142,8 @@ Application/User/generated/sequenceScreenViewBase.o: \
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:
-
-../../TouchGFX/gui/include/gui/containers/positionContainer.hpp:
-
-../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
-
-../../TouchGFX/generated/images/include/BitmapDatabase.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
