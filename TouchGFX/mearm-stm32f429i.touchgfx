@@ -612,18 +612,18 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId9",
               "UseBuffer": true,
-              "BufferSize": 16
+              "BufferSize": 17
             },
             "Name": "positionText",
-            "X": 12,
-            "Y": 8,
-            "Width": 51,
-            "Height": 25,
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 27,
             "Visible": true,
             "LockPosition": false,
             "Draggable": false,
@@ -637,7 +637,7 @@
         "X": 0,
         "Y": 0,
         "Width": 240,
-        "Height": 41
+        "Height": 27
       }
     ],
     "TextEntries": [

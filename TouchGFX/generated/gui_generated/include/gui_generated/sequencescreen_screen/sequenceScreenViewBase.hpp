@@ -67,7 +67,7 @@ protected:
     touchgfx::ButtonWithIcon saveSequenceButton;
     touchgfx::TextAreaWithOneWildcard infoTextArea;
     touchgfx::ClickListener< touchgfx::ScrollList > positionsList;
-    touchgfx::DrawableListItems<positionContainer, 6> positionsListListItems;
+    touchgfx::DrawableListItems<positionContainer, 9> positionsListListItems;
 
 private:
 

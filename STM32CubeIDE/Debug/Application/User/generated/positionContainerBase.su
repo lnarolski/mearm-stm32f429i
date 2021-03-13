@@ -14,7 +14,7 @@ Drawable.hpp:566:18:virtual void touchgfx::Drawable::setupDrawChain(const touchg
 TypedText.hpp:68:13:touchgfx::TypedText::~TypedText()	0	static
 Widget.hpp:50:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 positionContainerBase.hpp:15:13:positionContainerBase::~positionContainerBase()	0	static
-positionContainerBase.cpp:23:6:virtual void positionContainerBase::initialize()	0	static
+positionContainerBase.cpp:22:6:virtual void positionContainerBase::initialize()	0	static
 TypedText.hpp:68:13:virtual touchgfx::TypedText::~TypedText()	8	static
 positionContainerBase.hpp:15:13:virtual positionContainerBase::~positionContainerBase()	8	static
-positionContainerBase.cpp:8:1:positionContainerBase::positionContainerBase()	32	static
+positionContainerBase.cpp:8:1:positionContainerBase::positionContainerBase()	40	static

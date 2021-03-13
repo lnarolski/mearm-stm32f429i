@@ -81,7 +81,7 @@ main-build: STM32F429I-DISCO.elf secondary-outputs
 
 # Tool invocations
 STM32F429I-DISCO.elf: $(OBJS) $(USER_OBJS) C:\TouchGFXProjects\mearm-stm32f429i\STM32CubeIDE\STM32F429ZITX_FLASH.ld
-	arm-none-eabi-g++ -o "STM32F429I-DISCO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\TouchGFXProjects\mearm-stm32f429i\STM32CubeIDE\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F429I-DISCO.map" -Wl,--gc-sections -static -LC:/TouchGFXProjects/mearm-stm32f429i/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "STM32F429I-DISCO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\TouchGFXProjects\mearm-stm32f429i\STM32CubeIDE\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F429I-DISCO.map" -Wl,--gc-sections -static -LC:/TouchGFXProjects/mearm-stm32f429i/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc --specs=nano_c_standard_cpp.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

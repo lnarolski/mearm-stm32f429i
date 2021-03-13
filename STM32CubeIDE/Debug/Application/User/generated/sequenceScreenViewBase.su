@@ -24,10 +24,10 @@ sequenceScreenViewBase.hpp:33:18:virtual void sequenceScreenViewBase::SaveSequen
 sequenceScreenViewBase.hpp:38:18:virtual void sequenceScreenViewBase::PlaySequenceButton_Clicked()	0	static
 sequenceScreenViewBase.hpp:43:18:virtual void sequenceScreenViewBase::AddNewPositionButton_Clicked()	0	static
 sequenceScreenViewBase.hpp:48:18:virtual void sequenceScreenViewBase::DeletePositionButton_Clicked()	0	static
-DrawableList.hpp:101:21:int16_t touchgfx::DrawableListItems<TYPE, SIZE>::getNumberOfDrawables() [with TYPE = positionContainer; int SIZE = 6]	0	static
+DrawableList.hpp:101:21:int16_t touchgfx::DrawableListItems<TYPE, SIZE>::getNumberOfDrawables() [with TYPE = positionContainer; int SIZE = 9]	0	static
 Callback.hpp:221:8:touchgfx::Callback<sequenceScreenViewBase, touchgfx::DrawableListItemsInterface*, short int, short int>::~Callback()	0	static
 Callback.hpp:362:8:touchgfx::Callback<sequenceScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
-DrawableList.hpp:79:7:touchgfx::DrawableListItems<positionContainer, 6>::~DrawableListItems()	16	static
+DrawableList.hpp:79:7:touchgfx::DrawableListItems<positionContainer, 9>::~DrawableListItems()	16	static
 sequenceScreenViewBase.hpp:22:13:sequenceScreenViewBase::~sequenceScreenViewBase()	8	static
 ClickListener.hpp:35:7:touchgfx::ClickListener<touchgfx::ScrollList>::~ClickListener()	0	static
 Callback.hpp:254:18:void touchgfx::Callback<dest_type, T1, T2, T3>::execute(T1, T2, T3) [with dest_type = sequenceScreenViewBase; T1 = touchgfx::DrawableListItemsInterface*; T2 = short int; T3 = short int]	16	static
@@ -36,12 +36,12 @@ Callback.hpp:392:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(
 Callback.hpp:402:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = sequenceScreenViewBase; T1 = const touchgfx::AbstractButton&]	0	static
 TypedText.hpp:68:13:virtual touchgfx::TypedText::~TypedText()	8	static
 View.hpp:40:7:virtual touchgfx::View<sequenceScreenPresenter>::~View()	8	static
-DrawableList.hpp:79:7:virtual touchgfx::DrawableListItems<positionContainer, 6>::~DrawableListItems()	8	static
+DrawableList.hpp:79:7:virtual touchgfx::DrawableListItems<positionContainer, 9>::~DrawableListItems()	8	static
 ClickListener.hpp:35:7:virtual touchgfx::ClickListener<touchgfx::ScrollList>::~ClickListener()	8	static
 Callback.hpp:362:8:virtual touchgfx::Callback<sequenceScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
 Callback.hpp:221:8:virtual touchgfx::Callback<sequenceScreenViewBase, touchgfx::DrawableListItemsInterface*, short int, short int>::~Callback()	8	static
 sequenceScreenViewBase.hpp:22:13:virtual sequenceScreenViewBase::~sequenceScreenViewBase()	8	static
-DrawableList.hpp:82:23:touchgfx::Drawable* touchgfx::DrawableListItems<TYPE, SIZE>::getDrawable(int16_t) [with TYPE = positionContainer; int SIZE = 6]	8	static
+DrawableList.hpp:82:23:touchgfx::Drawable* touchgfx::DrawableListItems<TYPE, SIZE>::getDrawable(int16_t) [with TYPE = positionContainer; int SIZE = 9]	8	static
 ScrollBase.hpp:354:18:virtual void touchgfx::ScrollBase::initialize()	0	static
 sequenceScreenViewBase.cpp:73:6:virtual void sequenceScreenViewBase::setupScreen()	16	static
 ClickListener.hpp:51:18:void touchgfx::ClickListener<T>::handleClickEvent(const touchgfx::ClickEvent&) [with T = touchgfx::ScrollList]	16	static

@@ -56,7 +56,7 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     positionsList.setNumberOfItems(2);
     positionsList.setPadding(0, 0);
     positionsList.setSnapping(true);
-    positionsList.setDrawableSize(41, 0);
+    positionsList.setDrawableSize(27, 0);
     positionsList.setDrawables(positionsListListItems, updateItemCallback);
 
     add(__background);

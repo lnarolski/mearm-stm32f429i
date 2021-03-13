@@ -8,13 +8,12 @@
 positionContainerBase::positionContainerBase()
 {
     setWidth(240);
-    setHeight(41);
-    positionText.setXY(12, 8);
+    setHeight(27);
+    positionText.setPosition(0, 0, 240, 27);
     positionText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     positionText.setLinespacing(0);
     Unicode::snprintf(positionTextBuffer, POSITIONTEXT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID9).getText());
     positionText.setWildcard(positionTextBuffer);
-    positionText.resizeToCurrentText();
     positionText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID8));
 
     add(positionText);
