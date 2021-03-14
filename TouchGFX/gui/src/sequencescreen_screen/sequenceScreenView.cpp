@@ -2,14 +2,15 @@
 #include <gui/containers/positionContainer.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <memory>
-//#include <Vector.hpp>
+#include <Vector.hpp>
+#include <Test.hpp>
 
 extern uint32_t xAxisPWMDuty;
 extern uint32_t yAxisPWMDuty_L;
 extern uint32_t yAxisPWMDuty_R;
 extern uint32_t manipulatorPWMDuty;
 
-static touchgfx::Vector<positionContainer*, 50> positionContainersList;
+mearm::Vector<positionContainer*> positionContainersList;
 
 sequenceScreenView::sequenceScreenView()
 {
@@ -38,17 +39,17 @@ void sequenceScreenView::PlaySequenceButton_Clicked()
 
 void sequenceScreenView::AddNewPositionButton_Clicked()
 {
-	if (positionContainersList.size() != positionContainersList.maxCapacity())
-	{
-		positionContainer *newPosition = (positionContainer*)malloc(sizeof(positionContainer));
-		touchgfx::Unicode::UnicodeChar positionUnicodeChar[17];
-		Unicode::snprintf(positionUnicodeChar, 17, "%d,%d,%d,%d", xAxisPWMDuty, yAxisPWMDuty_L, yAxisPWMDuty_R, manipulatorPWMDuty == 700 ? 1 : 0);
-		newPosition->SetText(positionUnicodeChar);
-		positionContainersList[positionContainersList.size()] = newPosition;
+	positionContainer* newPosition = (positionContainer*)malloc(sizeof(positionContainer));
+	*newPosition = positionContainer();
+	touchgfx::Unicode::UnicodeChar positionUnicodeChar[17];
+	Unicode::snprintf(positionUnicodeChar, 17, "%d,%d,%d,%d", xAxisPWMDuty, yAxisPWMDuty_L, yAxisPWMDuty_R, manipulatorPWMDuty == 700 ? 1 : 0);
+	newPosition->SetText(positionUnicodeChar);
+	positionContainersList.push_back(newPosition);
 
-		positionsList.add(*positionContainersList[positionContainersList.size() - 1]);
-		positionsList.invalidate();
-	}
+	positionsList.add(*positionContainersList.lastItem->item);
+	positionsList.invalidate();
+
+	Test();
 }
 
 void sequenceScreenView::DeletePositionButton_Clicked()

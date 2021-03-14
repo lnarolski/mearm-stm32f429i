@@ -5,30 +5,33 @@
  *      Author: Lukasz
  */
 
-#ifndef APPLICATION_USER_GUI_VECTOR_HPP_
-#define APPLICATION_USER_GUI_VECTOR_HPP_
+#ifndef APPLICATION_USER_VECTOR_HPP_
+#define APPLICATION_USER_VECTOR_HPP_
 
 #include <stddef.h>
+#include <memory>
 
-template <class T>
+namespace mearm {
+template<class T>
 class Vector {
+private:
+	struct VectorItem {
+		VectorItem *nextItem = NULL;
+		VectorItem *previousItem = NULL;
+
+		T item;
+	};
 public:
 	Vector();
 	virtual ~Vector();
-	size_t push_back(T*);
-	T* firstItem = NULL;
-	T* lastItem = NULL;
+	bool push_back(T);
+	VectorItem *firstItem = NULL;
+	VectorItem *lastItem = NULL;
 
 	size_t size();
 
-private:
-	struct VectorItem
-	{
-		T* nextItem = NULL;
-		T* previousItem = NULL;
-	};
-
 	size_t sizeValue = 0;
 };
+}
 
-#endif /* APPLICATION_USER_GUI_VECTOR_HPP_ */
+#endif /* APPLICATION_USER_VECTOR_HPP_ */
