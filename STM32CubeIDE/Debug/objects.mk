@@ -3,7 +3,7 @@
 # Toolchain: GNU Tools for STM32 (9-2020-q2-update)
 ################################################################################
 
-USER_OBJS := C:/TouchGFXProjects/mearm-stm32f429i/STM32CubeIDE/Debug/Application/User/Vector.o
+USER_OBJS :=
 
 LIBS := -l:libtouchgfx-float-abi-hard.a
 

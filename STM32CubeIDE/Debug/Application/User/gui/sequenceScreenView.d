@@ -62,8 +62,7 @@ Application/User/gui/sequenceScreenView.o: \
  ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
- C:/TouchGFXProjects/mearm-stm32f429i/Libraries/Vector.hpp \
- C:/TouchGFXProjects/mearm-stm32f429i/Libraries/Test.hpp
+ C:/TouchGFXProjects/mearm-stm32f429i/Libraries/Vector.hpp
 
 ../../TouchGFX/gui/include/gui/sequencescreen_screen/sequenceScreenView.hpp:
 
@@ -190,5 +189,3 @@ Application/User/gui/sequenceScreenView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 
 C:/TouchGFXProjects/mearm-stm32f429i/Libraries/Vector.hpp:
-
-C:/TouchGFXProjects/mearm-stm32f429i/Libraries/Test.hpp:

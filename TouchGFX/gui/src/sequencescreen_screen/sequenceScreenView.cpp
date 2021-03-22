@@ -3,14 +3,13 @@
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <memory>
 #include <Vector.hpp>
-#include <Test.hpp>
 
 extern uint32_t xAxisPWMDuty;
 extern uint32_t yAxisPWMDuty_L;
 extern uint32_t yAxisPWMDuty_R;
 extern uint32_t manipulatorPWMDuty;
 
-mearm::Vector<positionContainer*> positionContainersList;
+mearm::vector<positionContainer*> positionContainersList;
 
 sequenceScreenView::sequenceScreenView()
 {
@@ -46,10 +45,8 @@ void sequenceScreenView::AddNewPositionButton_Clicked()
 	newPosition->SetText(positionUnicodeChar);
 	positionContainersList.push_back(newPosition);
 
-	positionsList.add(*positionContainersList.lastItem->item);
+	positionsList.add(*newPosition);
 	positionsList.invalidate();
-
-	Test();
 }
 
 void sequenceScreenView::DeletePositionButton_Clicked()
