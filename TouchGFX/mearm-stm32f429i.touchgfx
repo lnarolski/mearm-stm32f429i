@@ -503,21 +503,36 @@
             "Moveable": false
           },
           {
-            "Type": "ScrollList",
-            "PaddingBefore": 0,
-            "PaddingAfter": 0,
-            "Snapping": true,
-            "IsHorizontal": false,
-            "IsCircular": false,
-            "ItemTemplateName": "positionContainer",
-            "NumberofItems": 2,
-            "InitialElement": 0,
-            "ItemMargin": 0,
-            "Easing": "Back",
-            "EasingOption": "Out",
-            "SwipeAcceleration": 1.0,
-            "DragAcceleration": 1.0,
-            "Name": "positionsList",
+            "Components": [
+              {
+                "Components": [],
+                "Type": "ListLayout",
+                "Direction": "East",
+                "Name": "positionsList",
+                "X": 0,
+                "Y": 0,
+                "Width": 250,
+                "Height": 250,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "Type": "ScrollableContainer",
+            "HorizontalScrollEnabled": false,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": false,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsColor": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "ScrollbarsAlpha": 255,
+            "Name": "scrollableContainer",
             "X": 0,
             "Y": 60,
             "Width": 240,
@@ -525,7 +540,7 @@
             "Visible": true,
             "LockPosition": false,
             "Draggable": false,
-            "Clickable": true,
+            "Clickable": false,
             "Fadeable": false,
             "Moveable": false
           }

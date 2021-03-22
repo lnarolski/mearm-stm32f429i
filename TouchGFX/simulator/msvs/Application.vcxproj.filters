@@ -196,9 +196,6 @@
     <Filter Include="Source Files\generated\gui_generated\containers">
       <UniqueIdentifier>AE9DCD2A-0EE2-E4F8-5B57-FA608AF7593A</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\include">
-      <UniqueIdentifier>DEA95EED-14DF-4901-7C06-F8661690155A</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -251,9 +248,6 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\positionContainerBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\Vector.cpp">
-      <Filter>Source Files\gui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -711,9 +705,6 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\positionContainerBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\Vector.hpp">
-      <Filter>Header Files\gui\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

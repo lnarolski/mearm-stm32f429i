@@ -46,7 +46,7 @@ void sequenceScreenView::AddNewPositionButton_Clicked()
 	positionContainersList.push_back(newPosition);
 
 	positionsList.add(*newPosition);
-	positionsList.invalidate();
+	scrollableContainer.invalidate();
 }
 
 void sequenceScreenView::DeletePositionButton_Clicked()

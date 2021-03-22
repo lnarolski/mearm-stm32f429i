@@ -7,8 +7,7 @@
 #include <texts/TextKeysAndLanguages.hpp>
 
 sequenceScreenViewBase::sequenceScreenViewBase() :
-    buttonCallback(this, &sequenceScreenViewBase::buttonCallbackHandler),
-    updateItemCallback(this, &sequenceScreenViewBase::updateItemCallbackHandler)
+    buttonCallback(this, &sequenceScreenViewBase::buttonCallbackHandler)
 {
 
     __background.setPosition(0, 0, 240, 320);
@@ -47,17 +46,13 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     infoTextArea.setLinespacing(0);
     infoTextArea.setTypedText(touchgfx::TypedText(T_SINGLEUSEID6));
 
-    positionsList.setPosition(0, 60, 240, 200);
-    positionsList.setHorizontal(false);
-    positionsList.setCircular(false);
-    positionsList.setEasingEquation(touchgfx::EasingEquations::backEaseOut);
-    positionsList.setSwipeAcceleration(10);
-    positionsList.setDragAcceleration(10);
-    positionsList.setNumberOfItems(2);
-    positionsList.setPadding(0, 0);
-    positionsList.setSnapping(true);
-    positionsList.setDrawableSize(27, 0);
-    positionsList.setDrawables(positionsListListItems, updateItemCallback);
+    scrollableContainer.setPosition(0, 60, 240, 200);
+    scrollableContainer.enableHorizontalScroll(false);
+    scrollableContainer.setScrollbarsColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+
+    positionsList.setDirection(touchgfx::EAST);
+    positionsList.setPosition(0, 0, 250, 250);
+    scrollableContainer.add(positionsList);
 
     add(__background);
     add(backgroundImage);
@@ -67,16 +62,12 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     add(playSequenceButton);
     add(saveSequenceButton);
     add(infoTextArea);
-    add(positionsList);
+    add(scrollableContainer);
 }
 
 void sequenceScreenViewBase::setupScreen()
 {
-    positionsList.initialize();
-    for (int i = 0; i < positionsListListItems.getNumberOfDrawables(); i++)
-    {
-        positionsListListItems[i].initialize();
-    }
+
 }
 
 void sequenceScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
@@ -115,15 +106,5 @@ void sequenceScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
         //When saveSequenceButton clicked call virtual function
         //Call SaveSequenceButton_Clicked
         SaveSequenceButton_Clicked();
-    }
-}
-
-void sequenceScreenViewBase::updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex)
-{
-    if (items == &positionsListListItems)
-    {
-        touchgfx::Drawable* d = items->getDrawable(containerIndex);
-        positionContainer* cc = (positionContainer*)d;
-        positionsListUpdateItem(*cc, itemIndex);
     }
 }

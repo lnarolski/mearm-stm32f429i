@@ -28,7 +28,6 @@
     <ClCompile Include="..\..\generated\gui_generated\src\sequencescreen_screen\sequenceScreenViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\positionContainer.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\positionContainerBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\Vector.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xlsx"/>
@@ -184,7 +183,6 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\sequencescreen_screen\sequenceScreenViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\positionContainer.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\positionContainerBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\Vector.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

@@ -11,9 +11,8 @@
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/ButtonWithIcon.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/containers/scrollers/ScrollList.hpp>
-#include <gui/containers/positionContainer.hpp>
-#include <touchgfx/mixins/ClickListener.hpp>
+#include <touchgfx/containers/ScrollableContainer.hpp>
+#include <touchgfx/containers/ListLayout.hpp>
 
 class sequenceScreenViewBase : public touchgfx::View<sequenceScreenPresenter>
 {
@@ -21,11 +20,6 @@ public:
     sequenceScreenViewBase();
     virtual ~sequenceScreenViewBase() {}
     virtual void setupScreen();
-
-    virtual void positionsListUpdateItem(positionContainer& item, int16_t itemIndex)
-    {
-        // Override and implement this function in sequenceScreen
-    }
 
     /*
      * Virtual Action Handlers
@@ -66,8 +60,8 @@ protected:
     touchgfx::ButtonWithIcon playSequenceButton;
     touchgfx::ButtonWithIcon saveSequenceButton;
     touchgfx::TextAreaWithOneWildcard infoTextArea;
-    touchgfx::ClickListener< touchgfx::ScrollList > positionsList;
-    touchgfx::DrawableListItems<positionContainer, 9> positionsListListItems;
+    touchgfx::ScrollableContainer scrollableContainer;
+    touchgfx::ListLayout positionsList;
 
 private:
 
@@ -75,13 +69,11 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<sequenceScreenViewBase, const touchgfx::AbstractButton&> buttonCallback;
-    touchgfx::Callback<sequenceScreenViewBase, touchgfx::DrawableListItemsInterface*, int16_t, int16_t> updateItemCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
-    void updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex);
 
 };
 
