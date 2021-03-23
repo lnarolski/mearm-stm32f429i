@@ -14,21 +14,24 @@
 #include <memory>
 
 namespace mearm {
+
+template<class T>
+struct VectorItem {
+	VectorItem *nextItem = NULL;
+	VectorItem *previousItem = NULL;
+
+	T item;
+};
+
 template<class T>
 class vector {
 private:
-	struct VectorItem {
-		VectorItem *nextItem = NULL;
-		VectorItem *previousItem = NULL;
-
-		T item;
-	};
 public:
 	vector();
 	~vector();
 	bool push_back(T);
-	VectorItem *firstItem = NULL;
-	VectorItem *lastItem = NULL;
+	VectorItem<T> *firstItem = NULL;
+	VectorItem<T> *lastItem = NULL;
 
 	size_t size();
 
@@ -49,14 +52,14 @@ mearm::vector<T>::~vector() {
 template<class T>
 bool mearm::vector<T>::push_back(T item) {
 	if (firstItem == NULL) {
-		firstItem = (VectorItem*)malloc(sizeof(VectorItem));
+		firstItem = (VectorItem<T>*) malloc(sizeof(VectorItem<T>));
 
 		if (firstItem == NULL)
 			return false;
 
 		lastItem = firstItem;
 	} else {
-		lastItem->nextItem = (VectorItem*)malloc(sizeof(VectorItem));
+		lastItem->nextItem = (VectorItem<T>*) malloc(sizeof(VectorItem<T>));
 
 		if (firstItem == NULL)
 			return false;

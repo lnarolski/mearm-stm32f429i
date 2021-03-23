@@ -1,11 +1,9 @@
 Screen.hpp:108:18:virtual void touchgfx::Screen::afterTransition()	0	static
 Screen.hpp:148:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 Screen.hpp:158:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-sequenceScreenView.hpp:11:13:sequenceScreenView::~sequenceScreenView()	0	static
-sequenceScreenView.cpp:24:6:virtual void sequenceScreenView::tearDownScreen()	0	static
-sequenceScreenView.cpp:19:6:virtual void sequenceScreenView::setupScreen()	0	static
-sequenceScreenView.hpp:11:13:virtual sequenceScreenView::~sequenceScreenView()	8	static
-sequenceScreenView.cpp:14:1:sequenceScreenView::sequenceScreenView()	8	static
-positionContainerBase.hpp:11:7:constexpr positionContainerBase& positionContainerBase::operator=(const positionContainerBase&)	8	static
-sequenceScreenView.cpp:39:6:virtual void sequenceScreenView::AddNewPositionButton_Clicked()	184	static
-sequenceScreenView.cpp:55:1:cpp)	0	static
+sequenceScreenView.hpp:13:13:sequenceScreenView::~sequenceScreenView()	0	static
+sequenceScreenView.cpp:36:6:virtual void sequenceScreenView::tearDownScreen()	0	static
+sequenceScreenView.cpp:31:6:virtual void sequenceScreenView::setupScreen()	0	static
+sequenceScreenView.hpp:13:13:virtual sequenceScreenView::~sequenceScreenView()	8	static
+Vector.hpp:53:6:bool mearm::vector<T>::push_back(T) [with T = positionContainer*]	16	static
+sequenceScreenView.cpp:10:1:sequenceScreenView::sequenceScreenView()	72	static

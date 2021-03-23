@@ -509,7 +509,7 @@
                 "Type": "ListLayout",
                 "Direction": "East",
                 "Name": "positionsList",
-                "X": 0,
+                "X": -5,
                 "Y": 0,
                 "Width": 250,
                 "Height": 250,

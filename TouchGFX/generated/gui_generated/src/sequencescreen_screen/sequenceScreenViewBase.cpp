@@ -51,7 +51,7 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     scrollableContainer.setScrollbarsColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
 
     positionsList.setDirection(touchgfx::EAST);
-    positionsList.setPosition(0, 0, 250, 250);
+    positionsList.setPosition(-5, 0, 250, 250);
     scrollableContainer.add(positionsList);
 
     add(__background);

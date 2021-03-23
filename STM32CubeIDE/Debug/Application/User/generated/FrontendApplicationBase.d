@@ -104,6 +104,9 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
+ C:/TouchGFXProjects/mearm-stm32f429i/Libraries/Vector.hpp \
+ ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp \
  ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp
 
@@ -314,6 +317,12 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp:
+
+C:/TouchGFXProjects/mearm-stm32f429i/Libraries/Vector.hpp:
+
+../../TouchGFX/gui/include/gui/containers/positionContainer.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp:
 
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 
