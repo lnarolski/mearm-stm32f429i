@@ -57,7 +57,6 @@ Application/User/gui/sequenceScreenPresenter.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
- C:/TouchGFXProjects/mearm-stm32f429i/Libraries/Vector.hpp \
  ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp
 
@@ -174,8 +173,6 @@ Application/User/gui/sequenceScreenPresenter.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp:
-
-C:/TouchGFXProjects/mearm-stm32f429i/Libraries/Vector.hpp:
 
 ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp:
 

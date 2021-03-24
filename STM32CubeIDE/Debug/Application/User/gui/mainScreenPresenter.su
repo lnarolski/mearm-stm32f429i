@@ -1,5 +1,13 @@
-mainScreenPresenter.hpp:28:13:mainScreenPresenter::~mainScreenPresenter()	0	static
-mainScreenPresenter.cpp:10:6:virtual void mainScreenPresenter::activate()	0	static
-mainScreenPresenter.hpp:28:13:virtual mainScreenPresenter::~mainScreenPresenter()	8	static
-mainScreenPresenter.hpp:28:13:virtual void* mainScreenPresenter::_ZThn4_N19mainScreenPresenterD1Ev()	0	static
-mainScreenPresenter.cpp:4:1:mainScreenPresenter::mainScreenPresenter(mainScreenView&)	8	static
+Presenter.hpp:40:18:virtual void touchgfx::Presenter::activate()	16	static
+Presenter.hpp:50:18:virtual void touchgfx::Presenter::deactivate()	16	static
+Presenter.hpp:55:13:touchgfx::Presenter::~Presenter()	16	static
+Presenter.hpp:55:13:virtual touchgfx::Presenter::~Presenter()	16	static
+Presenter.hpp:61:5:touchgfx::Presenter::Presenter()	16	static
+ModelListener.hpp:9:5:ModelListener::ModelListener()	16	static
+ModelListener.hpp:11:13:ModelListener::~ModelListener()	16	static
+ModelListener.hpp:11:13:virtual ModelListener::~ModelListener()	16	static
+mainScreenPresenter.hpp:28:13:mainScreenPresenter::~mainScreenPresenter()	16	static
+mainScreenPresenter.hpp:28:13:virtual mainScreenPresenter::~mainScreenPresenter()	16	static
+mainScreenPresenter.cpp:4:1:mainScreenPresenter::mainScreenPresenter(mainScreenView&)	16	static
+mainScreenPresenter.cpp:10:6:virtual void mainScreenPresenter::activate()	16	static
+mainScreenPresenter.cpp:15:6:virtual void mainScreenPresenter::deactivate()	16	static

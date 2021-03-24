@@ -3,8 +3,8 @@
 
 #include <gui_generated/sequencescreen_screen/sequenceScreenViewBase.hpp>
 #include <gui/sequencescreen_screen/sequenceScreenPresenter.hpp>
-#include <Vector.hpp>
 #include <gui/containers/positionContainer.hpp>
+#include <stdio.h>
 
 class sequenceScreenView : public sequenceScreenViewBase
 {
@@ -18,8 +18,12 @@ public:
     void PlaySequenceButton_Clicked();
     void AddNewPositionButton_Clicked();
     void DeletePositionButton_Clicked();
+
+    size_t numOfListItems = 0;
 protected:
-    mearm::vector<positionContainer*> positionContainersList;
+    static const int numOfPositions = 50;
+
+    positionContainer positionContainersList[numOfPositions];
 };
 
 #endif // SEQUENCESCREENVIEW_HPP

@@ -1,6 +1,5 @@
 #include <gui/sequencescreen_screen/sequenceScreenView.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <memory>
 
 extern uint32_t xAxisPWMDuty;
 extern uint32_t yAxisPWMDuty_L;
@@ -9,23 +8,23 @@ extern uint32_t manipulatorPWMDuty;
 
 sequenceScreenView::sequenceScreenView()
 {
-	positionContainer* newPosition = (positionContainer*)malloc(sizeof(positionContainer));
-//	*newPosition = positionContainer();
-	touchgfx::Unicode::UnicodeChar positionUnicodeChar[17];
-	Unicode::snprintf(positionUnicodeChar, 17, "%d,%d,%d,%d", 100, 100, 100, 1);
-	newPosition->SetText(positionUnicodeChar);
-	positionContainersList.push_back(newPosition);
+	char positionUnicodeChar[17];
+	memset(positionUnicodeChar, '\0', 17);
+	snprintf(positionUnicodeChar, 17, "%d,%d,%d,%d", 100, 100, 100, 1);
+	positionContainersList[0].SetText(positionUnicodeChar);
+	++numOfListItems;
 
-	newPosition = (positionContainer*)malloc(sizeof(positionContainer));
-	//	*newPosition = positionContainer();
-	Unicode::snprintf(positionUnicodeChar, 17, "%d,%d,%d,%d", 200, 200, 200, 2);
-	newPosition->SetText(positionUnicodeChar);
-	positionContainersList.push_back(newPosition);
+	memset(positionUnicodeChar, '\0', 17);
+	snprintf(positionUnicodeChar, 17, "%d,%d,%d,%d", 200, 200, 200, 2);
+	positionContainersList[1].SetText(positionUnicodeChar);
+	++numOfListItems;
 
-	for (mearm::VectorItem<positionContainer*>* i = positionContainersList.firstItem; i != NULL; i = i->nextItem)
+	for (size_t i = 0; i < numOfListItems; ++i)
 	{
-		positionsList.add(*i->item);
+		positionsList.add(positionContainersList[i]);
 	}
+	positionsList.invalidate();
+	scrollableContainer.invalidate();
 }
 
 void sequenceScreenView::setupScreen()
@@ -50,7 +49,15 @@ void sequenceScreenView::PlaySequenceButton_Clicked()
 
 void sequenceScreenView::AddNewPositionButton_Clicked()
 {
+	char positionUnicodeChar[17];
+	memset(positionUnicodeChar, '\0', 17);
+	snprintf(positionUnicodeChar, 17, "%d,%d,%d,%d", 300, 300, 300, 1);
+	positionContainersList[numOfListItems].SetText(positionUnicodeChar);
+	positionsList.add(positionContainersList[numOfListItems]);
+	++numOfListItems;
 
+	positionsList.invalidate();
+	scrollableContainer.invalidate();
 }
 
 void sequenceScreenView::DeletePositionButton_Clicked()
