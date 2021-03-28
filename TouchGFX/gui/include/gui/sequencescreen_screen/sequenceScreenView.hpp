@@ -21,9 +21,9 @@ public:
 
     size_t numOfListItems = 0;
 protected:
-    static const int numOfPositions = 50;
+    static const int maxNumOfPositions = 10;
 
-    positionContainer positionContainersList[numOfPositions];
+    positionContainer positionContainersList[maxNumOfPositions];
 };
 
 #endif // SEQUENCESCREENVIEW_HPP

@@ -10,9 +10,9 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/ButtonWithIcon.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/ScrollableContainer.hpp>
 #include <touchgfx/containers/ListLayout.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class sequenceScreenViewBase : public touchgfx::View<sequenceScreenPresenter>
 {
@@ -59,9 +59,15 @@ protected:
     touchgfx::ButtonWithIcon addNewPositionButton;
     touchgfx::ButtonWithIcon playSequenceButton;
     touchgfx::ButtonWithIcon saveSequenceButton;
-    touchgfx::TextAreaWithOneWildcard infoTextArea;
     touchgfx::ScrollableContainer scrollableContainer;
     touchgfx::ListLayout positionsList;
+    touchgfx::TextAreaWithOneWildcard infoTextArea;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t INFOTEXTAREA_SIZE = 100;
+    touchgfx::Unicode::UnicodeChar infoTextAreaBuffer[INFOTEXTAREA_SIZE];
 
 private:
 

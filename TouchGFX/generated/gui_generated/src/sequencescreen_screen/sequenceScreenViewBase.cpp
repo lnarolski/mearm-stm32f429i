@@ -41,18 +41,22 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     saveSequenceButton.setIconXY(15, 15);
     saveSequenceButton.setAction(buttonCallback);
 
-    infoTextArea.setXY(95, 18);
-    infoTextArea.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-    infoTextArea.setLinespacing(0);
-    infoTextArea.setTypedText(touchgfx::TypedText(T_SINGLEUSEID6));
-
     scrollableContainer.setPosition(0, 60, 240, 200);
     scrollableContainer.enableHorizontalScroll(false);
     scrollableContainer.setScrollbarsColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
 
-    positionsList.setDirection(touchgfx::EAST);
+    positionsList.setDirection(touchgfx::SOUTH);
     positionsList.setPosition(-5, 0, 250, 250);
     scrollableContainer.add(positionsList);
+    scrollableContainer.setScrollbarsPermanentlyVisible();
+    scrollableContainer.setScrollbarsVisible(false);
+
+    infoTextArea.setPosition(60, 0, 120, 60);
+    infoTextArea.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    infoTextArea.setLinespacing(0);
+    Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID10).getText());
+    infoTextArea.setWildcard(infoTextAreaBuffer);
+    infoTextArea.setTypedText(touchgfx::TypedText(T_SINGLEUSEID6));
 
     add(__background);
     add(backgroundImage);
@@ -61,8 +65,8 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     add(addNewPositionButton);
     add(playSequenceButton);
     add(saveSequenceButton);
-    add(infoTextArea);
     add(scrollableContainer);
+    add(infoTextArea);
 }
 
 void sequenceScreenViewBase::setupScreen()
