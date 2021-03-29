@@ -91,7 +91,10 @@ Application/User/gui/mainScreenView.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
- ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
+ ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 
 ../../TouchGFX/gui/include/gui/mainscreen_screen/mainScreenView.hpp:
 
@@ -276,3 +279,9 @@ Application/User/gui/mainScreenView.o: \
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
+
+../../TouchGFX/gui/include/gui/containers/positionContainer.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:

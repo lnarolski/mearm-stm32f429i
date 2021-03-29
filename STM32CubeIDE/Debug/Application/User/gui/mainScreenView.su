@@ -36,15 +36,17 @@ mainScreenViewBase.hpp:21:13:mainScreenViewBase::~mainScreenViewBase()	16	static
 mainScreenViewBase.hpp:21:13:virtual mainScreenViewBase::~mainScreenViewBase()	16	static
 mainScreenView.hpp:13:13:mainScreenView::~mainScreenView()	16	static
 mainScreenView.hpp:13:13:virtual mainScreenView::~mainScreenView()	16	static
-mainScreenView.cpp:13:1:mainScreenView::mainScreenView()	16	static
-mainScreenView.cpp:22:6:virtual void mainScreenView::setupScreen()	16	static
-mainScreenView.cpp:27:6:virtual void mainScreenView::tearDownScreen()	16	static
-mainScreenView.cpp:32:6:virtual void mainScreenView::XAxisSliderValue_Changed(int)	16	static
-mainScreenView.cpp:37:6:virtual void mainScreenView::YAxisSlider_L_Value_Changed(int)	24	static
-mainScreenView.cpp:42:6:virtual void mainScreenView::YAxisSlider_R_Value_Changed(int)	24	static
-mainScreenView.cpp:47:6:virtual void mainScreenView::ManipulatorControlToggleButton_Clicked()	16	static
+TextArea.hpp:44:7:touchgfx::TextArea::~TextArea()	16	static
+TextArea.hpp:44:7:virtual touchgfx::TextArea::~TextArea()	16	static
 Container.hpp:42:7:touchgfx::Container::~Container()	16	static
 Container.hpp:42:7:virtual touchgfx::Container::~Container()	16	static
+mainScreenView.cpp:14:1:mainScreenView::mainScreenView()	16	static
+mainScreenView.cpp:23:6:virtual void mainScreenView::setupScreen()	16	static
+mainScreenView.cpp:28:6:virtual void mainScreenView::tearDownScreen()	16	static
+mainScreenView.cpp:33:6:virtual void mainScreenView::XAxisSliderValue_Changed(int)	16	static
+mainScreenView.cpp:38:6:virtual void mainScreenView::YAxisSlider_L_Value_Changed(int)	24	static
+mainScreenView.cpp:43:6:virtual void mainScreenView::YAxisSlider_R_Value_Changed(int)	24	static
+mainScreenView.cpp:48:6:virtual void mainScreenView::ManipulatorControlToggleButton_Clicked()	16	static
 Box.hpp:36:7:touchgfx::Box::~Box()	16	static
 Box.hpp:36:7:virtual touchgfx::Box::~Box()	16	static
 Image.hpp:42:7:touchgfx::Image::~Image()	16	static
@@ -53,8 +55,6 @@ Button.hpp:33:7:touchgfx::Button::~Button()	16	static
 Button.hpp:33:7:virtual touchgfx::Button::~Button()	16	static
 ToggleButton.hpp:34:7:touchgfx::ToggleButton::~ToggleButton()	16	static
 ToggleButton.hpp:34:7:virtual touchgfx::ToggleButton::~ToggleButton()	16	static
-TextArea.hpp:44:7:touchgfx::TextArea::~TextArea()	16	static
-TextArea.hpp:44:7:virtual touchgfx::TextArea::~TextArea()	16	static
 Slider.hpp:38:7:touchgfx::Slider::~Slider()	16	static
 Slider.hpp:38:7:virtual touchgfx::Slider::~Slider()	16	static
 ButtonWithIcon.hpp:36:7:touchgfx::ButtonWithIcon::~ButtonWithIcon()	16	static

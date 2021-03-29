@@ -1,4 +1,5 @@
 #include <gui/mainscreen_screen/mainScreenView.hpp>
+#include <gui/containers/positionContainer.hpp>
 
 extern uint32_t xAxisPWMDuty;
 extern uint32_t yAxisPWMDuty_L;

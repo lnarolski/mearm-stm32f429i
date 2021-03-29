@@ -6,75 +6,63 @@ extern uint32_t yAxisPWMDuty_L;
 extern uint32_t yAxisPWMDuty_R;
 extern uint32_t manipulatorPWMDuty;
 
-sequenceScreenView::sequenceScreenView()
-{
+sequenceScreenView::sequenceScreenView() {
 
 }
 
-void sequenceScreenView::setupScreen()
-{
-    sequenceScreenViewBase::setupScreen();
+void sequenceScreenView::setupScreen() {
+	sequenceScreenViewBase::setupScreen();
 
 	positionsList.removeAll();
 	scrollableContainer.invalidate();
 
-	char positionChar[17];
-	memset(positionChar, '\0', 17);
-	snprintf(positionChar, 17, "%d,%d,%d,%d", 100, 100, 100, 1);
-	positionContainersList[numOfListItems].SetText(positionChar);
-	positionsList.add(positionContainersList[numOfListItems]);
-	scrollableContainer.invalidate();
-	++numOfListItems;
-
-	memset(positionChar, '\0', 17);
-	snprintf(positionChar, 17, "%d,%d,%d,%d", 200, 200, 200, 2);
-	positionContainersList[numOfListItems].SetText(positionChar);
-	positionsList.add(positionContainersList[numOfListItems]);
-	scrollableContainer.invalidate();
-	++numOfListItems;
+	if (!DataStorageModel::screenViewFirstOpen) {
+		for (size_t i = 0; i < DataStorageModel::numOfListItems; ++i) {
+			positionContainersList[i].SetText(DataStorageModel::positionsList[i]);
+			positionsList.add(positionContainersList[i]);
+			scrollableContainer.invalidate();
+		}
+	} else {
+		DataStorageModel::screenViewFirstOpen = false;
+	}
 }
 
-void sequenceScreenView::tearDownScreen()
-{
-    sequenceScreenViewBase::tearDownScreen();
+void sequenceScreenView::tearDownScreen() {
+	sequenceScreenViewBase::tearDownScreen();
 }
 
-void sequenceScreenView::SaveSequenceButton_Clicked()
-{
+void sequenceScreenView::SaveSequenceButton_Clicked() {
 
 }
 
-void sequenceScreenView::PlaySequenceButton_Clicked()
-{
+void sequenceScreenView::PlaySequenceButton_Clicked() {
 
 }
 
-void sequenceScreenView::AddNewPositionButton_Clicked()
-{
-	if (numOfListItems < maxNumOfPositions)
-	{
+void sequenceScreenView::AddNewPositionButton_Clicked() {
+	if (DataStorageModel::numOfListItems < DataStorageModel::maxNumOfPositions) {
 		static unsigned int temp = 3;
 
 		char positionChar[17];
 		memset(positionChar, '\0', 17);
-		snprintf(positionChar, 17, "%d,%d,%d,%d", 100 * temp, 100 * temp, 100 * temp, 1 * temp);
-		positionContainersList[numOfListItems].SetText(positionChar);
-		positionsList.add(positionContainersList[numOfListItems]);
+		snprintf(positionChar, 17, "%d,%d,%d,%d", 100 * temp, 100 * temp,
+				100 * temp, 1 * temp);
+		memcpy(DataStorageModel::positionsList[DataStorageModel::numOfListItems], positionChar, 17);
+		positionContainersList[DataStorageModel::numOfListItems].SetText(positionChar);
+		positionsList.add(positionContainersList[DataStorageModel::numOfListItems]);
 		scrollableContainer.invalidate();
-		++numOfListItems;
+		++DataStorageModel::numOfListItems;
 
 		++temp;
-	}
-	else
-	{
-		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "ERROR:\nMaximum number of positions!");
+	} else {
+		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE,
+				"ERROR:\nMaximum number of positions!");
 		infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
 		infoTextArea.invalidate();
 	}
 }
 
-void sequenceScreenView::DeletePositionButton_Clicked()
-{
+void sequenceScreenView::DeletePositionButton_Clicked() {
 	positionsList.removeAll();
 	scrollableContainer.invalidate();
 
@@ -82,5 +70,5 @@ void sequenceScreenView::DeletePositionButton_Clicked()
 	infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
 	infoTextArea.invalidate();
 
-	numOfListItems = 0;
+	DataStorageModel::numOfListItems = 0;
 }

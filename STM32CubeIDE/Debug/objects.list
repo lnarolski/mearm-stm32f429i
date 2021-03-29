@@ -58,6 +58,7 @@
 "Application/User/gui/positionContainer.o"
 "Application/User/gui/sequenceScreenPresenter.o"
 "Application/User/gui/sequenceScreenView.o"
+"DataStorageModel.o"
 "Drivers/BSP/Components/ili9341.o"
 "Drivers/BSP/Components/stmpe811.o"
 "Drivers/CMSIS/system_stm32f4xx.o"

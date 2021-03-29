@@ -5,6 +5,8 @@
 #include <gui/sequencescreen_screen/sequenceScreenPresenter.hpp>
 #include <gui/containers/positionContainer.hpp>
 #include <stdio.h>
+#include <../STM32CubeIDE/DataStorageModel.h>
+#include <string.h>
 
 class sequenceScreenView : public sequenceScreenViewBase
 {
@@ -19,11 +21,8 @@ public:
     void AddNewPositionButton_Clicked();
     void DeletePositionButton_Clicked();
 
-    size_t numOfListItems = 0;
+    positionContainer positionContainersList[MAX_NUM_OF_POSITIONS];
 protected:
-    static const int maxNumOfPositions = 10;
-
-    positionContainer positionContainersList[maxNumOfPositions];
 };
 
 #endif // SEQUENCESCREENVIEW_HPP
