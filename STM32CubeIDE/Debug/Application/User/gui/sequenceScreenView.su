@@ -26,6 +26,7 @@ Screen.hpp:158:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	stat
 Widget.hpp:50:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	24	static
 Widget.hpp:39:7:touchgfx::Widget::~Widget()	16	static
 Widget.hpp:39:7:virtual touchgfx::Widget::~Widget()	16	static
+AbstractButton.hpp:75:18:virtual bool touchgfx::AbstractButton::getPressedState() const	16	static
 AbstractButton.hpp:34:7:touchgfx::AbstractButton::~AbstractButton()	16	static
 AbstractButton.hpp:34:7:virtual touchgfx::AbstractButton::~AbstractButton()	16	static
 Container.hpp:42:7:touchgfx::Container::~Container()	16	static
@@ -37,17 +38,17 @@ TextArea.hpp:44:7:touchgfx::TextArea::~TextArea()	16	static
 TextArea.hpp:44:7:virtual touchgfx::TextArea::~TextArea()	16	static
 View.hpp:40:7:touchgfx::View<sequenceScreenPresenter>::~View()	16	static
 View.hpp:40:7:virtual touchgfx::View<sequenceScreenPresenter>::~View()	16	static
-sequenceScreenViewBase.hpp:21:13:sequenceScreenViewBase::~sequenceScreenViewBase()	16	static
-sequenceScreenViewBase.hpp:21:13:virtual sequenceScreenViewBase::~sequenceScreenViewBase()	16	static
+sequenceScreenViewBase.hpp:22:13:sequenceScreenViewBase::~sequenceScreenViewBase()	16	static
+sequenceScreenViewBase.hpp:22:13:virtual sequenceScreenViewBase::~sequenceScreenViewBase()	16	static
 sequenceScreenView.hpp:15:13:sequenceScreenView::~sequenceScreenView()	24	static
 sequenceScreenView.hpp:15:13:virtual sequenceScreenView::~sequenceScreenView()	16	static
-sequenceScreenView.cpp:9:1:sequenceScreenView::sequenceScreenView()	24	static
-sequenceScreenView.cpp:13:6:virtual void sequenceScreenView::setupScreen()	24	static
-sequenceScreenView.cpp:30:6:virtual void sequenceScreenView::tearDownScreen()	16	static
-sequenceScreenView.cpp:34:6:virtual void sequenceScreenView::SaveSequenceButton_Clicked()	16	static
-sequenceScreenView.cpp:38:6:virtual void sequenceScreenView::PlaySequenceButton_Clicked()	16	static
-sequenceScreenView.cpp:42:6:virtual void sequenceScreenView::AddNewPositionButton_Clicked()	64	static
-sequenceScreenView.cpp:65:6:virtual void sequenceScreenView::DeletePositionButton_Clicked()	16	static
+sequenceScreenView.cpp:11:1:sequenceScreenView::sequenceScreenView()	24	static
+sequenceScreenView.cpp:15:6:virtual void sequenceScreenView::setupScreen()	40	static
+sequenceScreenView.cpp:52:6:virtual void sequenceScreenView::tearDownScreen()	16	static
+sequenceScreenView.cpp:56:6:virtual void sequenceScreenView::SaveSequenceButton_Clicked()	40	static
+sequenceScreenView.cpp:116:6:virtual void sequenceScreenView::PlaySequenceButton_Clicked()	16	static
+sequenceScreenView.cpp:120:6:virtual void sequenceScreenView::AddNewPositionButton_Clicked()	64	static
+sequenceScreenView.cpp:148:6:virtual void sequenceScreenView::DeletePositionButton_Clicked()	16	static
 Box.hpp:36:7:touchgfx::Box::~Box()	16	static
 Box.hpp:36:7:virtual touchgfx::Box::~Box()	16	static
 Image.hpp:42:7:touchgfx::Image::~Image()	16	static
@@ -56,6 +57,8 @@ Button.hpp:33:7:touchgfx::Button::~Button()	16	static
 Button.hpp:33:7:virtual touchgfx::Button::~Button()	16	static
 ButtonWithIcon.hpp:36:7:touchgfx::ButtonWithIcon::~ButtonWithIcon()	16	static
 ButtonWithIcon.hpp:36:7:virtual touchgfx::ButtonWithIcon::~ButtonWithIcon()	16	static
+ClickListener.hpp:35:7:touchgfx::ClickListener<touchgfx::ButtonWithIcon>::~ClickListener()	16	static
+ClickListener.hpp:35:7:virtual touchgfx::ClickListener<touchgfx::ButtonWithIcon>::~ClickListener()	16	static
 ScrollableContainer.hpp:46:7:touchgfx::ScrollableContainer::~ScrollableContainer()	16	static
 ScrollableContainer.hpp:46:7:virtual touchgfx::ScrollableContainer::~ScrollableContainer()	16	static
 ListLayout.hpp:40:7:touchgfx::ListLayout::~ListLayout()	16	static
@@ -68,3 +71,4 @@ Callback.hpp:141:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback(
 Callback.hpp:141:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::AbstractButton&]	16	static
 Callback.hpp:392:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = sequenceScreenViewBase; T1 = const touchgfx::AbstractButton&]	16	static
 Callback.hpp:402:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = sequenceScreenViewBase; T1 = const touchgfx::AbstractButton&]	16	static
+ClickListener.hpp:51:18:void touchgfx::ClickListener<T>::handleClickEvent(const touchgfx::ClickEvent&) [with T = touchgfx::ButtonWithIcon]	16	static

@@ -13,6 +13,7 @@
 #include <touchgfx/containers/ScrollableContainer.hpp>
 #include <touchgfx/containers/ListLayout.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/mixins/ClickListener.hpp>
 
 class sequenceScreenViewBase : public touchgfx::View<sequenceScreenPresenter>
 {
@@ -55,13 +56,14 @@ protected:
     touchgfx::Box __background;
     touchgfx::Image backgroundImage;
     touchgfx::ButtonWithIcon backButton;
-    touchgfx::ButtonWithIcon deletePositionButton;
+    touchgfx::ClickListener< touchgfx::ButtonWithIcon > deletePositionButton;
     touchgfx::ButtonWithIcon addNewPositionButton;
     touchgfx::ButtonWithIcon playSequenceButton;
     touchgfx::ButtonWithIcon saveSequenceButton;
     touchgfx::ScrollableContainer scrollableContainer;
     touchgfx::ListLayout positionsList;
     touchgfx::TextAreaWithOneWildcard infoTextArea;
+    touchgfx::ButtonWithIcon stopSequenceButton;
 
     /*
      * Wildcard Buffers

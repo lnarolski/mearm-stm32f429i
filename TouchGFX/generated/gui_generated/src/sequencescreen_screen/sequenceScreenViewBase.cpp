@@ -58,6 +58,11 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     infoTextArea.setWildcard(infoTextAreaBuffer);
     infoTextArea.setTypedText(touchgfx::TypedText(T_SINGLEUSEID6));
 
+    stopSequenceButton.setXY(180, 260);
+    stopSequenceButton.setVisible(false);
+    stopSequenceButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_STOP_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_STOP_32_ID));
+    stopSequenceButton.setIconXY(15, 15);
+
     add(__background);
     add(backgroundImage);
     add(backButton);
@@ -67,6 +72,7 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     add(saveSequenceButton);
     add(scrollableContainer);
     add(infoTextArea);
+    add(stopSequenceButton);
 }
 
 void sequenceScreenViewBase::setupScreen()

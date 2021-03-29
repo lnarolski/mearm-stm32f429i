@@ -57,6 +57,7 @@ Application/User/gui/sequenceScreenPresenter.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp \
  c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h
@@ -174,6 +175,8 @@ Application/User/gui/sequenceScreenPresenter.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 
 ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp:
 

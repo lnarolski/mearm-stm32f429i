@@ -21,6 +21,9 @@ public:
     void AddNewPositionButton_Clicked();
     void DeletePositionButton_Clicked();
 
+    uint32_t FlashRead();
+    uint32_t FlashWrite(uint32_t StartPageAddress, uint32_t * DATA_32);
+
     positionContainer positionContainersList[MAX_NUM_OF_POSITIONS];
 protected:
 };
