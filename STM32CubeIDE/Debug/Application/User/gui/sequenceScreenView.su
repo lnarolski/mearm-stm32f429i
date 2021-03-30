@@ -46,9 +46,9 @@ sequenceScreenView.cpp:11:1:sequenceScreenView::sequenceScreenView()	24	static
 sequenceScreenView.cpp:15:6:virtual void sequenceScreenView::setupScreen()	40	static
 sequenceScreenView.cpp:52:6:virtual void sequenceScreenView::tearDownScreen()	16	static
 sequenceScreenView.cpp:56:6:virtual void sequenceScreenView::SaveSequenceButton_Clicked()	40	static
-sequenceScreenView.cpp:116:6:virtual void sequenceScreenView::PlaySequenceButton_Clicked()	16	static
-sequenceScreenView.cpp:120:6:virtual void sequenceScreenView::AddNewPositionButton_Clicked()	64	static
-sequenceScreenView.cpp:148:6:virtual void sequenceScreenView::DeletePositionButton_Clicked()	16	static
+sequenceScreenView.cpp:117:6:virtual void sequenceScreenView::PlaySequenceButton_Clicked()	16	static
+sequenceScreenView.cpp:121:6:virtual void sequenceScreenView::AddNewPositionButton_Clicked()	64	static
+sequenceScreenView.cpp:149:6:virtual void sequenceScreenView::DeletePositionButton_Clicked()	16	static
 Box.hpp:36:7:touchgfx::Box::~Box()	16	static
 Box.hpp:36:7:virtual touchgfx::Box::~Box()	16	static
 Image.hpp:42:7:touchgfx::Image::~Image()	16	static

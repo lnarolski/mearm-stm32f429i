@@ -63,6 +63,7 @@ void sequenceScreenView::SaveSequenceButton_Clicked() {
 	pEraseInit.TypeErase = FLASH_TYPEERASE_SECTORS;
 	pEraseInit.VoltageRange = FLASH_VOLTAGE_RANGE_3;
 	pEraseInit.Sector = FLASH_SECTOR_23;
+	pEraseInit.NbSectors = 1;
 
 	if (HAL_FLASHEx_Erase(&pEraseInit, &sectorError) != HAL_OK) {
 		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE,
@@ -74,7 +75,7 @@ void sequenceScreenView::SaveSequenceButton_Clicked() {
 		return;
 	}
 
-	uint32_t startSectorAddress = 0x081E0000;
+	uint32_t startSectorAddress = 0x081E0000; // Address of Sector 23
 
 	if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, startSectorAddress,
 			(uint32_t) DataStorageModel::numOfListItems) == HAL_OK) {
