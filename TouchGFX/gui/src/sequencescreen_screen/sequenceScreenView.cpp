@@ -116,6 +116,62 @@ void sequenceScreenView::SaveSequenceButton_Clicked() {
 
 void sequenceScreenView::PlaySequenceButton_Clicked() {
 
+
+	playSequenceButton.setVisible(false);
+	playSequenceButton.invalidate();
+	saveSequenceButton.setVisible(false);
+	saveSequenceButton.invalidate();
+	deletePositionButton.setVisible(false);
+	deletePositionButton.invalidate();
+
+	stopSequenceButton.setVisible(true);
+	stopSequenceButton.invalidate();
+	pauseSequenceButton.setVisible(true);
+	pauseSequenceButton.invalidate();
+	changeSequenceSpeedButton.setVisible(true);
+	changeSequenceSpeedButton.invalidate();
+}
+
+void sequenceScreenView::StopSequenceButton_Clicked() {
+
+
+	playSequenceButton.setVisible(true);
+	playSequenceButton.invalidate();
+	saveSequenceButton.setVisible(true);
+	saveSequenceButton.invalidate();
+	deletePositionButton.setVisible(true);
+	deletePositionButton.invalidate();
+
+	stopSequenceButton.setVisible(false);
+	stopSequenceButton.invalidate();
+	pauseSequenceButton.setVisible(false);
+	pauseSequenceButton.invalidate();
+	resumeSequenceButton.setVisible(false);
+	resumeSequenceButton.invalidate();
+	changeSequenceSpeedButton.setVisible(false);
+	changeSequenceSpeedButton.invalidate();
+}
+
+void sequenceScreenView::ChangeSequenceSpeedButton_Clicked() {
+
+}
+
+void sequenceScreenView::PauseSequenceButton_Clicked() {
+
+
+	pauseSequenceButton.setVisible(false);
+	pauseSequenceButton.invalidate();
+	resumeSequenceButton.setVisible(true);
+	resumeSequenceButton.invalidate();
+}
+
+void sequenceScreenView::ResumeSequenceButton_Clicked() {
+
+
+	pauseSequenceButton.setVisible(true);
+	pauseSequenceButton.invalidate();
+	resumeSequenceButton.setVisible(false);
+	resumeSequenceButton.invalidate();
 }
 
 void sequenceScreenView::AddNewPositionButton_Clicked() {

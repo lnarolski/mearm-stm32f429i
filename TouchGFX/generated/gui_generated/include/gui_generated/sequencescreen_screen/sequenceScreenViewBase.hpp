@@ -45,6 +45,26 @@ public:
         // Override and implement this function in sequenceScreen
     }
 
+    virtual void StopSequenceButton_Clicked()
+    {
+        // Override and implement this function in sequenceScreen
+    }
+
+    virtual void PauseSequenceButton_Clicked()
+    {
+        // Override and implement this function in sequenceScreen
+    }
+
+    virtual void ChangeSequenceSpeedButton_Clicked()
+    {
+        // Override and implement this function in sequenceScreen
+    }
+
+    virtual void ResumeSequenceButton_Clicked()
+    {
+        // Override and implement this function in sequenceScreen
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -64,6 +84,9 @@ protected:
     touchgfx::ListLayout positionsList;
     touchgfx::TextAreaWithOneWildcard infoTextArea;
     touchgfx::ButtonWithIcon stopSequenceButton;
+    touchgfx::ButtonWithIcon changeSequenceSpeedButton;
+    touchgfx::ButtonWithIcon pauseSequenceButton;
+    touchgfx::ButtonWithIcon resumeSequenceButton;
 
     /*
      * Wildcard Buffers

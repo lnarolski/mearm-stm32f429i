@@ -11,6 +11,7 @@
 #define MAX_NUM_OF_POSITIONS 10
 
 #include <cstddef>
+#include <stdint.h>
 
 class DataStorageModel {
 public:
@@ -21,6 +22,9 @@ public:
 	static size_t numOfListItems;
 	static const size_t maxNumOfPositions;
 	static char positionsList[MAX_NUM_OF_POSITIONS][17];
+
+	static bool sequenceRunning;
+	static uint32_t sequenceSpeed;
 };
 
 #endif /* DATASTORAGEMODEL_H_ */

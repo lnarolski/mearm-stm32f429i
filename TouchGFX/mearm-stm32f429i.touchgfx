@@ -454,14 +454,13 @@
             "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
             "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
             "Alpha": 255,
-            "IconPressed": "__designer\\Blue_Icons_Done_32.png",
-            "IconReleased": "__designer\\Blue_Icons_Done_32.png",
-            "IconX": 15,
-            "IconY": 15,
-            "IconHeight": 30,
-            "IconWidth": 30,
+            "IconPressed": "Save_Icon_32.png",
+            "IconReleased": "Save_Icon_32.png",
+            "IconX": 14,
+            "IconY": 14,
+            "IconHeight": 32,
+            "IconWidth": 32,
             "ButtonStyle": "Style1",
-            "IconStyle": "Icon11",
             "Name": "saveSequenceButton",
             "X": 0,
             "Y": 0,
@@ -569,6 +568,81 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Blue_Icons_Next_arrow_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Next_arrow_32.png",
+            "IconX": 22,
+            "IconY": 15,
+            "IconHeight": 30,
+            "IconWidth": 17,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon39",
+            "Name": "changeSequenceSpeedButton",
+            "X": 180,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Blue_Icons_Pause_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Pause_32.png",
+            "IconX": 18,
+            "IconY": 15,
+            "IconHeight": 30,
+            "IconWidth": 24,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon43",
+            "Name": "pauseSequenceButton",
+            "X": 90,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Blue_Icons_Go_next_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Go_next_32.png",
+            "IconX": 15,
+            "IconY": 16,
+            "IconHeight": 28,
+            "IconWidth": 30,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon25",
+            "Name": "resumeSequenceButton",
+            "X": 90,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [
@@ -632,6 +706,54 @@
               "ScreenTransitionType": "ScreenTransitionSlide",
               "ScreenTransitionDirection": "West",
               "ActionComponent": "mainScreen"
+            }
+          },
+          {
+            "InteractionName": "StopSequenceButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "stopSequenceButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "StopSequenceButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "PauseSequenceButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "pauseSequenceButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "PauseSequenceButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "ChangeSequenceSpeedButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "changeSequenceSpeedButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ChangeSequenceSpeedButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "ResumeSequenceButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "resumeSequenceButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ResumeSequenceButton_Clicked"
             }
           }
         ],

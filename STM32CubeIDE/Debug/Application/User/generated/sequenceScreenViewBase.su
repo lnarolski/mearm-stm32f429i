@@ -68,11 +68,15 @@ sequenceScreenViewBase.hpp:28:18:virtual void sequenceScreenViewBase::SaveSequen
 sequenceScreenViewBase.hpp:33:18:virtual void sequenceScreenViewBase::PlaySequenceButton_Clicked()	16	static
 sequenceScreenViewBase.hpp:38:18:virtual void sequenceScreenViewBase::AddNewPositionButton_Clicked()	16	static
 sequenceScreenViewBase.hpp:43:18:virtual void sequenceScreenViewBase::DeletePositionButton_Clicked()	16	static
-sequenceScreenViewBase.hpp:49:26:FrontendApplication& sequenceScreenViewBase::application()	16	static
+sequenceScreenViewBase.hpp:48:18:virtual void sequenceScreenViewBase::StopSequenceButton_Clicked()	16	static
+sequenceScreenViewBase.hpp:53:18:virtual void sequenceScreenViewBase::PauseSequenceButton_Clicked()	16	static
+sequenceScreenViewBase.hpp:58:18:virtual void sequenceScreenViewBase::ChangeSequenceSpeedButton_Clicked()	16	static
+sequenceScreenViewBase.hpp:63:18:virtual void sequenceScreenViewBase::ResumeSequenceButton_Clicked()	16	static
+sequenceScreenViewBase.hpp:69:26:FrontendApplication& sequenceScreenViewBase::application()	16	static
 Color.hpp:51:22:static touchgfx::colortype touchgfx::Color::getColorFrom24BitRGB(uint8_t, uint8_t, uint8_t)	24	static
-sequenceScreenViewBase.cpp:9:1:sequenceScreenViewBase::sequenceScreenViewBase()	184	static
-sequenceScreenViewBase.cpp:78:6:virtual void sequenceScreenViewBase::setupScreen()	16	static
-sequenceScreenViewBase.cpp:83:6:void sequenceScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+sequenceScreenViewBase.cpp:9:1:sequenceScreenViewBase::sequenceScreenViewBase()	232	static
+sequenceScreenViewBase.cpp:100:6:virtual void sequenceScreenViewBase::setupScreen()	16	static
+sequenceScreenViewBase.cpp:105:6:void sequenceScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 View.hpp:43:5:touchgfx::View<T>::View() [with T = sequenceScreenPresenter]	16	static
 Button.hpp:33:7:touchgfx::Button::~Button()	16	static
 Button.hpp:33:7:virtual touchgfx::Button::~Button()	16	static

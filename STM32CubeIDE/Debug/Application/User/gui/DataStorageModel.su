@@ -1,3 +1,0 @@
-DataStorageModel.cpp:10:1:DataStorageModel::DataStorageModel()	16	static
-DataStorageModel.cpp:15:1:DataStorageModel::~DataStorageModel()	16	static
-DataStorageModel.cpp:15:1:virtual DataStorageModel::~DataStorageModel()	16	static

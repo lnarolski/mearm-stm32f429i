@@ -37,8 +37,8 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     playSequenceButton.setAction(buttonCallback);
 
     saveSequenceButton.setXY(0, 0);
-    saveSequenceButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_DONE_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_DONE_32_ID));
-    saveSequenceButton.setIconXY(15, 15);
+    saveSequenceButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_SAVE_ICON_32_ID), touchgfx::Bitmap(BITMAP_SAVE_ICON_32_ID));
+    saveSequenceButton.setIconXY(14, 14);
     saveSequenceButton.setAction(buttonCallback);
 
     scrollableContainer.setPosition(0, 60, 240, 200);
@@ -62,6 +62,25 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     stopSequenceButton.setVisible(false);
     stopSequenceButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_STOP_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_STOP_32_ID));
     stopSequenceButton.setIconXY(15, 15);
+    stopSequenceButton.setAction(buttonCallback);
+
+    changeSequenceSpeedButton.setXY(180, 0);
+    changeSequenceSpeedButton.setVisible(false);
+    changeSequenceSpeedButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_NEXT_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_NEXT_ARROW_32_ID));
+    changeSequenceSpeedButton.setIconXY(22, 15);
+    changeSequenceSpeedButton.setAction(buttonCallback);
+
+    pauseSequenceButton.setXY(90, 260);
+    pauseSequenceButton.setVisible(false);
+    pauseSequenceButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_PAUSE_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_PAUSE_32_ID));
+    pauseSequenceButton.setIconXY(18, 15);
+    pauseSequenceButton.setAction(buttonCallback);
+
+    resumeSequenceButton.setXY(90, 260);
+    resumeSequenceButton.setVisible(false);
+    resumeSequenceButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_GO_NEXT_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_GO_NEXT_32_ID));
+    resumeSequenceButton.setIconXY(15, 16);
+    resumeSequenceButton.setAction(buttonCallback);
 
     add(__background);
     add(backgroundImage);
@@ -73,6 +92,9 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     add(scrollableContainer);
     add(infoTextArea);
     add(stopSequenceButton);
+    add(changeSequenceSpeedButton);
+    add(pauseSequenceButton);
+    add(resumeSequenceButton);
 }
 
 void sequenceScreenViewBase::setupScreen()
@@ -116,5 +138,33 @@ void sequenceScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
         //When saveSequenceButton clicked call virtual function
         //Call SaveSequenceButton_Clicked
         SaveSequenceButton_Clicked();
+    }
+    else if (&src == &stopSequenceButton)
+    {
+        //StopSequenceButton_Clicked
+        //When stopSequenceButton clicked call virtual function
+        //Call StopSequenceButton_Clicked
+        StopSequenceButton_Clicked();
+    }
+    else if (&src == &changeSequenceSpeedButton)
+    {
+        //ChangeSequenceSpeedButton_Clicked
+        //When changeSequenceSpeedButton clicked call virtual function
+        //Call ChangeSequenceSpeedButton_Clicked
+        ChangeSequenceSpeedButton_Clicked();
+    }
+    else if (&src == &pauseSequenceButton)
+    {
+        //PauseSequenceButton_Clicked
+        //When pauseSequenceButton clicked call virtual function
+        //Call PauseSequenceButton_Clicked
+        PauseSequenceButton_Clicked();
+    }
+    else if (&src == &resumeSequenceButton)
+    {
+        //ResumeSequenceButton_Clicked
+        //When resumeSequenceButton clicked call virtual function
+        //Call ResumeSequenceButton_Clicked
+        ResumeSequenceButton_Clicked();
     }
 }

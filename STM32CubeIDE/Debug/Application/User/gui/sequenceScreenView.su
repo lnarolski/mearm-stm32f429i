@@ -11,6 +11,7 @@ Drawable.hpp:334:18:virtual void touchgfx::Drawable::handleClickEvent(const touc
 Drawable.hpp:344:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	16	static
 Drawable.hpp:354:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	16	static
 Drawable.hpp:364:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
+Drawable.hpp:378:10:void touchgfx::Drawable::setVisible(bool)	16	static
 Drawable.hpp:400:10:bool touchgfx::Drawable::isVisible() const	16	static
 Drawable.hpp:412:10:bool touchgfx::Drawable::isTouchable() const	16	static
 Drawable.hpp:451:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	16	static
@@ -47,8 +48,12 @@ sequenceScreenView.cpp:15:6:virtual void sequenceScreenView::setupScreen()	40	st
 sequenceScreenView.cpp:52:6:virtual void sequenceScreenView::tearDownScreen()	16	static
 sequenceScreenView.cpp:56:6:virtual void sequenceScreenView::SaveSequenceButton_Clicked()	40	static
 sequenceScreenView.cpp:117:6:virtual void sequenceScreenView::PlaySequenceButton_Clicked()	16	static
-sequenceScreenView.cpp:121:6:virtual void sequenceScreenView::AddNewPositionButton_Clicked()	64	static
-sequenceScreenView.cpp:149:6:virtual void sequenceScreenView::DeletePositionButton_Clicked()	16	static
+sequenceScreenView.cpp:135:6:virtual void sequenceScreenView::StopSequenceButton_Clicked()	16	static
+sequenceScreenView.cpp:155:6:virtual void sequenceScreenView::ChangeSequenceSpeedButton_Clicked()	16	static
+sequenceScreenView.cpp:159:6:virtual void sequenceScreenView::PauseSequenceButton_Clicked()	16	static
+sequenceScreenView.cpp:168:6:virtual void sequenceScreenView::ResumeSequenceButton_Clicked()	16	static
+sequenceScreenView.cpp:177:6:virtual void sequenceScreenView::AddNewPositionButton_Clicked()	64	static
+sequenceScreenView.cpp:205:6:virtual void sequenceScreenView::DeletePositionButton_Clicked()	16	static
 Box.hpp:36:7:touchgfx::Box::~Box()	16	static
 Box.hpp:36:7:virtual touchgfx::Box::~Box()	16	static
 Image.hpp:42:7:touchgfx::Image::~Image()	16	static

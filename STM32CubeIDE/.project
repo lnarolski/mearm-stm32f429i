@@ -419,6 +419,11 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/BitmapDatabase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_Save_Icon_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_Save_Icon_32.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_Sequence_Icon_32.cpp</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_Sequence_Icon_32.cpp</locationURI>
@@ -449,9 +454,19 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Back_arrow_32.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_Blue_Icons_Done_32.cpp</name>
+			<name>Application/User/generated/image_Blue_Icons_Go_next_32.cpp</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Done_32.cpp</locationURI>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Go_next_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Next_arrow_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Next_arrow_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Pause_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Pause_32.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_Blue_Icons_Play_32.cpp</name>

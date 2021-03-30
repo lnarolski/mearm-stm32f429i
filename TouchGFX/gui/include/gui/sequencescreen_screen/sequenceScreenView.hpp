@@ -18,8 +18,12 @@ public:
 
     void SaveSequenceButton_Clicked();
     void PlaySequenceButton_Clicked();
+    void StopSequenceButton_Clicked();
     void AddNewPositionButton_Clicked();
     void DeletePositionButton_Clicked();
+    void ChangeSequenceSpeedButton_Clicked();
+    void PauseSequenceButton_Clicked();
+    void ResumeSequenceButton_Clicked();
 
     uint32_t FlashRead();
     uint32_t FlashWrite(uint32_t StartPageAddress, uint32_t * DATA_32);
