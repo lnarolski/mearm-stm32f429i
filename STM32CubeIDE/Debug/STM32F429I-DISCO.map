@@ -13560,7 +13560,7 @@ Memory Configuration
 Name             Origin             Length             Attributes
 CCMRAM           0x0000000010000000 0x0000000000010000 xrw
 RAM              0x0000000020000000 0x0000000000030000 xrw
-FLASH            0x0000000008000000 0x0000000000200000 xr
+FLASH            0x0000000008000000 0x00000000001e0000 xr
 SDRAM            0x00000000d0000000 0x0000000000800000 xrw
 *default*        0x0000000000000000 0xffffffffffffffff
 
