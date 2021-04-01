@@ -1,0 +1,3 @@
+SequencePlaybackControl.cpp:10:1:SequencePlaybackControl::SequencePlaybackControl()	16	static
+SequencePlaybackControl.cpp:15:1:SequencePlaybackControl::~SequencePlaybackControl()	16	static
+SequencePlaybackControl.cpp:15:1:virtual SequencePlaybackControl::~SequencePlaybackControl()	16	static

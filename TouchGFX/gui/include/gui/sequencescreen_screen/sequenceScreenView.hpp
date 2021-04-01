@@ -6,6 +6,7 @@
 #include <gui/containers/positionContainer.hpp>
 #include <stdio.h>
 #include <../STM32CubeIDE/DataStorageModel.h>
+#include <../STM32CubeIDE/SequencePlaybackControl.h>
 #include <string.h>
 
 class sequenceScreenView : public sequenceScreenViewBase

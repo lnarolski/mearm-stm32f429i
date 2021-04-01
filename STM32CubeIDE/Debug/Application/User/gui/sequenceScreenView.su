@@ -41,8 +41,8 @@ View.hpp:40:7:touchgfx::View<sequenceScreenPresenter>::~View()	16	static
 View.hpp:40:7:virtual touchgfx::View<sequenceScreenPresenter>::~View()	16	static
 sequenceScreenViewBase.hpp:22:13:sequenceScreenViewBase::~sequenceScreenViewBase()	16	static
 sequenceScreenViewBase.hpp:22:13:virtual sequenceScreenViewBase::~sequenceScreenViewBase()	16	static
-sequenceScreenView.hpp:15:13:sequenceScreenView::~sequenceScreenView()	24	static
-sequenceScreenView.hpp:15:13:virtual sequenceScreenView::~sequenceScreenView()	16	static
+sequenceScreenView.hpp:16:13:sequenceScreenView::~sequenceScreenView()	24	static
+sequenceScreenView.hpp:16:13:virtual sequenceScreenView::~sequenceScreenView()	16	static
 sequenceScreenView.cpp:11:1:sequenceScreenView::sequenceScreenView()	24	static
 sequenceScreenView.cpp:15:6:virtual void sequenceScreenView::setupScreen()	40	static
 sequenceScreenView.cpp:52:6:virtual void sequenceScreenView::tearDownScreen()	16	static
