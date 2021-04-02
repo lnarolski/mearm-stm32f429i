@@ -9,32 +9,34 @@
 #include <../STM32CubeIDE/SequencePlaybackControl.h>
 #include <string.h>
 
-class sequenceScreenView : public sequenceScreenViewBase
+class sequenceScreenView: public sequenceScreenViewBase
 {
 public:
-    sequenceScreenView();
-    virtual ~sequenceScreenView() {}
-    virtual void setupScreen();
-    virtual void tearDownScreen();
+	sequenceScreenView();
+	virtual ~sequenceScreenView()
+	{
+	}
+	virtual void setupScreen();
+	virtual void tearDownScreen();
 
-    void SaveSequenceButton_Clicked();
-    void PlaySequenceButton_Clicked();
-    void StopSequenceButton_Clicked();
-    void AddNewPositionButton_Clicked();
-    void DeletePositionButton_Clicked();
-    void ChangeSequenceSpeedButton_Clicked();
-    void PauseSequenceButton_Clicked();
-    void ResumeSequenceButton_Clicked();
+	void SaveSequenceButton_Clicked();
+	void PlaySequenceButton_Clicked();
+	void StopSequenceButton_Clicked();
+	void AddNewPositionButton_Clicked();
+	void DeletePositionButton_Clicked();
+	void ChangeSequenceSpeedButton_Clicked();
+	void PauseSequenceButton_Clicked();
+	void ResumeSequenceButton_Clicked();
 
-    bool invalidateScrollableContainer = false;
-    bool invalidateInfoTextArea = false;
+	bool invalidateScrollableContainer = false;
+	bool invalidateInfoTextArea = false;
 
-    void handleTickEvent();
+	void handleTickEvent();
 
-    uint32_t FlashRead();
-    uint32_t FlashWrite(uint32_t StartPageAddress, uint32_t * DATA_32);
+	uint32_t FlashRead();
+	uint32_t FlashWrite(uint32_t StartPageAddress, uint32_t* DATA_32);
 
-    positionContainer positionContainersList[MAX_NUM_OF_POSITIONS];
+	positionContainer positionContainersList[MAX_NUM_OF_POSITIONS];
 protected:
 };
 

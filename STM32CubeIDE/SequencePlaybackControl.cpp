@@ -7,12 +7,14 @@
 
 #include "SequencePlaybackControl.h"
 
-SequencePlaybackControl::SequencePlaybackControl() {
+SequencePlaybackControl::SequencePlaybackControl()
+{
 	// TODO Auto-generated constructor stub
 
 }
 
-SequencePlaybackControl::~SequencePlaybackControl() {
+SequencePlaybackControl::~SequencePlaybackControl()
+{
 	// TODO Auto-generated destructor stub
 }
 
@@ -25,7 +27,8 @@ sequenceScreenView* SequencePlaybackControl::sequenceScreenViewClass = NULL;
 size_t SequencePlaybackControl::currentPositionNumber = 0;
 TaskHandle_t* SequencePlaybackControl::playbackThread = NULL;
 
-void SequencePlaybackControl::Play() {
+void SequencePlaybackControl::Play()
+{
 	xTaskCreate(PlaybackThreadFunction, /* Function that implements the task. */
 	"PlaybackThreadFunction", /* Text name for the task. */
 	256, /* Stack size in words, not bytes. */
@@ -34,24 +37,28 @@ void SequencePlaybackControl::Play() {
 	playbackThread); /* Used to pass out the created task's handle. */
 }
 
-void SequencePlaybackControl::Stop() {
-
+void SequencePlaybackControl::Stop()
+{
 	stopSequence = true;
 }
 
-void SequencePlaybackControl::Pause() {
+void SequencePlaybackControl::Pause()
+{
 
 }
 
-void SequencePlaybackControl::Resume() {
+void SequencePlaybackControl::Resume()
+{
 
 }
 
-void SequencePlaybackControl::GoToPosition(size_t positionNumber) {
+void SequencePlaybackControl::GoToPosition(size_t positionNumber)
+{
 
 }
 
-void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters) {
+void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters)
+{
 	sequenceRunning = true;
 	while (!stopSequence)
 	{
@@ -75,31 +82,43 @@ void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters) {
 	vTaskDelete(NULL);
 }
 
-RobotPosition SequencePlaybackControl::Char2RobotPosition(char *position) {
+RobotPosition SequencePlaybackControl::Char2RobotPosition(char* position)
+{
 	RobotPosition robotPosition;
-
 	char buffer[17];
 	size_t j = 0, PWMDutyType = 0;
-	for(size_t i = 0; i < 17 && *position != '\0'; ++i)
+	for (size_t i = 0; i < 17 && position[i] != '\0'; ++i)
 	{
-		if (isdigit(*position[i]))
+		if (isdigit(position[i]))
 		{
-			buffer[j] = *position[i];
+			buffer[j] = position[i];
 			++j;
 		}
 		else
 		{
-			buffer[]
-			switch (PWMDutyType) {
-				case value:
-
-					break;
-				default:
-					break;
+			buffer[j] = '\0';
+			uint32_t tempValue = (uint32_t) atoi(buffer);
+			switch (PWMDutyType)
+			{
+			case 0:
+				robotPosition.xAxisPWMDuty = tempValue;
+				++PWMDutyType;
+				break;
+			case 1:
+				robotPosition.yAxisPWMDuty_L = tempValue;
+				++PWMDutyType;
+				break;
+			case 2:
+				robotPosition.yAxisPWMDuty_R = tempValue;
+				++PWMDutyType;
+				break;
+			default:
+				break;
 			}
+
 			j = 0;
 		}
 	}
-
+	robotPosition.manipulatorPWMDuty = (buffer[0] == 1 ? 275 : 700);
 	return robotPosition;
 }

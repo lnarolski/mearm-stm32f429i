@@ -13,7 +13,8 @@
 #include <cstddef>
 #include <stdint.h>
 
-class DataStorageModel {
+class DataStorageModel
+{
 public:
 	DataStorageModel();
 	virtual ~DataStorageModel();

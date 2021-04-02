@@ -8,3 +8,4 @@ SequencePlaybackControl.cpp:42:6:static void SequencePlaybackControl::Pause()	4	
 SequencePlaybackControl.cpp:46:6:static void SequencePlaybackControl::Resume()	4	static
 SequencePlaybackControl.cpp:50:6:static void SequencePlaybackControl::GoToPosition(size_t)	16	static
 SequencePlaybackControl.cpp:54:6:static void SequencePlaybackControl::PlaybackThreadFunction(void*)	24	static
+SequencePlaybackControl.cpp:78:15:RobotPosition SequencePlaybackControl::Char2RobotPosition(char*)	64	static

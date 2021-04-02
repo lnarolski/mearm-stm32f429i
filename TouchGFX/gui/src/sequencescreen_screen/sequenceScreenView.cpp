@@ -8,24 +8,28 @@ extern uint32_t yAxisPWMDuty_L;
 extern uint32_t yAxisPWMDuty_R;
 extern uint32_t manipulatorPWMDuty;
 
-sequenceScreenView::sequenceScreenView() {
+sequenceScreenView::sequenceScreenView()
+{
 	SequencePlaybackControl::sequenceScreenViewClass = this;
 }
 
-void sequenceScreenView::setupScreen() {
+void sequenceScreenView::setupScreen()
+{
 	sequenceScreenViewBase::setupScreen();
 
 	positionsList.removeAll();
 	scrollableContainer.invalidate();
 
-	if (DataStorageModel::screenViewFirstOpen) {
-		uint32_t *startSectorAddress = (uint32_t*)0x081E0000; // Address of Sector 23
+	if (DataStorageModel::screenViewFirstOpen)
+	{
+		uint32_t* startSectorAddress = (uint32_t*) 0x081E0000; // Address of Sector 23
 		DataStorageModel::numOfListItems = *startSectorAddress;
 		if (DataStorageModel::numOfListItems <= DataStorageModel::maxNumOfPositions) // Check if numOfListItems was initialized in flash memory
 		{
-			char *charAddress = (char*)startSectorAddress;
+			char* charAddress = (char*) startSectorAddress;
 			charAddress += 4;
-			for (size_t i = 0; i < DataStorageModel::numOfListItems; ++i) {
+			for (size_t i = 0; i < DataStorageModel::numOfListItems; ++i)
+			{
 				for (size_t j = 0; j < 17; ++j) // 17 - size of char array
 				{
 					DataStorageModel::positionsList[i][j] = *charAddress;
@@ -41,9 +45,9 @@ void sequenceScreenView::setupScreen() {
 		DataStorageModel::screenViewFirstOpen = false;
 	}
 
-	for (size_t i = 0; i < DataStorageModel::numOfListItems; ++i) {
-		positionContainersList[i].SetText(
-				DataStorageModel::positionsList[i]);
+	for (size_t i = 0; i < DataStorageModel::numOfListItems; ++i)
+	{
+		positionContainersList[i].SetText(DataStorageModel::positionsList[i]);
 		positionsList.add(positionContainersList[i]);
 		scrollableContainer.invalidate();
 	}
@@ -63,11 +67,13 @@ void sequenceScreenView::handleTickEvent()
 	}
 }
 
-void sequenceScreenView::tearDownScreen() {
+void sequenceScreenView::tearDownScreen()
+{
 	sequenceScreenViewBase::tearDownScreen();
 }
 
-void sequenceScreenView::SaveSequenceButton_Clicked() {
+void sequenceScreenView::SaveSequenceButton_Clicked()
+{
 	HAL_FLASH_Unlock();
 
 	uint32_t sectorError;
@@ -79,9 +85,9 @@ void sequenceScreenView::SaveSequenceButton_Clicked() {
 	pEraseInit.Sector = FLASH_SECTOR_23;
 	pEraseInit.NbSectors = 1;
 
-	if (HAL_FLASHEx_Erase(&pEraseInit, &sectorError) != HAL_OK) {
-		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE,
-				"ERROR:\nError during sector erase!");
+	if (HAL_FLASHEx_Erase(&pEraseInit, &sectorError) != HAL_OK)
+	{
+		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "ERROR:\nError during sector erase!");
 		infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
 		infoTextArea.invalidate();
 
@@ -91,27 +97,32 @@ void sequenceScreenView::SaveSequenceButton_Clicked() {
 
 	uint32_t startSectorAddress = 0x081E0000; // Address of Sector 23
 
-	if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, startSectorAddress,
-			(uint32_t) DataStorageModel::numOfListItems) == HAL_OK) {
+	if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, startSectorAddress, (uint32_t) DataStorageModel::numOfListItems)
+			== HAL_OK)
+	{
 		startSectorAddress += 4;
-	} else {
-		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE,
-				"ERROR:\nError during save number of list items!");
+	}
+	else
+	{
+		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "ERROR:\nError during save number of list items!");
 		infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
 		infoTextArea.invalidate();
 
 		HAL_FLASH_Lock();
 		return;
 	}
-	for (size_t i = 0; i < DataStorageModel::numOfListItems; ++i) { // 17 - size of char array
+	for (size_t i = 0; i < DataStorageModel::numOfListItems; ++i)
+	{ // 17 - size of char array
 		for (size_t j = 0; j < 17; ++j)
 		{
 			if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_BYTE, startSectorAddress,
-					(uint64_t)DataStorageModel::positionsList[i][j]) == HAL_OK) {
+					(uint64_t) DataStorageModel::positionsList[i][j]) == HAL_OK)
+			{
 				startSectorAddress += 1;
-			} else {
-				Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE,
-						"ERROR:\nError during saving positions!");
+			}
+			else
+			{
+				Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "ERROR:\nError during saving positions!");
 				infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
 				infoTextArea.invalidate();
 
@@ -121,14 +132,14 @@ void sequenceScreenView::SaveSequenceButton_Clicked() {
 		}
 	}
 
-	Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE,
-			"INFO:\nSequence saved");
+	Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "INFO:\nSequence saved");
 	infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
 	infoTextArea.invalidate();
 	HAL_FLASH_Lock();
 }
 
-void sequenceScreenView::PlaySequenceButton_Clicked() {
+void sequenceScreenView::PlaySequenceButton_Clicked()
+{
 	playSequenceButton.setVisible(false);
 	playSequenceButton.invalidate();
 	saveSequenceButton.setVisible(false);
@@ -146,10 +157,11 @@ void sequenceScreenView::PlaySequenceButton_Clicked() {
 	SequencePlaybackControl::Play();
 }
 
-void sequenceScreenView::StopSequenceButton_Clicked() {
+void sequenceScreenView::StopSequenceButton_Clicked()
+{
 	SequencePlaybackControl::Stop();
 
-	while(SequencePlaybackControl::stopSequence)
+	while (SequencePlaybackControl::stopSequence)
 	{
 		vTaskDelay(100);
 	};
@@ -171,12 +183,13 @@ void sequenceScreenView::StopSequenceButton_Clicked() {
 	changeSequenceSpeedButton.invalidate();
 }
 
-void sequenceScreenView::ChangeSequenceSpeedButton_Clicked() {
+void sequenceScreenView::ChangeSequenceSpeedButton_Clicked()
+{
 
 }
 
-void sequenceScreenView::PauseSequenceButton_Clicked() {
-
+void sequenceScreenView::PauseSequenceButton_Clicked()
+{
 
 	pauseSequenceButton.setVisible(false);
 	pauseSequenceButton.invalidate();
@@ -184,8 +197,8 @@ void sequenceScreenView::PauseSequenceButton_Clicked() {
 	resumeSequenceButton.invalidate();
 }
 
-void sequenceScreenView::ResumeSequenceButton_Clicked() {
-
+void sequenceScreenView::ResumeSequenceButton_Clicked()
+{
 
 	pauseSequenceButton.setVisible(true);
 	pauseSequenceButton.invalidate();
@@ -193,35 +206,33 @@ void sequenceScreenView::ResumeSequenceButton_Clicked() {
 	resumeSequenceButton.invalidate();
 }
 
-void sequenceScreenView::AddNewPositionButton_Clicked() {
-	if (DataStorageModel::numOfListItems
-			< DataStorageModel::maxNumOfPositions) {
+void sequenceScreenView::AddNewPositionButton_Clicked()
+{
+	if (DataStorageModel::numOfListItems < DataStorageModel::maxNumOfPositions)
+	{
 		static unsigned int temp = 3;
 
 		char positionChar[17];
 		memset(positionChar, '\0', 17);
-		snprintf(positionChar, 17, "%d,%d,%d,%d", 100 * temp, 100 * temp,
-				100 * temp, 1 * temp);
-		memcpy(
-				DataStorageModel::positionsList[DataStorageModel::numOfListItems],
-				positionChar, 17);
-		positionContainersList[DataStorageModel::numOfListItems].SetText(
-				positionChar);
-		positionsList.add(
-				positionContainersList[DataStorageModel::numOfListItems]);
+		snprintf(positionChar, 17, "%d,%d,%d,%d", 100 * temp, 100 * temp, 100 * temp, 1 * temp);
+		memcpy(DataStorageModel::positionsList[DataStorageModel::numOfListItems], positionChar, 17);
+		positionContainersList[DataStorageModel::numOfListItems].SetText(positionChar);
+		positionsList.add(positionContainersList[DataStorageModel::numOfListItems]);
 		scrollableContainer.invalidate();
 		++DataStorageModel::numOfListItems;
 
 		++temp;
-	} else {
-		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE,
-				"ERROR:\nMaximum number of positions!");
+	}
+	else
+	{
+		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "ERROR:\nMaximum number of positions!");
 		infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
 		infoTextArea.invalidate();
 	}
 }
 
-void sequenceScreenView::DeletePositionButton_Clicked() {
+void sequenceScreenView::DeletePositionButton_Clicked()
+{
 	positionsList.removeAll();
 	scrollableContainer.invalidate();
 

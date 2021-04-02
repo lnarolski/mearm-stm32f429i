@@ -14,6 +14,7 @@
 #include <../STM32CubeIDE/DataStorageModel.h>
 #include <gui/sequencescreen_screen/sequenceScreenView.hpp>
 #include <cctype>
+#include <cstdlib>
 
 extern uint32_t xAxisPWMDuty;
 extern uint32_t yAxisPWMDuty_L;
@@ -28,7 +29,8 @@ struct RobotPosition
 	uint32_t manipulatorPWMDuty;
 };
 
-class SequencePlaybackControl {
+class SequencePlaybackControl
+{
 public:
 	SequencePlaybackControl();
 	virtual ~SequencePlaybackControl();
