@@ -45,15 +45,16 @@ sequenceScreenView.hpp:16:13:sequenceScreenView::~sequenceScreenView()	24	static
 sequenceScreenView.hpp:16:13:virtual sequenceScreenView::~sequenceScreenView()	16	static
 sequenceScreenView.cpp:11:1:sequenceScreenView::sequenceScreenView()	24	static
 sequenceScreenView.cpp:15:6:virtual void sequenceScreenView::setupScreen()	40	static
-sequenceScreenView.cpp:52:6:virtual void sequenceScreenView::tearDownScreen()	16	static
-sequenceScreenView.cpp:56:6:virtual void sequenceScreenView::SaveSequenceButton_Clicked()	40	static
-sequenceScreenView.cpp:117:6:virtual void sequenceScreenView::PlaySequenceButton_Clicked()	16	static
-sequenceScreenView.cpp:135:6:virtual void sequenceScreenView::StopSequenceButton_Clicked()	16	static
-sequenceScreenView.cpp:155:6:virtual void sequenceScreenView::ChangeSequenceSpeedButton_Clicked()	16	static
-sequenceScreenView.cpp:159:6:virtual void sequenceScreenView::PauseSequenceButton_Clicked()	16	static
-sequenceScreenView.cpp:168:6:virtual void sequenceScreenView::ResumeSequenceButton_Clicked()	16	static
-sequenceScreenView.cpp:177:6:virtual void sequenceScreenView::AddNewPositionButton_Clicked()	64	static
-sequenceScreenView.cpp:205:6:virtual void sequenceScreenView::DeletePositionButton_Clicked()	16	static
+sequenceScreenView.cpp:52:6:virtual void sequenceScreenView::handleTickEvent()	16	static
+sequenceScreenView.cpp:61:6:virtual void sequenceScreenView::tearDownScreen()	16	static
+sequenceScreenView.cpp:65:6:virtual void sequenceScreenView::SaveSequenceButton_Clicked()	40	static
+sequenceScreenView.cpp:126:6:virtual void sequenceScreenView::PlaySequenceButton_Clicked()	16	static
+sequenceScreenView.cpp:144:6:virtual void sequenceScreenView::StopSequenceButton_Clicked()	16	static
+sequenceScreenView.cpp:169:6:virtual void sequenceScreenView::ChangeSequenceSpeedButton_Clicked()	16	static
+sequenceScreenView.cpp:173:6:virtual void sequenceScreenView::PauseSequenceButton_Clicked()	16	static
+sequenceScreenView.cpp:182:6:virtual void sequenceScreenView::ResumeSequenceButton_Clicked()	16	static
+sequenceScreenView.cpp:191:6:virtual void sequenceScreenView::AddNewPositionButton_Clicked()	64	static
+sequenceScreenView.cpp:219:6:virtual void sequenceScreenView::DeletePositionButton_Clicked()	16	static
 Box.hpp:36:7:touchgfx::Box::~Box()	16	static
 Box.hpp:36:7:virtual touchgfx::Box::~Box()	16	static
 Image.hpp:42:7:touchgfx::Image::~Image()	16	static

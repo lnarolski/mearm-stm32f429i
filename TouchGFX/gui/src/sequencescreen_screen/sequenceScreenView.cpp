@@ -9,7 +9,7 @@ extern uint32_t yAxisPWMDuty_R;
 extern uint32_t manipulatorPWMDuty;
 
 sequenceScreenView::sequenceScreenView() {
-
+	SequencePlaybackControl::sequenceScreenViewClass = this;
 }
 
 void sequenceScreenView::setupScreen() {
@@ -46,6 +46,20 @@ void sequenceScreenView::setupScreen() {
 				DataStorageModel::positionsList[i]);
 		positionsList.add(positionContainersList[i]);
 		scrollableContainer.invalidate();
+	}
+}
+
+void sequenceScreenView::handleTickEvent()
+{
+	if (invalidateScrollableContainer)
+	{
+		scrollableContainer.invalidate();
+		invalidateScrollableContainer = false;
+	}
+	if (invalidateInfoTextArea)
+	{
+		infoTextArea.invalidate();
+		invalidateInfoTextArea = false;
 	}
 }
 
@@ -115,8 +129,6 @@ void sequenceScreenView::SaveSequenceButton_Clicked() {
 }
 
 void sequenceScreenView::PlaySequenceButton_Clicked() {
-
-
 	playSequenceButton.setVisible(false);
 	playSequenceButton.invalidate();
 	saveSequenceButton.setVisible(false);
@@ -130,10 +142,17 @@ void sequenceScreenView::PlaySequenceButton_Clicked() {
 	pauseSequenceButton.invalidate();
 	changeSequenceSpeedButton.setVisible(true);
 	changeSequenceSpeedButton.invalidate();
+
+	SequencePlaybackControl::Play();
 }
 
 void sequenceScreenView::StopSequenceButton_Clicked() {
+	SequencePlaybackControl::Stop();
 
+	while(SequencePlaybackControl::stopSequence)
+	{
+		vTaskDelay(100);
+	};
 
 	playSequenceButton.setVisible(true);
 	playSequenceButton.invalidate();

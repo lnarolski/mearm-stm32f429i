@@ -61,7 +61,18 @@ Application/User/gui/sequenceScreenPresenter.o: \
  ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp \
  c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h \
- c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\sequenceplaybackcontrol.h
+ c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\sequenceplaybackcontrol.h \
+ ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
+ ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+ ../../Core/Inc/FreeRTOSConfig.h \
+ ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+ ../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+ ../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h \
+ ../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 
 ../../TouchGFX/gui/include/gui/sequencescreen_screen/sequenceScreenView.hpp:
 
@@ -186,3 +197,25 @@ Application/User/gui/sequenceScreenPresenter.o: \
 c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h:
 
 c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\sequenceplaybackcontrol.h:
+
+../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
+
+../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
+
+../../Core/Inc/FreeRTOSConfig.h:
+
+../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
+
+../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
+
+../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
+
+../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h:
+
+../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
+
+../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+
+../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+
+../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:

@@ -1,3 +1,10 @@
+Drawable.hpp:378:10:void touchgfx::Drawable::setVisible(bool)	16	static
 SequencePlaybackControl.cpp:10:1:SequencePlaybackControl::SequencePlaybackControl()	16	static
 SequencePlaybackControl.cpp:15:1:SequencePlaybackControl::~SequencePlaybackControl()	16	static
 SequencePlaybackControl.cpp:15:1:virtual SequencePlaybackControl::~SequencePlaybackControl()	16	static
+SequencePlaybackControl.cpp:28:6:static void SequencePlaybackControl::Play()	16	static
+SequencePlaybackControl.cpp:37:6:static void SequencePlaybackControl::Stop()	4	static
+SequencePlaybackControl.cpp:42:6:static void SequencePlaybackControl::Pause()	4	static
+SequencePlaybackControl.cpp:46:6:static void SequencePlaybackControl::Resume()	4	static
+SequencePlaybackControl.cpp:50:6:static void SequencePlaybackControl::GoToPosition(size_t)	16	static
+SequencePlaybackControl.cpp:54:6:static void SequencePlaybackControl::PlaybackThreadFunction(void*)	24	static

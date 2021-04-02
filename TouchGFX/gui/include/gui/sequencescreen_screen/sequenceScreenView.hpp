@@ -26,6 +26,11 @@ public:
     void PauseSequenceButton_Clicked();
     void ResumeSequenceButton_Clicked();
 
+    bool invalidateScrollableContainer = false;
+    bool invalidateInfoTextArea = false;
+
+    void handleTickEvent();
+
     uint32_t FlashRead();
     uint32_t FlashWrite(uint32_t StartPageAddress, uint32_t * DATA_32);
 

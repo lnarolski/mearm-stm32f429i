@@ -10,6 +10,23 @@
 
 #include <cstddef>
 #include <stdint.h>
+#include "cmsis_os.h"
+#include <../STM32CubeIDE/DataStorageModel.h>
+#include <gui/sequencescreen_screen/sequenceScreenView.hpp>
+#include <cctype>
+
+extern uint32_t xAxisPWMDuty;
+extern uint32_t yAxisPWMDuty_L;
+extern uint32_t yAxisPWMDuty_R;
+extern uint32_t manipulatorPWMDuty;
+
+struct RobotPosition
+{
+	uint32_t xAxisPWMDuty;
+	uint32_t yAxisPWMDuty_L;
+	uint32_t yAxisPWMDuty_R;
+	uint32_t manipulatorPWMDuty;
+};
 
 class SequencePlaybackControl {
 public:
@@ -25,9 +42,16 @@ public:
 	static bool sequenceRunning;
 	static uint32_t sequenceSpeed;
 
+	static sequenceScreenView* sequenceScreenViewClass;
+	static bool stopSequence;
+	static bool pauseSequence;
+
 private:
 	static size_t currentPositionNumber;
 
+	static void PlaybackThreadFunction(void* pvParameters);
+	static TaskHandle_t* playbackThread;
+	RobotPosition Char2RobotPosition(char* position);
 };
 
 #endif /* SEQUENCEPLAYBACKCONTROL_H_ */
