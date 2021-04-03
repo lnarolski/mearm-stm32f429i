@@ -238,6 +238,6 @@ ArmPosition SequencePlaybackControl::Char2ArmPosition(char* position)
 			j = 0;
 		}
 	}
-	robotPosition.manipulatorPWMDuty = (buffer[0] == 1 ? 275 : 700);
+	robotPosition.manipulatorPWMDuty = (buffer[0] == '1' ? 275 : 700);
 	return robotPosition;
 }
