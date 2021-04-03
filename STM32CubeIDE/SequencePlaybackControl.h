@@ -53,6 +53,8 @@ public:
 	static sequenceScreenView* sequenceScreenViewClass;
 	static bool stopSequence;
 	static bool pauseSequence;
+	static uint32_t maxSequenceSpeed;
+	static uint32_t minSequenceSpeed;
 
 private:
 	static size_t currentPositionNumber;

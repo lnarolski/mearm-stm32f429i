@@ -23,10 +23,20 @@ mainScreenView::mainScreenView()
 void mainScreenView::setupScreen()
 {
 	mainScreenViewBase::setupScreen();
+
+	xAxisSlider.setValue(DataStorageModel::xAxisSliderValue);
+	yAxisSlider_L.setValue(DataStorageModel::yAxisSliderValue_L);
+	yAxisSlider_R.setValue(DataStorageModel::yAxisSliderValue_R);
+	manipulatorControlToggleButton.forceState(DataStorageModel::manipulatorState);
 }
 
 void mainScreenView::tearDownScreen()
 {
+	DataStorageModel::xAxisSliderValue = xAxisSlider.getValue();
+	DataStorageModel::yAxisSliderValue_L = yAxisSlider_L.getValue();
+	DataStorageModel::yAxisSliderValue_R = yAxisSlider_R.getValue();
+	DataStorageModel::manipulatorState = manipulatorControlToggleButton.getState();
+
 	mainScreenViewBase::tearDownScreen();
 }
 

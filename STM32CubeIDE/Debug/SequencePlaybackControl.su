@@ -2,10 +2,10 @@ Drawable.hpp:378:10:void touchgfx::Drawable::setVisible(bool)	16	static
 SequencePlaybackControl.cpp:10:1:SequencePlaybackControl::SequencePlaybackControl()	16	static
 SequencePlaybackControl.cpp:16:1:SequencePlaybackControl::~SequencePlaybackControl()	16	static
 SequencePlaybackControl.cpp:16:1:virtual SequencePlaybackControl::~SequencePlaybackControl()	16	static
-SequencePlaybackControl.cpp:30:6:static void SequencePlaybackControl::Play()	16	static
-SequencePlaybackControl.cpp:40:6:static void SequencePlaybackControl::Stop()	4	static
-SequencePlaybackControl.cpp:45:6:static void SequencePlaybackControl::Pause()	4	static
-SequencePlaybackControl.cpp:50:6:static void SequencePlaybackControl::Resume()	4	static
-SequencePlaybackControl.cpp:55:6:static void SequencePlaybackControl::GoToPosition(size_t)	16	static
-SequencePlaybackControl.cpp:60:6:static void SequencePlaybackControl::PlaybackThreadFunction(void*)	64	static
-SequencePlaybackControl.cpp:198:13:static ArmPosition SequencePlaybackControl::Char2ArmPosition(char*)	56	static
+SequencePlaybackControl.cpp:32:6:static void SequencePlaybackControl::Play()	16	static
+SequencePlaybackControl.cpp:42:6:static void SequencePlaybackControl::Stop()	4	static
+SequencePlaybackControl.cpp:47:6:static void SequencePlaybackControl::Pause()	4	static
+SequencePlaybackControl.cpp:52:6:static void SequencePlaybackControl::Resume()	4	static
+SequencePlaybackControl.cpp:57:6:static void SequencePlaybackControl::GoToPosition(size_t)	16	static
+SequencePlaybackControl.cpp:62:6:static void SequencePlaybackControl::PlaybackThreadFunction(void*)	64	static
+SequencePlaybackControl.cpp:204:13:static ArmPosition SequencePlaybackControl::Char2ArmPosition(char*)	56	static

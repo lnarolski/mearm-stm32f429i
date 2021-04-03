@@ -5,6 +5,7 @@
 #include <gui/mainscreen_screen/mainScreenPresenter.hpp>
 #include "stm32f4xx_hal.h"
 #include "stm32f4xx_hal_tim.h"
+#include <../STM32CubeIDE/DataStorageModel.h>
 
 class mainScreenView : public mainScreenViewBase
 {

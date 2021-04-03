@@ -13,9 +13,7 @@ class sequenceScreenView: public sequenceScreenViewBase
 {
 public:
 	sequenceScreenView();
-	virtual ~sequenceScreenView()
-	{
-	}
+	virtual ~sequenceScreenView();
 	virtual void setupScreen();
 	virtual void tearDownScreen();
 
@@ -27,6 +25,7 @@ public:
 	void ChangeSequenceSpeedButton_Clicked();
 	void PauseSequenceButton_Clicked();
 	void ResumeSequenceButton_Clicked();
+	void ShowSequenceSpeed();
 
 	bool invalidateScrollableContainer = false;
 	bool invalidateInfoTextArea = false;

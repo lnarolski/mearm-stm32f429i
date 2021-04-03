@@ -98,6 +98,7 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
+ c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h \
  ../../TouchGFX/gui/include/gui/sequencescreen_screen/sequenceScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/sequencescreen_screen/sequenceScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/sequencescreen_screen/sequenceScreenPresenter.hpp \
@@ -107,7 +108,6 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp \
- c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h \
  c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\sequenceplaybackcontrol.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
@@ -319,6 +319,8 @@ Application/User/generated/FrontendApplicationBase.o: \
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 
+c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h:
+
 ../../TouchGFX/gui/include/gui/sequencescreen_screen/sequenceScreenView.hpp:
 
 ../../TouchGFX/generated/gui_generated/include/gui_generated/sequencescreen_screen/sequenceScreenViewBase.hpp:
@@ -336,8 +338,6 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp:
 
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp:
-
-c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h:
 
 c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\sequenceplaybackcontrol.h:
 

@@ -20,6 +20,8 @@ SequencePlaybackControl::~SequencePlaybackControl()
 
 bool SequencePlaybackControl::sequenceRunning = false;
 uint32_t SequencePlaybackControl::sequenceSpeed = 1;
+uint32_t SequencePlaybackControl::minSequenceSpeed = 1;
+uint32_t SequencePlaybackControl::maxSequenceSpeed = 128;
 bool SequencePlaybackControl::stopSequence = false;
 bool SequencePlaybackControl::pauseSequence = false;
 sequenceScreenView* SequencePlaybackControl::sequenceScreenViewClass = NULL;
@@ -44,21 +46,23 @@ void SequencePlaybackControl::Stop()
 
 void SequencePlaybackControl::Pause()
 {
-
+	SequencePlaybackControl::pauseSequence = true;
 }
 
 void SequencePlaybackControl::Resume()
 {
-
+	SequencePlaybackControl::pauseSequence = false;
 }
 
 void SequencePlaybackControl::GoToPosition(size_t positionNumber)
 {
-
+	// TODO
 }
 
 void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters)
 {
+	sequenceScreenViewClass->ShowSequenceSpeed();
+	stopSequence = false;
 	sequenceRunning = true;
 	while (!stopSequence)
 	{
@@ -171,11 +175,12 @@ void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters)
 				}
 				else
 				{
+					desiredArmPositionReached = false;
 					vTaskDelay(100);
 				}
 
 			} while (!stopSequence && !desiredArmPositionReached);
-			if (manipulatorPWMDuty != desiredArmPosition.manipulatorPWMDuty)
+			if (!stopSequence && manipulatorPWMDuty != desiredArmPosition.manipulatorPWMDuty)
 			{
 				vTaskDelay(100);
 				manipulatorPWMDuty = desiredArmPosition.manipulatorPWMDuty;

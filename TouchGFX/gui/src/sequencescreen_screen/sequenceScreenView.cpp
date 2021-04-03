@@ -8,9 +8,15 @@ extern uint32_t yAxisPWMDuty_L;
 extern uint32_t yAxisPWMDuty_R;
 extern uint32_t manipulatorPWMDuty;
 
+
 sequenceScreenView::sequenceScreenView()
 {
 	SequencePlaybackControl::sequenceScreenViewClass = this;
+}
+
+sequenceScreenView::~sequenceScreenView()
+{
+	SequencePlaybackControl::stopSequence = true;
 }
 
 void sequenceScreenView::setupScreen()
@@ -26,6 +32,9 @@ void sequenceScreenView::setupScreen()
 		DataStorageModel::numOfListItems = *startSectorAddress;
 		if (DataStorageModel::numOfListItems <= DataStorageModel::maxNumOfPositions) // Check if numOfListItems was initialized in flash memory
 		{
+			startSectorAddress += 1;
+			SequencePlaybackControl::sequenceSpeed = *startSectorAddress;
+
 			char* charAddress = (char*) startSectorAddress;
 			charAddress += 4;
 			for (size_t i = 0; i < DataStorageModel::numOfListItems; ++i)
@@ -111,6 +120,22 @@ void sequenceScreenView::SaveSequenceButton_Clicked()
 		HAL_FLASH_Lock();
 		return;
 	}
+
+	if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, startSectorAddress, (uint32_t) SequencePlaybackControl::sequenceSpeed)
+			== HAL_OK)
+	{
+		startSectorAddress += 4;
+	}
+	else
+	{
+		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "ERROR:\nError during save sequence speed!");
+		infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
+		infoTextArea.invalidate();
+
+		HAL_FLASH_Lock();
+		return;
+	}
+
 	for (size_t i = 0; i < DataStorageModel::numOfListItems; ++i)
 	{ // 17 - size of char array
 		for (size_t j = 0; j < 17; ++j)
@@ -185,43 +210,70 @@ void sequenceScreenView::StopSequenceButton_Clicked()
 
 void sequenceScreenView::ChangeSequenceSpeedButton_Clicked()
 {
+	uint32_t tempSpeed = SequencePlaybackControl::sequenceSpeed * 2;
+
+	if (tempSpeed > SequencePlaybackControl::maxSequenceSpeed)
+	{
+		SequencePlaybackControl::sequenceSpeed = SequencePlaybackControl::minSequenceSpeed;
+
+		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "INFO:\nSequence speed: %d", SequencePlaybackControl::sequenceSpeed);
+		infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
+		infoTextArea.invalidate();
+	}
+	else
+	{
+		SequencePlaybackControl::sequenceSpeed = tempSpeed;
+
+		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "INFO:\nSequence speed: %d", SequencePlaybackControl::sequenceSpeed);
+		infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
+		infoTextArea.invalidate();
+	}
 
 }
 
 void sequenceScreenView::PauseSequenceButton_Clicked()
 {
-
 	pauseSequenceButton.setVisible(false);
 	pauseSequenceButton.invalidate();
 	resumeSequenceButton.setVisible(true);
 	resumeSequenceButton.invalidate();
+
+	SequencePlaybackControl::Pause();
 }
 
 void sequenceScreenView::ResumeSequenceButton_Clicked()
 {
-
 	pauseSequenceButton.setVisible(true);
 	pauseSequenceButton.invalidate();
 	resumeSequenceButton.setVisible(false);
 	resumeSequenceButton.invalidate();
+
+	SequencePlaybackControl::Resume();
+}
+
+void sequenceScreenView::ShowSequenceSpeed()
+{
+	Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "INFO:\nSequence speed: %d", SequencePlaybackControl::sequenceSpeed);
+	infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
+	invalidateInfoTextArea = true;
 }
 
 void sequenceScreenView::AddNewPositionButton_Clicked()
 {
 	if (DataStorageModel::numOfListItems < DataStorageModel::maxNumOfPositions)
 	{
-		static unsigned int temp = 3;
-
 		char positionChar[17];
 		memset(positionChar, '\0', 17);
-		snprintf(positionChar, 17, "%d,%d,%d,%d", 100 * temp, 100 * temp, 100 * temp, 1 * temp);
+		snprintf(positionChar, 17, "%d,%d,%d,%d", xAxisPWMDuty, yAxisPWMDuty_L, yAxisPWMDuty_R, manipulatorPWMDuty == 275 ? 1 : 0);
 		memcpy(DataStorageModel::positionsList[DataStorageModel::numOfListItems], positionChar, 17);
 		positionContainersList[DataStorageModel::numOfListItems].SetText(positionChar);
 		positionsList.add(positionContainersList[DataStorageModel::numOfListItems]);
 		scrollableContainer.invalidate();
 		++DataStorageModel::numOfListItems;
 
-		++temp;
+		Unicode::snprintf(infoTextAreaBuffer, INFOTEXTAREA_SIZE, "INFO:\nItem in list: %d", DataStorageModel::numOfListItems);
+		infoTextArea.setWideTextAction(WIDE_TEXT_WORDWRAP);
+		infoTextArea.invalidate();
 	}
 	else
 	{

@@ -23,6 +23,11 @@ public:
 	static size_t numOfListItems;
 	static const size_t maxNumOfPositions;
 	static char positionsList[MAX_NUM_OF_POSITIONS][17];
+
+	static uint32_t xAxisSliderValue;
+	static uint32_t yAxisSliderValue_L;
+	static uint32_t yAxisSliderValue_R;
+	static bool manipulatorState;
 };
 
 #endif /* DATASTORAGEMODEL_H_ */
