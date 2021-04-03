@@ -21,7 +21,7 @@ extern uint32_t yAxisPWMDuty_L;
 extern uint32_t yAxisPWMDuty_R;
 extern uint32_t manipulatorPWMDuty;
 
-struct RobotPosition
+struct ArmPosition
 {
 	uint32_t xAxisPWMDuty;
 	uint32_t yAxisPWMDuty_L;
@@ -32,6 +32,12 @@ struct RobotPosition
 class SequencePlaybackControl
 {
 public:
+	enum Direction
+	{
+		UP = 1,
+		DOWN = -1
+	};
+
 	SequencePlaybackControl();
 	virtual ~SequencePlaybackControl();
 
@@ -53,7 +59,7 @@ private:
 
 	static void PlaybackThreadFunction(void* pvParameters);
 	static TaskHandle_t* playbackThread;
-	RobotPosition Char2RobotPosition(char* position);
+	static ArmPosition Char2ArmPosition(char* position);
 };
 
 #endif /* SEQUENCEPLAYBACKCONTROL_H_ */

@@ -64,13 +64,126 @@ void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters)
 	{
 		for (size_t i = 0; i < DataStorageModel::numOfListItems && !stopSequence; ++i)
 		{
-			currentPositionNumber = i;
-
 			if (sequenceScreenViewClass != NULL)
 			{
 				sequenceScreenViewClass->positionContainersList[i].setVisible(false);
 				sequenceScreenViewClass->invalidateScrollableContainer = true;
-				vTaskDelay(1000);
+			}
+
+			currentPositionNumber = i;
+			ArmPosition desiredArmPosition = Char2ArmPosition(DataStorageModel::positionsList[i]);
+			uint32_t desiredArmPositionArray[3] =
+			{ desiredArmPosition.xAxisPWMDuty, desiredArmPosition.yAxisPWMDuty_L, desiredArmPosition.yAxisPWMDuty_R };
+			SequencePlaybackControl::Direction directionArray[3];
+
+			if (desiredArmPositionArray[0] > xAxisPWMDuty)
+			{
+				directionArray[0] = UP;
+			}
+			else
+			{
+				directionArray[0] = DOWN;
+			}
+			if (desiredArmPositionArray[1] > yAxisPWMDuty_L)
+			{
+				directionArray[1] = UP;
+			}
+			else
+			{
+				directionArray[1] = DOWN;
+			}
+			if (desiredArmPositionArray[2] > yAxisPWMDuty_R)
+			{
+				directionArray[2] = UP;
+			}
+			else
+			{
+				directionArray[2] = DOWN;
+			}
+
+			bool desiredArmPositionReached;
+			do
+			{
+				desiredArmPositionReached = true;
+
+				if (!pauseSequence)
+				{
+					for (size_t j = 0; j < 3; j++)
+					{
+						uint32_t tempValue;
+
+						switch (j)
+						{
+						case 0:
+							tempValue = xAxisPWMDuty;
+							break;
+						case 1:
+							tempValue = yAxisPWMDuty_L;
+							break;
+						case 2:
+							tempValue = yAxisPWMDuty_R;
+							break;
+						default:
+							break;
+						}
+
+						tempValue += directionArray[j] * sequenceSpeed;
+
+						if (directionArray[j] == UP)
+						{
+							if (tempValue >= desiredArmPositionArray[j])
+							{
+								tempValue = desiredArmPositionArray[j];
+							}
+							else
+							{
+								desiredArmPositionReached = false;
+							}
+						}
+						else
+						{
+							if (tempValue <= desiredArmPositionArray[j])
+							{
+								tempValue = desiredArmPositionArray[j];
+							}
+							else
+							{
+								desiredArmPositionReached = false;
+							}
+						}
+
+						switch (j)
+						{
+						case 0:
+							xAxisPWMDuty = tempValue;
+							break;
+						case 1:
+							yAxisPWMDuty_L = tempValue;
+							break;
+						case 2:
+							yAxisPWMDuty_R = tempValue;
+							break;
+						default:
+							break;
+						}
+					}
+					vTaskDelay(100);
+				}
+				else
+				{
+					vTaskDelay(100);
+				}
+
+			} while (!stopSequence && !desiredArmPositionReached);
+			if (manipulatorPWMDuty != desiredArmPosition.manipulatorPWMDuty)
+			{
+				vTaskDelay(100);
+				manipulatorPWMDuty = desiredArmPosition.manipulatorPWMDuty;
+				vTaskDelay(900);
+			}
+
+			if (sequenceScreenViewClass != NULL)
+			{
 				sequenceScreenViewClass->positionContainersList[i].setVisible(true);
 				sequenceScreenViewClass->invalidateScrollableContainer = true;
 			}
@@ -79,12 +192,13 @@ void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters)
 
 	sequenceRunning = false;
 	stopSequence = false;
+	pauseSequence = false;
 	vTaskDelete(NULL);
 }
 
-RobotPosition SequencePlaybackControl::Char2RobotPosition(char* position)
+ArmPosition SequencePlaybackControl::Char2ArmPosition(char* position)
 {
-	RobotPosition robotPosition;
+	ArmPosition robotPosition;
 	char buffer[17];
 	size_t j = 0, PWMDutyType = 0;
 	for (size_t i = 0; i < 17 && position[i] != '\0'; ++i)
