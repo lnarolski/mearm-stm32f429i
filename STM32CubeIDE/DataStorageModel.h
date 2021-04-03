@@ -8,7 +8,7 @@
 #ifndef DATASTORAGEMODEL_H_
 #define DATASTORAGEMODEL_H_
 
-#define MAX_NUM_OF_POSITIONS 10
+#define MAX_NUM_OF_POSITIONS 50
 
 #include <cstddef>
 #include <stdint.h>
