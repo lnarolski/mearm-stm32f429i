@@ -2,7 +2,7 @@
  * SequencePlaybackControl.h
  *
  *  Created on: 1 kwi 2021
- *      Author: Lukasz
+ *      Author: Lukasz Narolski
  */
 
 #ifndef SEQUENCEPLAYBACKCONTROL_H_
@@ -15,6 +15,7 @@
 #include <gui/sequencescreen_screen/sequenceScreenView.hpp>
 #include <cctype>
 #include <cstdlib>
+#include <touchgfx/Color.hpp>
 
 extern uint32_t xAxisPWMDuty;
 extern uint32_t yAxisPWMDuty_L;

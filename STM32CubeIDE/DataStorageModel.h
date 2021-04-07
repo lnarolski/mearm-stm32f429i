@@ -2,7 +2,7 @@
  * DataStorageModel.h
  *
  *  Created on: 29 mar 2021
- *      Author: Lukasz
+ *      Author: Lukasz Narolski
  */
 
 #ifndef DATASTORAGEMODEL_H_

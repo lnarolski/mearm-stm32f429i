@@ -2,7 +2,7 @@
  * SequencePlaybackControl.cpp
  *
  *  Created on: 1 kwi 2021
- *      Author: Lukasz
+ *      Author: Lukasz Narolski
  */
 
 #include "SequencePlaybackControl.h"
@@ -68,9 +68,11 @@ void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters)
 	{
 		for (size_t i = 0; i < DataStorageModel::numOfListItems && !stopSequence; ++i)
 		{
+			colortype previousColor;
 			if (sequenceScreenViewClass != NULL)
 			{
-				sequenceScreenViewClass->positionContainersList[i].setVisible(false);
+				previousColor = ((touchgfx::TextAreaWithOneWildcard*)sequenceScreenViewClass->positionContainersList[i].getFirstChild())->getColor();
+				((touchgfx::TextAreaWithOneWildcard*)sequenceScreenViewClass->positionContainersList[i].getFirstChild())->setColor(touchgfx::Color::getColorFrom24BitRGB(9, 137, 182));
 				sequenceScreenViewClass->invalidateScrollableContainer = true;
 			}
 
@@ -189,7 +191,7 @@ void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters)
 
 			if (sequenceScreenViewClass != NULL)
 			{
-				sequenceScreenViewClass->positionContainersList[i].setVisible(true);
+				((touchgfx::TextAreaWithOneWildcard*)sequenceScreenViewClass->positionContainersList[i].getFirstChild())->setColor(previousColor);
 				sequenceScreenViewClass->invalidateScrollableContainer = true;
 			}
 		}

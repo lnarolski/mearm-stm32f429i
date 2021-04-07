@@ -2,7 +2,7 @@
  * DataStorageModel.cpp
  *
  *  Created on: 29 mar 2021
- *      Author: Lukasz
+ *      Author: Lukasz Narolski
  */
 
 #include "DataStorageModel.h"

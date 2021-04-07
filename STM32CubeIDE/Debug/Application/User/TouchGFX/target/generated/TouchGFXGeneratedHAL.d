@@ -122,7 +122,8 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+ ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
 
 ../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:
 
@@ -369,3 +370,5 @@ c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\sequenceplaybackcontrol.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:

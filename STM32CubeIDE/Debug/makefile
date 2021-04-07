@@ -1,6 +1,5 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
 ################################################################################
 
 -include ../makefile.init
@@ -52,12 +51,6 @@ endif
 
 -include ../makefile.defs
 
-OPTIONAL_TOOL_DEPS := \
-$(wildcard ../makefile.defs) \
-$(wildcard ../makefile.init) \
-$(wildcard ../makefile.targets) \
-
-
 BUILD_ARTIFACT_NAME := STM32F429I-DISCO
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX := 
@@ -87,27 +80,27 @@ all: main-build
 main-build: STM32F429I-DISCO.elf secondary-outputs
 
 # Tool invocations
-STM32F429I-DISCO.elf: $(OBJS) $(USER_OBJS) C:\TouchGFXProjects\mearm-stm32f429i\STM32CubeIDE\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "STM32F429I-DISCO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\TouchGFXProjects\mearm-stm32f429i\STM32CubeIDE\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F429I-DISCO.map" -Wl,--gc-sections -static -Wl,--start-group -l:libtouchgfx-float-abi-hard.a -Wl,--end-group -LC:/TouchGFXProjects/mearm-stm32f429i/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc --specs=nano_c_standard_cpp.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+STM32F429I-DISCO.elf: $(OBJS) $(USER_OBJS) C:\TouchGFXProjects\mearm-stm32f429i\STM32CubeIDE\STM32F429ZITX_FLASH.ld
+	arm-none-eabi-g++ -o "STM32F429I-DISCO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\TouchGFXProjects\mearm-stm32f429i\STM32CubeIDE\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F429I-DISCO.map" -Wl,--gc-sections -static -LC:/TouchGFXProjects/mearm-stm32f429i/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc --specs=nano_c_standard_cpp.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+default.size.stdout: $(EXECUTABLES)
 	arm-none-eabi-size  $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-STM32F429I-DISCO.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+STM32F429I-DISCO.list: $(EXECUTABLES)
 	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "STM32F429I-DISCO.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-STM32F429I-DISCO.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+STM32F429I-DISCO.hex: $(EXECUTABLES)
 	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "STM32F429I-DISCO.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-STM32F429I-DISCO.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+STM32F429I-DISCO.bin: $(EXECUTABLES)
 	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "STM32F429I-DISCO.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
