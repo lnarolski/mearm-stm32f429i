@@ -643,6 +643,151 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Components": [
+              {
+                "Type": "BoxWithBorder",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "BorderColor": {
+                  "Red": 9,
+                  "Green": 137,
+                  "Blue": 182
+                },
+                "BorderSize": 10,
+                "Alpha": 255,
+                "Name": "boxWithBorderModalWindow",
+                "X": 15,
+                "Y": 30,
+                "Width": 210,
+                "Height": 249,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "ButtonWithIcon",
+                "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+                "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+                "Alpha": 255,
+                "IconPressed": "__designer\\Blue_Icons_trash_32.png",
+                "IconReleased": "__designer\\Blue_Icons_trash_32.png",
+                "IconX": 18,
+                "IconY": 15,
+                "IconHeight": 30,
+                "IconWidth": 24,
+                "ButtonStyle": "Style9",
+                "IconStyle": "Icon65",
+                "Name": "yesDeleteAllButton",
+                "X": 143,
+                "Y": 211,
+                "Width": 60,
+                "Height": 60,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "ButtonWithIcon",
+                "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+                "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+                "Alpha": 255,
+                "IconPressed": "__designer\\Blue_Icons_Back_arrow_32.png",
+                "IconReleased": "__designer\\Blue_Icons_Back_arrow_32.png",
+                "IconX": 22,
+                "IconY": 15,
+                "IconHeight": 30,
+                "IconWidth": 17,
+                "ButtonStyle": "Style9",
+                "IconStyle": "Icon5",
+                "Name": "noDeleteAllButton",
+                "X": 37,
+                "Y": 211,
+                "Width": 60,
+                "Height": 60,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "TextArea",
+                "TextId": "SingleUseId11",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
+                },
+                "Alpha": 255,
+                "AutoSize": false,
+                "LineSpacing": 0,
+                "Name": "warningTextArea",
+                "X": 24,
+                "Y": 96,
+                "Width": 192,
+                "Height": 102,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "Image",
+                "RelativeFilename": "__designer\\Blue_Icons_Alert_48.png",
+                "Alpha": 255,
+                "Name": "warningImage",
+                "X": 97,
+                "Y": 47,
+                "Width": 46,
+                "Height": 39,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "Type": "ModalWindow",
+            "FileName": "__designer\\Blue_Backgrounds_main_bg_portrait_240x320px.png",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "ModalX": 0,
+            "ModalY": 0,
+            "ModalWidth": 240,
+            "ModalHeight": 320,
+            "ContX": 0,
+            "ContY": 0,
+            "Alpha": 255,
+            "Name": "deleteAllModalWindow",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 320,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [
@@ -755,6 +900,30 @@
               "Type": "ActionCustom",
               "FunctionName": "ResumeSequenceButton_Clicked"
             }
+          },
+          {
+            "InteractionName": "NoDeleteAllButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "noDeleteAllButton"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "deleteAllModalWindow"
+            }
+          },
+          {
+            "InteractionName": "YesDeleteAllButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "yesDeleteAllButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "YesDeleteAllButton_Clicked"
+            }
           }
         ],
         "Name": "sequenceScreen",
@@ -838,6 +1007,10 @@
       },
       {
         "TextEntryId": "SingleUseId10",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId11",
         "IsResource": false
       }
     ],

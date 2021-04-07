@@ -82,6 +82,38 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     resumeSequenceButton.setIconXY(15, 16);
     resumeSequenceButton.setAction(buttonCallback);
 
+    deleteAllModalWindow.setBackground(touchgfx::BitmapId(BITMAP_BLUE_BACKGROUNDS_MAIN_BG_PORTRAIT_240X320PX_ID), 0, 0);
+    deleteAllModalWindow.setShadeColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    deleteAllModalWindow.hide();
+
+    boxWithBorderModalWindow.setPosition(15, 30, 210, 249);
+    boxWithBorderModalWindow.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    boxWithBorderModalWindow.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(9, 137, 182));
+    boxWithBorderModalWindow.setBorderSize(10);
+    deleteAllModalWindow.add(boxWithBorderModalWindow);
+
+    yesDeleteAllButton.setXY(143, 211);
+    yesDeleteAllButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_TRASH_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_TRASH_32_ID));
+    yesDeleteAllButton.setIconXY(18, 15);
+    yesDeleteAllButton.setAction(buttonCallback);
+    deleteAllModalWindow.add(yesDeleteAllButton);
+
+    noDeleteAllButton.setXY(37, 211);
+    noDeleteAllButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_BACK_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_BACK_ARROW_32_ID));
+    noDeleteAllButton.setIconXY(22, 15);
+    noDeleteAllButton.setAction(buttonCallback);
+    deleteAllModalWindow.add(noDeleteAllButton);
+
+    warningTextArea.setPosition(24, 96, 192, 102);
+    warningTextArea.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    warningTextArea.setLinespacing(0);
+    warningTextArea.setTypedText(touchgfx::TypedText(T_SINGLEUSEID11));
+    deleteAllModalWindow.add(warningTextArea);
+
+    warningImage.setXY(97, 47);
+    warningImage.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_ICONS_ALERT_48_ID));
+    deleteAllModalWindow.add(warningImage);
+
     add(__background);
     add(backgroundImage);
     add(backButton);
@@ -95,6 +127,7 @@ sequenceScreenViewBase::sequenceScreenViewBase() :
     add(changeSequenceSpeedButton);
     add(pauseSequenceButton);
     add(resumeSequenceButton);
+    add(deleteAllModalWindow);
 }
 
 void sequenceScreenViewBase::setupScreen()
@@ -166,5 +199,20 @@ void sequenceScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
         //When resumeSequenceButton clicked call virtual function
         //Call ResumeSequenceButton_Clicked
         ResumeSequenceButton_Clicked();
+    }
+    else if (&src == &yesDeleteAllButton)
+    {
+        //YesDeleteAllButton_Clicked
+        //When yesDeleteAllButton clicked call virtual function
+        //Call YesDeleteAllButton_Clicked
+        YesDeleteAllButton_Clicked();
+    }
+    else if (&src == &noDeleteAllButton)
+    {
+        //NoDeleteAllButton_Clicked
+        //When noDeleteAllButton clicked hide deleteAllModalWindow
+        //Hide deleteAllModalWindow
+        deleteAllModalWindow.setVisible(false);
+        deleteAllModalWindow.invalidate();
     }
 }

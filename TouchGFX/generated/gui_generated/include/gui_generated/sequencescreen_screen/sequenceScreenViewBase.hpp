@@ -13,6 +13,10 @@
 #include <touchgfx/containers/ScrollableContainer.hpp>
 #include <touchgfx/containers/ListLayout.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/ModalWindow.hpp>
+#include <touchgfx/Color.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 
 class sequenceScreenViewBase : public touchgfx::View<sequenceScreenPresenter>
@@ -65,6 +69,11 @@ public:
         // Override and implement this function in sequenceScreen
     }
 
+    virtual void YesDeleteAllButton_Clicked()
+    {
+        // Override and implement this function in sequenceScreen
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -87,6 +96,12 @@ protected:
     touchgfx::ButtonWithIcon changeSequenceSpeedButton;
     touchgfx::ButtonWithIcon pauseSequenceButton;
     touchgfx::ButtonWithIcon resumeSequenceButton;
+    touchgfx::ModalWindow deleteAllModalWindow;
+    touchgfx::BoxWithBorder boxWithBorderModalWindow;
+    touchgfx::ButtonWithIcon yesDeleteAllButton;
+    touchgfx::ButtonWithIcon noDeleteAllButton;
+    touchgfx::TextArea warningTextArea;
+    touchgfx::Image warningImage;
 
     /*
      * Wildcard Buffers

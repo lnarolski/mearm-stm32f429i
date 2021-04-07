@@ -69,11 +69,13 @@ SequencePlaybackControl.o: ../SequencePlaybackControl.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp \
- c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\sequenceplaybackcontrol.h \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
+ c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\sequenceplaybackcontrol.h
 
 ../SequencePlaybackControl.h:
 
@@ -215,6 +217,12 @@ c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
+
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 
 ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp:
@@ -222,5 +230,3 @@ c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp:
 
 c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\sequenceplaybackcontrol.h:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:

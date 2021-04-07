@@ -21,7 +21,7 @@ public:
 	void PlaySequenceButton_Clicked();
 	void StopSequenceButton_Clicked();
 	void AddNewPositionButton_Clicked();
-	void DeletePositionButton_Clicked();
+//	void DeletePositionButton_Clicked();
 	void ChangeSequenceSpeedButton_Clicked();
 	void PauseSequenceButton_Clicked();
 	void ResumeSequenceButton_Clicked();
@@ -31,12 +31,20 @@ public:
 	bool invalidateInfoTextArea = false;
 
 	void handleTickEvent();
+	void handleClickEvent(ClickEvent& evt);
+
+	void LongPressDeleteButton_Clicked();
+	void ShortPressDeleteButton_Clicked();
+
+	void YesDeleteAllButton_Clicked();
 
 	uint32_t FlashRead();
 	uint32_t FlashWrite(uint32_t StartPageAddress, uint32_t* DATA_32);
 
 	positionContainer positionContainersList[MAX_NUM_OF_POSITIONS];
 protected:
+    Callback<sequenceScreenView, const touchgfx::ButtonWithIcon&, const ClickEvent&> deleteCallback;
+    void onDeleteButton_Clicked(const touchgfx::ButtonWithIcon&, const ClickEvent&);
 };
 
 #endif // SEQUENCESCREENVIEW_HPP
