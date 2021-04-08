@@ -21,7 +21,6 @@ public:
 	void PlaySequenceButton_Clicked();
 	void StopSequenceButton_Clicked();
 	void AddNewPositionButton_Clicked();
-//	void DeletePositionButton_Clicked();
 	void ChangeSequenceSpeedButton_Clicked();
 	void PauseSequenceButton_Clicked();
 	void ResumeSequenceButton_Clicked();
@@ -43,8 +42,11 @@ public:
 
 	positionContainer positionContainersList[MAX_NUM_OF_POSITIONS];
 protected:
-    Callback<sequenceScreenView, const touchgfx::ButtonWithIcon&, const ClickEvent&> deleteCallback;
-    void onDeleteButton_Clicked(const touchgfx::ButtonWithIcon&, const ClickEvent&);
+	Callback<sequenceScreenView, const touchgfx::ButtonWithIcon&, const ClickEvent&> deleteCallback;
+	void onDeleteButton_Clicked(const touchgfx::ButtonWithIcon&, const ClickEvent&);
+
+	Callback<sequenceScreenView, const touchgfx::TextAreaWithOneWildcard&, const ClickEvent&> positionListCallback;
+	void onPositionList_Clicked(const touchgfx::TextAreaWithOneWildcard&, const ClickEvent&);
 };
 
 #endif // SEQUENCESCREENVIEW_HPP

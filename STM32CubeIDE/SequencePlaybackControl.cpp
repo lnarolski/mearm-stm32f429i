@@ -71,8 +71,10 @@ void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters)
 			colortype previousColor;
 			if (sequenceScreenViewClass != NULL)
 			{
-				previousColor = ((touchgfx::TextAreaWithOneWildcard*)sequenceScreenViewClass->positionContainersList[i].getFirstChild())->getColor();
-				((touchgfx::TextAreaWithOneWildcard*)sequenceScreenViewClass->positionContainersList[i].getFirstChild())->setColor(touchgfx::Color::getColorFrom24BitRGB(9, 137, 182));
+				previousColor =
+						((touchgfx::TextAreaWithOneWildcard*) sequenceScreenViewClass->positionContainersList[i].getFirstChild())->getColor();
+				((touchgfx::TextAreaWithOneWildcard*) sequenceScreenViewClass->positionContainersList[i].getFirstChild())->setColor(
+						touchgfx::Color::getColorFrom24BitRGB(9, 137, 182));
 				sequenceScreenViewClass->invalidateScrollableContainer = true;
 			}
 
@@ -191,7 +193,8 @@ void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters)
 
 			if (sequenceScreenViewClass != NULL)
 			{
-				((touchgfx::TextAreaWithOneWildcard*)sequenceScreenViewClass->positionContainersList[i].getFirstChild())->setColor(previousColor);
+				((touchgfx::TextAreaWithOneWildcard*) sequenceScreenViewClass->positionContainersList[i].getFirstChild())->setColor(
+						previousColor);
 				sequenceScreenViewClass->invalidateScrollableContainer = true;
 			}
 		}
@@ -213,6 +216,47 @@ ArmPosition SequencePlaybackControl::Char2ArmPosition(char* position)
 		if (isdigit(position[i]))
 		{
 			buffer[j] = position[i];
+			++j;
+		}
+		else
+		{
+			buffer[j] = '\0';
+			uint32_t tempValue = (uint32_t) atoi(buffer);
+			switch (PWMDutyType)
+			{
+			case 0:
+				robotPosition.xAxisPWMDuty = tempValue;
+				++PWMDutyType;
+				break;
+			case 1:
+				robotPosition.yAxisPWMDuty_L = tempValue;
+				++PWMDutyType;
+				break;
+			case 2:
+				robotPosition.yAxisPWMDuty_R = tempValue;
+				++PWMDutyType;
+				break;
+			default:
+				break;
+			}
+
+			j = 0;
+		}
+	}
+	robotPosition.manipulatorPWMDuty = (buffer[0] == '1' ? 275 : 700);
+	return robotPosition;
+}
+
+ArmPosition SequencePlaybackControl::Char2ArmPosition(Unicode::UnicodeChar* position)
+{
+	ArmPosition robotPosition;
+	char buffer[17];
+	size_t j = 0, PWMDutyType = 0;
+	for (size_t i = 0; i < 17 && position[i] != '\0'; ++i)
+	{
+		if (isdigit(position[i]))
+		{
+			buffer[j] = (char)position[i];
 			++j;
 		}
 		else

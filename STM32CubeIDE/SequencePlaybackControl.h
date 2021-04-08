@@ -57,12 +57,14 @@ public:
 	static uint32_t maxSequenceSpeed;
 	static uint32_t minSequenceSpeed;
 
+	static ArmPosition Char2ArmPosition(char* position);
+	static ArmPosition Char2ArmPosition(Unicode::UnicodeChar* position);
+
 private:
 	static size_t currentPositionNumber;
 
 	static void PlaybackThreadFunction(void* pvParameters);
 	static TaskHandle_t* playbackThread;
-	static ArmPosition Char2ArmPosition(char* position);
 };
 
 #endif /* SEQUENCEPLAYBACKCONTROL_H_ */

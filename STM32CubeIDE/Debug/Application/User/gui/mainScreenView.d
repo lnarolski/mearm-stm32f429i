@@ -95,7 +95,8 @@ Application/User/gui/mainScreenView.o: \
  c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h \
  ../../TouchGFX/gui/include/gui/containers/positionContainer.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp
 
 ../../TouchGFX/gui/include/gui/mainscreen_screen/mainScreenView.hpp:
 
@@ -288,3 +289,5 @@ c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/positionContainerBase.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:

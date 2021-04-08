@@ -8,7 +8,9 @@ extern uint32_t yAxisPWMDuty_L;
 extern uint32_t yAxisPWMDuty_R;
 extern uint32_t manipulatorPWMDuty;
 
-sequenceScreenView::sequenceScreenView() : deleteCallback(this, &sequenceScreenView::onDeleteButton_Clicked)
+sequenceScreenView::sequenceScreenView() :
+		deleteCallback(this, &sequenceScreenView::onDeleteButton_Clicked), positionListCallback(this,
+				&sequenceScreenView::onPositionList_Clicked)
 {
 	SequencePlaybackControl::sequenceScreenViewClass = this;
 }
@@ -23,6 +25,11 @@ void sequenceScreenView::setupScreen()
 	sequenceScreenViewBase::setupScreen();
 
 	deletePositionButton.setClickAction(deleteCallback);
+
+	for (size_t i = 0; i < MAX_NUM_OF_POSITIONS; ++i)
+	{
+		((touchgfx::ClickListener< touchgfx::TextAreaWithOneWildcard >*)positionContainersList[i].getFirstChild())->setClickAction(positionListCallback);
+	}
 
 	positionsList.removeAll();
 	scrollableContainer.invalidate();
@@ -303,22 +310,43 @@ void sequenceScreenView::AddNewPositionButton_Clicked()
 	}
 }
 
+void sequenceScreenView::onPositionList_Clicked(const touchgfx::TextAreaWithOneWildcard& text, const ClickEvent& evt)
+{
+	static int16_t startPosition = 0;
+
+	if (evt.getType() == ClickEvent::PRESSED)
+	{
+		startPosition = scrollableContainer.getY();
+	}
+	else if (evt.getType() == ClickEvent::RELEASED && startPosition == scrollableContainer.getY())
+	{
+		Unicode::UnicodeChar* tempText = ((positionContainer*)text.getParent())->GetText();
+		ArmPosition armPosition = SequencePlaybackControl::Char2ArmPosition(tempText);
+		xAxisPWMDuty = armPosition.xAxisPWMDuty;
+		yAxisPWMDuty_L = armPosition.yAxisPWMDuty_L;
+		yAxisPWMDuty_R = armPosition.yAxisPWMDuty_R;
+		manipulatorPWMDuty = armPosition.manipulatorPWMDuty;
+	}
+	else
+		startPosition = 0;
+}
+
 void sequenceScreenView::onDeleteButton_Clicked(const touchgfx::ButtonWithIcon&, const ClickEvent& evt)
 {
-    if (evt.getType() == ClickEvent::RELEASED)
-    {
+	if (evt.getType() == ClickEvent::RELEASED)
+	{
 		deleteButtonClicked = false;
 
 		if (longPressCounter <= 50)
 		{
 			ShortPressDeleteButton_Clicked();
 		}
-    }
-    else if (evt.getType() == ClickEvent::PRESSED)
-    {
+	}
+	else if (evt.getType() == ClickEvent::PRESSED)
+	{
 		longPressCounter = 0;
 		deleteButtonClicked = true;
-    }
+	}
 }
 
 void sequenceScreenView::LongPressDeleteButton_Clicked()

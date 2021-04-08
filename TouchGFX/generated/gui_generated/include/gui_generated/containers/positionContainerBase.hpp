@@ -7,6 +7,7 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/mixins/ClickListener.hpp>
 
 class positionContainerBase : public touchgfx::Container
 {
@@ -23,7 +24,7 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::TextAreaWithOneWildcard positionText;
+    touchgfx::ClickListener< touchgfx::TextAreaWithOneWildcard > positionText;
 
     /*
      * Wildcard Buffers

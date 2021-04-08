@@ -959,7 +959,7 @@
             "Visible": true,
             "LockPosition": false,
             "Draggable": false,
-            "Clickable": false,
+            "Clickable": true,
             "Fadeable": false,
             "Moveable": false
           }
