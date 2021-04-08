@@ -8,7 +8,7 @@ extern uint32_t yAxisPWMDuty_L;
 extern uint32_t yAxisPWMDuty_R;
 extern uint32_t manipulatorPWMDuty;
 
-sequenceScreenView::sequenceScreenView()
+sequenceScreenView::sequenceScreenView() : deleteCallback(this, &sequenceScreenView::onDeleteButton_Clicked)
 {
 	SequencePlaybackControl::sequenceScreenViewClass = this;
 }
@@ -21,6 +21,7 @@ sequenceScreenView::~sequenceScreenView()
 void sequenceScreenView::setupScreen()
 {
 	sequenceScreenViewBase::setupScreen();
+
 	deletePositionButton.setClickAction(deleteCallback);
 
 	positionsList.removeAll();
@@ -80,8 +81,9 @@ void sequenceScreenView::handleTickEvent()
 
 	if (deleteButtonClicked)
 	{
-		if (longPressCounter > 1000)
+		if (longPressCounter > 50)
 		{
+			deleteButtonClicked = false;
 			LongPressDeleteButton_Clicked();
 		}
 
@@ -307,7 +309,7 @@ void sequenceScreenView::onDeleteButton_Clicked(const touchgfx::ButtonWithIcon&,
     {
 		deleteButtonClicked = false;
 
-		if (longPressCounter <= 1000)
+		if (longPressCounter <= 50)
 		{
 			ShortPressDeleteButton_Clicked();
 		}
@@ -322,6 +324,7 @@ void sequenceScreenView::onDeleteButton_Clicked(const touchgfx::ButtonWithIcon&,
 void sequenceScreenView::LongPressDeleteButton_Clicked()
 {
 	deleteAllModalWindow.setVisible(true);
+	deleteAllModalWindow.invalidate();
 }
 
 void sequenceScreenView::ShortPressDeleteButton_Clicked()
@@ -349,4 +352,7 @@ void sequenceScreenView::YesDeleteAllButton_Clicked()
 	infoTextArea.invalidate();
 
 	DataStorageModel::numOfListItems = 0;
+
+	deleteAllModalWindow.setVisible(false);
+	deleteAllModalWindow.invalidate();
 }
