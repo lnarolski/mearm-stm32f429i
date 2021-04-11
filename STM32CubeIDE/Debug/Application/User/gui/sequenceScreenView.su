@@ -52,7 +52,7 @@ sequenceScreenView.cpp:18:1:virtual sequenceScreenView::~sequenceScreenView()	16
 sequenceScreenView.cpp:23:6:virtual void sequenceScreenView::setupScreen()	40	static
 sequenceScreenView.cpp:76:6:virtual void sequenceScreenView::handleTickEvent()	16	static
 sequenceScreenView.cpp:101:6:virtual void sequenceScreenView::tearDownScreen()	16	static
-sequenceScreenView.cpp:106:6:virtual void sequenceScreenView::SaveSequenceButton_Clicked()	40	static
+sequenceScreenView.cpp:106:6:virtual void sequenceScreenView::SaveSequenceButton_Clicked()	32	static
 sequenceScreenView.cpp:188:6:virtual void sequenceScreenView::PlaySequenceButton_Clicked()	16	static
 sequenceScreenView.cpp:207:6:virtual void sequenceScreenView::StopSequenceButton_Clicked()	16	static
 sequenceScreenView.cpp:233:6:virtual void sequenceScreenView::ChangeSequenceSpeedButton_Clicked()	24	static

@@ -47,8 +47,8 @@ mainScreenView.cpp:14:1:mainScreenView::mainScreenView()	16	static
 mainScreenView.cpp:23:6:virtual void mainScreenView::setupScreen()	16	static
 mainScreenView.cpp:33:6:virtual void mainScreenView::tearDownScreen()	16	static
 mainScreenView.cpp:43:6:virtual void mainScreenView::XAxisSliderValue_Changed(int)	16	static
-mainScreenView.cpp:48:6:virtual void mainScreenView::YAxisSlider_L_Value_Changed(int)	24	static
-mainScreenView.cpp:53:6:virtual void mainScreenView::YAxisSlider_R_Value_Changed(int)	24	static
+mainScreenView.cpp:48:6:virtual void mainScreenView::YAxisSlider_L_Value_Changed(int)	16	static
+mainScreenView.cpp:53:6:virtual void mainScreenView::YAxisSlider_R_Value_Changed(int)	16	static
 mainScreenView.cpp:58:6:virtual void mainScreenView::ManipulatorControlToggleButton_Clicked()	16	static
 Box.hpp:36:7:touchgfx::Box::~Box()	16	static
 Box.hpp:36:7:virtual touchgfx::Box::~Box()	16	static

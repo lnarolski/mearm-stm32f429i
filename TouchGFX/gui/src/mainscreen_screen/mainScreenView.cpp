@@ -42,17 +42,17 @@ void mainScreenView::tearDownScreen()
 
 void mainScreenView::XAxisSliderValue_Changed(int value)
 {
-	xAxisPWMDuty = 275 + 9 * value;
+	xAxisPWMDuty = 275 * 6 + 6 * 9 * value;
 }
 
 void mainScreenView::YAxisSlider_L_Value_Changed(int value)
 {
-	yAxisPWMDuty_L = (int) (842.0 + 5.06 * (float) value);
+	yAxisPWMDuty_L = (int) (842.0 * 6 + 6 * 5.06 * (float) value);
 }
 
 void mainScreenView::YAxisSlider_R_Value_Changed(int value)
 {
-	yAxisPWMDuty_R = (int) (842.0 + 3.42 * (float) value);
+	yAxisPWMDuty_R = (int) (842.0 * 6 + 6 * 3.42 * (float) value);
 }
 
 void mainScreenView::ManipulatorControlToggleButton_Clicked()
@@ -61,12 +61,12 @@ void mainScreenView::ManipulatorControlToggleButton_Clicked()
 
 	if (state)
 	{
-		manipulatorPWMDuty = 275;
+		manipulatorPWMDuty = 275 * 6;
 		state = false;
 	}
 	else
 	{
-		manipulatorPWMDuty = 700;
+		manipulatorPWMDuty = 700 * 6;
 		state = true;
 	}
 }
