@@ -46,6 +46,9 @@ On this screen you can control position of robotic arm with 3 sliders. State of 
 <p align="center">
   <img align="center" src="/Img/screenshot3.png">
 </p>
+<p align="center">
+  <img align="center" src="/Img/screenshot4.png">
+</p>
 
 On this screen you can record sequences of positions and play them with different speeds. Screen description below:
 
