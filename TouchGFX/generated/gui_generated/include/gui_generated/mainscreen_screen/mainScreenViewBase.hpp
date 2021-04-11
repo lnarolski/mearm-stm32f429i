@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/Slider.hpp>
+#include <touchgfx/widgets/ButtonWithIcon.hpp>
 
 class mainScreenViewBase : public touchgfx::View<mainScreenPresenter>
 {
@@ -62,6 +63,7 @@ protected:
     touchgfx::TextArea leftText;
     touchgfx::TextArea rightText;
     touchgfx::TextArea baseText;
+    touchgfx::ButtonWithIcon sequenceScreenButton;
 
 private:
 

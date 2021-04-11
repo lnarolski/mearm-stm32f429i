@@ -1,0 +1,13 @@
+Presenter.hpp:40:18:virtual void touchgfx::Presenter::activate()	16	static
+Presenter.hpp:50:18:virtual void touchgfx::Presenter::deactivate()	16	static
+Presenter.hpp:55:13:touchgfx::Presenter::~Presenter()	16	static
+Presenter.hpp:55:13:virtual touchgfx::Presenter::~Presenter()	16	static
+Presenter.hpp:61:5:touchgfx::Presenter::Presenter()	16	static
+ModelListener.hpp:9:5:ModelListener::ModelListener()	16	static
+ModelListener.hpp:11:13:ModelListener::~ModelListener()	16	static
+ModelListener.hpp:11:13:virtual ModelListener::~ModelListener()	16	static
+sequenceScreenPresenter.hpp:28:13:sequenceScreenPresenter::~sequenceScreenPresenter()	16	static
+sequenceScreenPresenter.hpp:28:13:virtual sequenceScreenPresenter::~sequenceScreenPresenter()	16	static
+sequenceScreenPresenter.cpp:4:1:sequenceScreenPresenter::sequenceScreenPresenter(sequenceScreenView&)	16	static
+sequenceScreenPresenter.cpp:10:6:virtual void sequenceScreenPresenter::activate()	16	static
+sequenceScreenPresenter.cpp:15:6:virtual void sequenceScreenPresenter::deactivate()	16	static

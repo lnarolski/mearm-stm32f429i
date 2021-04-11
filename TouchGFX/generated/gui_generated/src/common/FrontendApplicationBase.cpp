@@ -11,6 +11,8 @@
 #include <platform/driver/lcd/LCD16bpp.hpp>
 #include <gui/mainscreen_screen/mainScreenView.hpp>
 #include <gui/mainscreen_screen/mainScreenPresenter.hpp>
+#include <gui/sequencescreen_screen/sequenceScreenView.hpp>
+#include <gui/sequencescreen_screen/sequenceScreenPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -40,4 +42,28 @@ void FrontendApplicationBase::gotomainScreenScreenNoTransition()
 void FrontendApplicationBase::gotomainScreenScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<mainScreenView, mainScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotomainScreenScreenSlideTransitionWest()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotomainScreenScreenSlideTransitionWestImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotomainScreenScreenSlideTransitionWestImpl()
+{
+    touchgfx::makeTransition<mainScreenView, mainScreenPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// sequenceScreen
+
+void FrontendApplicationBase::gotosequenceScreenScreenSlideTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotosequenceScreenScreenSlideTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotosequenceScreenScreenSlideTransitionEastImpl()
+{
+    touchgfx::makeTransition<sequenceScreenView, sequenceScreenPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

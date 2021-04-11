@@ -17,7 +17,7 @@ mainScreenViewBase::mainScreenViewBase() :
     backgroundImage.setXY(0, 0);
     backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_BACKGROUNDS_MAIN_BG_PORTRAIT_240X320PX_ID));
 
-    manipulatorControlToggleButton.setXY(72, 141);
+    manipulatorControlToggleButton.setXY(72, 193);
     manipulatorControlToggleButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_SMALL_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_SMALL_BUTTON_ON_ID));
     manipulatorControlToggleButton.setAction(buttonCallback);
 
@@ -26,7 +26,7 @@ mainScreenViewBase::mainScreenViewBase() :
     titleText.setLinespacing(0);
     titleText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
 
-    manipulatorText.setXY(61, 76);
+    manipulatorText.setXY(61, 128);
     manipulatorText.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     manipulatorText.setLinespacing(0);
     manipulatorText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID2));
@@ -67,6 +67,11 @@ mainScreenViewBase::mainScreenViewBase() :
     baseText.setLinespacing(0);
     baseText.setTypedText(touchgfx::TypedText(T_SINGLEUSEID5));
 
+    sequenceScreenButton.setXY(90, 52);
+    sequenceScreenButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_SEQUENCE_ICON_32_ID), touchgfx::Bitmap(BITMAP_SEQUENCE_ICON_32_ID));
+    sequenceScreenButton.setIconXY(14, 14);
+    sequenceScreenButton.setAction(buttonCallback);
+
     add(__background);
     add(backgroundImage);
     add(manipulatorControlToggleButton);
@@ -78,6 +83,7 @@ mainScreenViewBase::mainScreenViewBase() :
     add(leftText);
     add(rightText);
     add(baseText);
+    add(sequenceScreenButton);
 }
 
 void mainScreenViewBase::setupScreen()
@@ -93,6 +99,13 @@ void mainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //When manipulatorControlToggleButton clicked call virtual function
         //Call ManipulatorControlToggleButton_Clicked
         ManipulatorControlToggleButton_Clicked();
+    }
+    else if (&src == &sequenceScreenButton)
+    {
+        //sequenceScreenButton_Clicked
+        //When sequenceScreenButton clicked change screen to sequenceScreen
+        //Go to sequenceScreen with screen transition towards East
+        application().gotosequenceScreenScreenSlideTransitionEast();
     }
 }
 

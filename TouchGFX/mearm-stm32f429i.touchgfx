@@ -29,7 +29,7 @@
             "Style": "Style5",
             "Name": "manipulatorControlToggleButton",
             "X": 72,
-            "Y": 141,
+            "Y": 193,
             "Width": 96,
             "Height": 38,
             "Visible": true,
@@ -77,7 +77,7 @@
             "LineSpacing": 0,
             "Name": "manipulatorText",
             "X": 61,
-            "Y": 76,
+            "Y": 128,
             "Width": 118,
             "Height": 50,
             "Visible": true,
@@ -236,6 +236,30 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "Sequence_Icon_32.png",
+            "IconReleased": "Sequence_Icon_32.png",
+            "IconX": 14,
+            "IconY": 14,
+            "IconHeight": 32,
+            "IconWidth": 32,
+            "ButtonStyle": "Style1",
+            "Name": "sequenceScreenButton",
+            "X": 90,
+            "Y": 52,
+            "Width": 60,
+            "Height": 60,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [
@@ -286,14 +310,668 @@
               "Type": "ActionCustom",
               "FunctionName": "YAxisSlider_R_Value_Changed"
             }
+          },
+          {
+            "InteractionName": "sequenceScreenButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "sequenceScreenButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "sequenceScreen"
+            }
           }
         ],
         "Name": "mainScreen",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Type": "Image",
+            "RelativeFilename": "__designer\\Blue_Backgrounds_main_bg_portrait_240x320px.png",
+            "Alpha": 255,
+            "Style": "Image25",
+            "Name": "backgroundImage",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 320,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Blue_Icons_Back_arrow_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Back_arrow_32.png",
+            "IconX": 22,
+            "IconY": 15,
+            "IconHeight": 30,
+            "IconWidth": 17,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon5",
+            "Name": "backButton",
+            "X": 0,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Blue_Icons_Remove_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Remove_32.png",
+            "IconX": 16,
+            "IconY": 16,
+            "IconHeight": 29,
+            "IconWidth": 29,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon53",
+            "Name": "deletePositionButton",
+            "X": 180,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": true,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Blue_Icons_Add_new_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Add_new_32.png",
+            "IconX": 16,
+            "IconY": 16,
+            "IconHeight": 29,
+            "IconWidth": 29,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon1",
+            "Name": "addNewPositionButton",
+            "X": 90,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Blue_Icons_Play_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Play_32.png",
+            "IconX": 20,
+            "IconY": 15,
+            "IconHeight": 30,
+            "IconWidth": 21,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon45",
+            "Name": "playSequenceButton",
+            "X": 180,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "Save_Icon_32.png",
+            "IconReleased": "Save_Icon_32.png",
+            "IconX": 14,
+            "IconY": 14,
+            "IconHeight": 32,
+            "IconWidth": 32,
+            "ButtonStyle": "Style1",
+            "Name": "saveSequenceButton",
+            "X": 0,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Components": [
+              {
+                "Components": [],
+                "Type": "ListLayout",
+                "Direction": "South",
+                "Name": "positionsList",
+                "X": -5,
+                "Y": 0,
+                "Width": 250,
+                "Height": 250,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "Type": "ScrollableContainer",
+            "HorizontalScrollEnabled": false,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": true,
+            "ScrollbarsVisibleOnPressed": false,
+            "ScrollbarsColor": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "ScrollbarsAlpha": 255,
+            "Name": "scrollableContainer",
+            "X": 0,
+            "Y": 60,
+            "Width": 240,
+            "Height": 200,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId10",
+              "UseBuffer": true,
+              "BufferSize": 100
+            },
+            "Name": "infoTextArea",
+            "X": 60,
+            "Y": 0,
+            "Width": 120,
+            "Height": 60,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Blue_Icons_Stop_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Stop_32.png",
+            "IconX": 15,
+            "IconY": 15,
+            "IconHeight": 30,
+            "IconWidth": 30,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon61",
+            "Name": "stopSequenceButton",
+            "X": 180,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Blue_Icons_Next_arrow_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Next_arrow_32.png",
+            "IconX": 22,
+            "IconY": 15,
+            "IconHeight": 30,
+            "IconWidth": 17,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon39",
+            "Name": "changeSequenceSpeedButton",
+            "X": 180,
+            "Y": 0,
+            "Width": 60,
+            "Height": 60,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Blue_Icons_Pause_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Pause_32.png",
+            "IconX": 18,
+            "IconY": 15,
+            "IconHeight": 30,
+            "IconWidth": 24,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon43",
+            "Name": "pauseSequenceButton",
+            "X": 90,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Blue_Icons_Go_next_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Go_next_32.png",
+            "IconX": 15,
+            "IconY": 16,
+            "IconHeight": 28,
+            "IconWidth": 30,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon25",
+            "Name": "resumeSequenceButton",
+            "X": 90,
+            "Y": 260,
+            "Width": 60,
+            "Height": 60,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Components": [
+              {
+                "Type": "BoxWithBorder",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "BorderColor": {
+                  "Red": 9,
+                  "Green": 137,
+                  "Blue": 182
+                },
+                "BorderSize": 10,
+                "Alpha": 255,
+                "Name": "boxWithBorderModalWindow",
+                "X": 15,
+                "Y": 30,
+                "Width": 210,
+                "Height": 249,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "ButtonWithIcon",
+                "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+                "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+                "Alpha": 255,
+                "IconPressed": "__designer\\Blue_Icons_trash_32.png",
+                "IconReleased": "__designer\\Blue_Icons_trash_32.png",
+                "IconX": 18,
+                "IconY": 15,
+                "IconHeight": 30,
+                "IconWidth": 24,
+                "ButtonStyle": "Style9",
+                "IconStyle": "Icon65",
+                "Name": "yesDeleteAllButton",
+                "X": 143,
+                "Y": 211,
+                "Width": 60,
+                "Height": 60,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "ButtonWithIcon",
+                "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+                "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+                "Alpha": 255,
+                "IconPressed": "__designer\\Blue_Icons_Back_arrow_32.png",
+                "IconReleased": "__designer\\Blue_Icons_Back_arrow_32.png",
+                "IconX": 22,
+                "IconY": 15,
+                "IconHeight": 30,
+                "IconWidth": 17,
+                "ButtonStyle": "Style9",
+                "IconStyle": "Icon5",
+                "Name": "noDeleteAllButton",
+                "X": 37,
+                "Y": 211,
+                "Width": 60,
+                "Height": 60,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "TextArea",
+                "TextId": "SingleUseId11",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
+                },
+                "Alpha": 255,
+                "AutoSize": false,
+                "LineSpacing": 0,
+                "Name": "warningTextArea",
+                "X": 24,
+                "Y": 96,
+                "Width": 192,
+                "Height": 102,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              },
+              {
+                "Type": "Image",
+                "RelativeFilename": "__designer\\Blue_Icons_Alert_48.png",
+                "Alpha": 255,
+                "Name": "warningImage",
+                "X": 97,
+                "Y": 47,
+                "Width": 46,
+                "Height": 39,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "Type": "ModalWindow",
+            "FileName": "__designer\\Blue_Backgrounds_main_bg_portrait_240x320px.png",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "ModalX": 0,
+            "ModalY": 0,
+            "ModalWidth": 240,
+            "ModalHeight": 320,
+            "ContX": 0,
+            "ContY": 0,
+            "Alpha": 255,
+            "Name": "deleteAllModalWindow",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 320,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "SaveSequenceButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "saveSequenceButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "SaveSequenceButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "PlaySequenceButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "playSequenceButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "PlaySequenceButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "AddNewPositionButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "addNewPositionButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "AddNewPositionButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "DeletePositionButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "deletePositionButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "DeletePositionButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "BackButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "backButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "mainScreen"
+            }
+          },
+          {
+            "InteractionName": "StopSequenceButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "stopSequenceButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "StopSequenceButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "PauseSequenceButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "pauseSequenceButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "PauseSequenceButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "ChangeSequenceSpeedButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "changeSequenceSpeedButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ChangeSequenceSpeedButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "ResumeSequenceButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "resumeSequenceButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ResumeSequenceButton_Clicked"
+            }
+          },
+          {
+            "InteractionName": "NoDeleteAllButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "noDeleteAllButton"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "deleteAllModalWindow"
+            }
+          },
+          {
+            "InteractionName": "YesDeleteAllButton_Clicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "yesDeleteAllButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "YesDeleteAllButton_Clicked"
+            }
+          }
+        ],
+        "Name": "sequenceScreen",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
       }
     ],
-    "CustomContainerDefinitions": [],
+    "CustomContainerDefinitions": [
+      {
+        "Components": [
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId8",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId9",
+              "UseBuffer": true,
+              "BufferSize": 17
+            },
+            "Name": "positionText",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 27,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": true,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "positionContainer",
+        "X": 0,
+        "Y": 0,
+        "Width": 240,
+        "Height": 27
+      }
+    ],
     "TextEntries": [
       {
         "TextEntryId": "SingleUseId1",
@@ -313,6 +991,26 @@
       },
       {
         "TextEntryId": "SingleUseId5",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId6",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId8",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId9",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId10",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId11",
         "IsResource": false
       }
     ],

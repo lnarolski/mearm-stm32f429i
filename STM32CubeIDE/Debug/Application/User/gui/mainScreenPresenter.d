@@ -55,6 +55,7 @@ Application/User/gui/mainScreenPresenter.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -90,7 +91,8 @@ Application/User/gui/mainScreenPresenter.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
- ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
+ c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h
 
 ../../TouchGFX/gui/include/gui/mainscreen_screen/mainScreenView.hpp:
 
@@ -202,6 +204,8 @@ Application/User/gui/mainScreenPresenter.o: \
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
 
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithIcon.hpp:
+
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 
 ../../Core/Inc/stm32f4xx_hal_conf.h:
@@ -273,3 +277,5 @@ Application/User/gui/mainScreenPresenter.o: \
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
+
+c:\touchgfxprojects\mearm-stm32f429i\stm32cubeide\datastoragemodel.h:

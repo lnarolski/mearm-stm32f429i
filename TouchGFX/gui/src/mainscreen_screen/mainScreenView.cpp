@@ -1,9 +1,10 @@
 #include <gui/mainscreen_screen/mainScreenView.hpp>
+#include <gui/containers/positionContainer.hpp>
 
-uint32_t xAxisPWMDuty = 725;
-uint32_t yAxisPWMDuty_L = 842;
-uint32_t yAxisPWMDuty_R = 842;
-uint32_t manipulatorPWMDuty = 275;
+extern uint32_t xAxisPWMDuty;
+extern uint32_t yAxisPWMDuty_L;
+extern uint32_t yAxisPWMDuty_R;
+extern uint32_t manipulatorPWMDuty;
 
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
@@ -21,12 +22,22 @@ mainScreenView::mainScreenView()
 
 void mainScreenView::setupScreen()
 {
-    mainScreenViewBase::setupScreen();
+	mainScreenViewBase::setupScreen();
+
+	xAxisSlider.setValue(DataStorageModel::xAxisSliderValue);
+	yAxisSlider_L.setValue(DataStorageModel::yAxisSliderValue_L);
+	yAxisSlider_R.setValue(DataStorageModel::yAxisSliderValue_R);
+	manipulatorControlToggleButton.forceState(DataStorageModel::manipulatorState);
 }
 
 void mainScreenView::tearDownScreen()
 {
-    mainScreenViewBase::tearDownScreen();
+	DataStorageModel::xAxisSliderValue = xAxisSlider.getValue();
+	DataStorageModel::yAxisSliderValue_L = yAxisSlider_L.getValue();
+	DataStorageModel::yAxisSliderValue_R = yAxisSlider_R.getValue();
+	DataStorageModel::manipulatorState = manipulatorControlToggleButton.getState();
+
+	mainScreenViewBase::tearDownScreen();
 }
 
 void mainScreenView::XAxisSliderValue_Changed(int value)
@@ -36,12 +47,12 @@ void mainScreenView::XAxisSliderValue_Changed(int value)
 
 void mainScreenView::YAxisSlider_L_Value_Changed(int value)
 {
-	yAxisPWMDuty_L = (int) (842.0 + 5.06 * (float)value);
+	yAxisPWMDuty_L = (int) (842.0 + 5.06 * (float) value);
 }
 
 void mainScreenView::YAxisSlider_R_Value_Changed(int value)
 {
-	yAxisPWMDuty_R = (int) (842.0 + 3.42 * (float)value);
+	yAxisPWMDuty_R = (int) (842.0 + 3.42 * (float) value);
 }
 
 void mainScreenView::ManipulatorControlToggleButton_Clicked()

@@ -294,6 +294,11 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/gui/src/common/FrontendApplication.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/positionContainer.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/gui/src/containers/positionContainer.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/mainScreenPresenter.cpp</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/gui/src/mainscreen_screen/mainScreenPresenter.cpp</locationURI>
@@ -307,6 +312,16 @@
 			<name>Application/User/gui/Model.cpp</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/gui/src/model/Model.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/sequenceScreenPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/gui/src/sequencescreen_screen/sequenceScreenPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/sequenceScreenView.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/gui/src/sequencescreen_screen/sequenceScreenView.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/ApplicationFontProvider.cpp</name>
@@ -384,9 +399,19 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/positionContainerBase.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/gui_generated/src/containers/positionContainerBase.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/mainScreenViewBase.cpp</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/gui_generated/src/mainscreen_screen/mainScreenViewBase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/sequenceScreenViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/gui_generated/src/sequencescreen_screen/sequenceScreenViewBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/BitmapDatabase.cpp</name>
@@ -394,9 +419,89 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/BitmapDatabase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_Save_Icon_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_Save_Icon_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Sequence_Icon_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/image_Sequence_Icon_32.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_Blue_Backgrounds_main_bg_portrait_240x320px.cpp</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Backgrounds_main_bg_portrait_240x320px.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Buttons_Round_Edge_icon_button.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_icon_button.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Buttons_Round_Edge_icon_button_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_icon_button_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Buttons_Square_icon_button.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Square_icon_button.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Buttons_Square_icon_button_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Square_icon_button_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Add_new_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Add_new_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Alert_48.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Alert_48.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Back_arrow_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Back_arrow_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Go_next_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Go_next_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Next_arrow_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Next_arrow_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Pause_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Pause_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Play_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Play_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Remove_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Remove_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Stop_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Stop_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_trash_32.cpp</name>
+			<type>1</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/TouchGFX/generated/images/src/__designer/image_Blue_Icons_trash_32.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_Blue_Slider_Horizontal_Small_Indicators_slider_horizontal_small_round_knob.cpp</name>
