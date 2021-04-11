@@ -48,19 +48,32 @@ On this screen you can control position of robotic arm with 3 sliders. State of 
 </p>
 
 On this screen you can record sequences of positions and play them with different speeds. Screen description below:
- 1 - Save button - Save created sequence to flash memory to restore it after microcontroller restart
- 2 - Info text area - Displays information and errors
- 3 - Clear button
- - Short press - Delete last position from the list
- - Long press - Delete all positions from the list
 
- 4 - Positions list - Scrollable list of all added positions. Click on element to move arm to clicked position
- 5 - Back button - Close window and go back to Main screen
- 6 - Add new position - Add current arm position to positions list
- 7 - Play sequence - Start playing created sequence of positions
- 8 - Change speed button - Change sequence speed
- 9 - Pause/Resume button - Pause/Resume sequence
- 10 - Stop button - Stop playing created sequence of positions
+1 - Save button - Save created sequence to flash memory to restore it after microcontroller restart
+
+2 - Info text area - Displays information and errors
+
+3 - Clear button
+
+- Short press - Delete last position from the list
+
+- Long press - Delete all positions from the list
+
+
+4 - Positions list - Scrollable list of all added positions. Click on element to move arm to clicked position
+
+5 - Back button - Close window and go back to Main screen
+
+6 - Add new position - Add current arm position to positions list
+
+7 - Play sequence - Start playing created sequence of positions
+
+8 - Change speed button - Change sequence speed
+
+9 - Pause/Resume button - Pause/Resume sequence
+
+10 - Stop button - Stop playing created sequence of positions
+
 
 # Video
 
