@@ -41,13 +41,19 @@ On this screen you can control position of robotic arm with 3 sliders. State of 
 ## Sequence recorder
 
 <p align="center">
-  <img align="center" src="/Img/screenshot2.png">
-</p>
-<p align="center">
-  <img align="center" src="/Img/screenshot3.png">
-</p>
-<p align="center">
-  <img align="center" src="/Img/screenshot4.png">
+  <table>
+    <tr>
+      <th>
+        <img align="center" src="/Img/screenshot2.png">
+      </th>
+      <th>
+        <img align="center" src="/Img/screenshot3.png">
+      </th>
+      <th>
+        <img align="center" src="/Img/screenshot4.png">
+      </th>
+    </tr>
+  </table>
 </p>
 
 On this screen you can record sequences of positions and play them with different speeds. Screen description below:
