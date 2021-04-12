@@ -100,4 +100,4 @@ alt="YouTube video" border="10" /></a>
 # [More info (in polish)](https://narolski.eu/2021/02/28/mearm-stm32f429i/)
 
 # TODO
-- Increase resolution of PWM duty
+- Send "move to position" commands via USB/UART
