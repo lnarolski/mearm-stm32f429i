@@ -21,7 +21,7 @@ SequencePlaybackControl::~SequencePlaybackControl()
 bool SequencePlaybackControl::sequenceRunning = false;
 uint32_t SequencePlaybackControl::sequenceSpeed = 1;
 uint32_t SequencePlaybackControl::minSequenceSpeed = 1;
-uint32_t SequencePlaybackControl::maxSequenceSpeed = 128;
+uint32_t SequencePlaybackControl::maxSequenceSpeed = 8;
 bool SequencePlaybackControl::stopSequence = false;
 bool SequencePlaybackControl::pauseSequence = false;
 sequenceScreenView* SequencePlaybackControl::sequenceScreenViewClass = NULL;
@@ -175,7 +175,7 @@ void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters)
 							break;
 						}
 					}
-					vTaskDelay(100);
+					vTaskDelay(1);
 				}
 				else
 				{
@@ -209,9 +209,9 @@ void SequencePlaybackControl::PlaybackThreadFunction(void* pvParameters)
 ArmPosition SequencePlaybackControl::Char2ArmPosition(char* position)
 {
 	ArmPosition robotPosition;
-	char buffer[17];
+	char buffer[POSITION_TEXT_BUFFER_SIZE];
 	size_t j = 0, PWMDutyType = 0;
-	for (size_t i = 0; i < 17 && position[i] != '\0'; ++i)
+	for (size_t i = 0; i < POSITION_TEXT_BUFFER_SIZE && position[i] != '\0'; ++i)
 	{
 		if (isdigit(position[i]))
 		{
@@ -243,16 +243,16 @@ ArmPosition SequencePlaybackControl::Char2ArmPosition(char* position)
 			j = 0;
 		}
 	}
-	robotPosition.manipulatorPWMDuty = (buffer[0] == '1' ? 275 : 700);
+	robotPosition.manipulatorPWMDuty = (buffer[0] == '1' ? 275 * 6 : 700 * 6);
 	return robotPosition;
 }
 
 ArmPosition SequencePlaybackControl::Char2ArmPosition(Unicode::UnicodeChar* position)
 {
 	ArmPosition robotPosition;
-	char buffer[17];
+	char buffer[POSITION_TEXT_BUFFER_SIZE];
 	size_t j = 0, PWMDutyType = 0;
-	for (size_t i = 0; i < 17 && position[i] != '\0'; ++i)
+	for (size_t i = 0; i < POSITION_TEXT_BUFFER_SIZE && position[i] != '\0'; ++i)
 	{
 		if (isdigit(position[i]))
 		{
@@ -284,6 +284,6 @@ ArmPosition SequencePlaybackControl::Char2ArmPosition(Unicode::UnicodeChar* posi
 			j = 0;
 		}
 	}
-	robotPosition.manipulatorPWMDuty = (buffer[0] == '1' ? 275 : 700);
+	robotPosition.manipulatorPWMDuty = (buffer[0] == '1' ? 275 * 6 : 700 * 6);
 	return robotPosition;
 }

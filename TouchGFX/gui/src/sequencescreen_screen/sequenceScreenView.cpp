@@ -47,7 +47,7 @@ void sequenceScreenView::setupScreen()
 			charAddress += 4;
 			for (size_t i = 0; i < DataStorageModel::numOfListItems; ++i)
 			{
-				for (size_t j = 0; j < 17; ++j) // 17 - size of char array
+				for (size_t j = 0; j < POSITION_TEXT_BUFFER_SIZE; ++j) // POSITION_TEXT_BUFFER_SIZE - size of char array
 				{
 					DataStorageModel::positionsList[i][j] = *charAddress;
 					charAddress += 1;
@@ -100,6 +100,11 @@ void sequenceScreenView::handleTickEvent()
 
 void sequenceScreenView::tearDownScreen()
 {
+	DataStorageModel::xAxisSliderValue = (uint32_t)(((float)xAxisPWMDuty - 275 * 6) / (6 * 9.05));
+	DataStorageModel::yAxisSliderValue_L = (uint32_t)(((float)yAxisPWMDuty_L - 842.0 * 6) / (6 * 4.4));
+	DataStorageModel::yAxisSliderValue_R = (uint32_t)(((float)yAxisPWMDuty_R - 842.0 * 6) / (6 * 3.42));
+	DataStorageModel::manipulatorState = (manipulatorPWMDuty == 700 * 6 ? true : false);
+
 	sequenceScreenViewBase::tearDownScreen();
 }
 
@@ -159,8 +164,8 @@ void sequenceScreenView::SaveSequenceButton_Clicked()
 	}
 
 	for (size_t i = 0; i < DataStorageModel::numOfListItems; ++i)
-	{ // 17 - size of char array
-		for (size_t j = 0; j < 17; ++j)
+	{ // POSITION_TEXT_BUFFER_SIZE - size of char array
+		for (size_t j = 0; j < POSITION_TEXT_BUFFER_SIZE; ++j)
 		{
 			if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_BYTE, startSectorAddress,
 					(uint64_t) DataStorageModel::positionsList[i][j]) == HAL_OK)
@@ -287,11 +292,11 @@ void sequenceScreenView::AddNewPositionButton_Clicked()
 {
 	if (DataStorageModel::numOfListItems < DataStorageModel::maxNumOfPositions)
 	{
-		char positionChar[17];
-		memset(positionChar, '\0', 17);
-		snprintf(positionChar, 17, "%d,%d,%d,%d", xAxisPWMDuty, yAxisPWMDuty_L, yAxisPWMDuty_R,
-				manipulatorPWMDuty == 275 ? 1 : 0);
-		memcpy(DataStorageModel::positionsList[DataStorageModel::numOfListItems], positionChar, 17);
+		char positionChar[POSITION_TEXT_BUFFER_SIZE];
+		memset(positionChar, '\0', POSITION_TEXT_BUFFER_SIZE);
+		snprintf(positionChar, POSITION_TEXT_BUFFER_SIZE, "%d,%d,%d,%d", xAxisPWMDuty, yAxisPWMDuty_L, yAxisPWMDuty_R,
+				manipulatorPWMDuty == 275 * 6 ? 1 : 0);
+		memcpy(DataStorageModel::positionsList[DataStorageModel::numOfListItems], positionChar, POSITION_TEXT_BUFFER_SIZE);
 		positionContainersList[DataStorageModel::numOfListItems].SetText(positionChar);
 		positionsList.add(positionContainersList[DataStorageModel::numOfListItems]);
 		scrollableContainer.invalidate();
