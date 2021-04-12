@@ -8,6 +8,8 @@
 #ifndef DATASTORAGEMODEL_H_
 #define DATASTORAGEMODEL_H_
 
+#define POSITION_TEXT_BUFFER_SIZE 25
+
 #define MAX_NUM_OF_POSITIONS 50
 
 #include <cstddef>
@@ -22,7 +24,7 @@ public:
 	static bool screenViewFirstOpen;
 	static size_t numOfListItems;
 	static const size_t maxNumOfPositions;
-	static char positionsList[MAX_NUM_OF_POSITIONS][17];
+	static char positionsList[MAX_NUM_OF_POSITIONS][POSITION_TEXT_BUFFER_SIZE];
 
 	static uint32_t xAxisSliderValue;
 	static uint32_t yAxisSliderValue_L;

@@ -8,6 +8,8 @@
 #ifndef SEQUENCEPLAYBACKCONTROL_H_
 #define SEQUENCEPLAYBACKCONTROL_H_
 
+#define POSITION_TEXT_BUFFER_SIZE 25
+
 #include <cstddef>
 #include <stdint.h>
 #include "cmsis_os.h"

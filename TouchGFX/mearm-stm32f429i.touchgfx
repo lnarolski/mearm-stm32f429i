@@ -949,7 +949,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId9",
               "UseBuffer": true,
-              "BufferSize": 17
+              "BufferSize": 25
             },
             "Name": "positionText",
             "X": 0,

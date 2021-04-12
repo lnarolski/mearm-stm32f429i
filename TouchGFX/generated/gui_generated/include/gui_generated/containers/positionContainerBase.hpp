@@ -29,7 +29,7 @@ protected:
     /*
      * Wildcard Buffers
      */
-    static const uint16_t POSITIONTEXT_SIZE = 17;
+    static const uint16_t POSITIONTEXT_SIZE = 25;
     touchgfx::Unicode::UnicodeChar positionTextBuffer[POSITIONTEXT_SIZE];
 
 private:

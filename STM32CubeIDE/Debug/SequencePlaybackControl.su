@@ -12,5 +12,5 @@ SequencePlaybackControl.cpp:47:6:static void SequencePlaybackControl::Pause()	4	
 SequencePlaybackControl.cpp:52:6:static void SequencePlaybackControl::Resume()	4	static
 SequencePlaybackControl.cpp:57:6:static void SequencePlaybackControl::GoToPosition(size_t)	16	static
 SequencePlaybackControl.cpp:62:6:static void SequencePlaybackControl::PlaybackThreadFunction(void*)	96	static
-SequencePlaybackControl.cpp:209:13:static ArmPosition SequencePlaybackControl::Char2ArmPosition(char*)	56	static
-SequencePlaybackControl.cpp:250:13:static ArmPosition SequencePlaybackControl::Char2ArmPosition(touchgfx::Unicode::UnicodeChar*)	56	static
+SequencePlaybackControl.cpp:209:13:static ArmPosition SequencePlaybackControl::Char2ArmPosition(char*)	64	static
+SequencePlaybackControl.cpp:250:13:static ArmPosition SequencePlaybackControl::Char2ArmPosition(touchgfx::Unicode::UnicodeChar*)	64	static

@@ -1,6 +1,8 @@
 #ifndef SEQUENCESCREENVIEW_HPP
 #define SEQUENCESCREENVIEW_HPP
 
+#define POSITION_TEXT_BUFFER_SIZE 25
+
 #include <gui_generated/sequencescreen_screen/sequenceScreenViewBase.hpp>
 #include <gui/sequencescreen_screen/sequenceScreenPresenter.hpp>
 #include <gui/containers/positionContainer.hpp>
@@ -36,9 +38,6 @@ public:
 	void ShortPressDeleteButton_Clicked();
 
 	void YesDeleteAllButton_Clicked();
-
-	uint32_t FlashRead();
-	uint32_t FlashWrite(uint32_t StartPageAddress, uint32_t* DATA_32);
 
 	positionContainer positionContainersList[MAX_NUM_OF_POSITIONS];
 protected:
