@@ -87,7 +87,7 @@ On this screen you can record sequences of positions and play them with differen
 # Video
 
 <p align="center">
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=8TPBKfzF_Nk" target="_blank"><img src="http://img.youtube.com/vi/v-8TPBKfzF_Nk/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=8TPBKfzF_Nk" target="_blank"><img src="https://img.youtube.com/vi/8TPBKfzF_Nk/0.jpg" 
 alt="YouTube video" border="10" /></a>
 </p>
 <p align="center">
